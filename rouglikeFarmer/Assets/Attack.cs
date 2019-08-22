@@ -1,0 +1,93 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Attack : MonoBehaviour
+{
+    private int currentAttack = 0;
+    public float DropdownExplosionRadius = 2f;
+    bool isAttacking = false;
+    public ContactFilter2D whatisenemy;
+    public GameObject attackobj;
+    public Animator animator;
+    private Collider2D[] enemiesHit = new Collider2D[5];
+    private Collider2D attackCollider;
+
+    public Transform Feetpos;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!isAttacking)
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                animator.SetBool("IsAttacking", true);
+                Attackfun();
+            }
+        }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            animator.SetInteger("Attack", 0);
+            currentAttack = 0;
+            isAttacking = false;
+            animator.SetBool("IsAttacking", false);
+        }
+
+    }
+
+    public void onAttackEnd()
+    {
+        isAttacking = false;
+        
+        animator.SetBool("IsAttacking", false);
+    }
+    public void onAttackStart()
+    {
+        isAttacking = true;
+        Debug.Log("attack has started");
+        animator.SetBool("IsAttacking", true);
+    }
+       
+    IEnumerator DealDmg(int AttackNumber)
+    {
+        attackCollider = attackobj.GetComponents<Collider2D>()[AttackNumber-1];
+  
+        attackCollider.enabled = true;
+        yield return new WaitForSeconds(0.25f);
+        attackCollider.enabled = false;
+
+      
+    }
+
+    public void DropDownAttack()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(Feetpos.position, DropdownExplosionRadius, whatisenemy.layerMask);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            colliders[i].gameObject.GetComponent<Enemy>().TakeDamage(20);
+        }
+    }
+
+    void Attackfun()
+    {
+        if (currentAttack <= 3)
+        {
+            Debug.Log(currentAttack);
+            currentAttack += 1;
+        }
+        else
+        {
+            Debug.Log("again");
+            currentAttack = 0;
+
+        }
+        animator.SetInteger("Attack", currentAttack);
+
+    }
+}

@@ -4,7 +4,8 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-    CameraShake camshake;
+    private CameraShake camshake;
+    private shockwaveSpawner _shockWaveSpawner;
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;// How much to smooth out the movement
@@ -57,6 +58,7 @@ public class CharacterController2D : MonoBehaviour
     void Start()
     {
         camshake = Camera.main.GetComponent<CameraShake>();
+        _shockWaveSpawner = GameObject.Find("ShockWaveSpawner").GetComponent<shockwaveSpawner>();
     }
 
 	private void FixedUpdate()
@@ -80,7 +82,8 @@ public class CharacterController2D : MonoBehaviour
                {
                     isDroppingDown = false;
                     camshake.Shake(.3f, 2f, 1f);
-
+                    _shockWaveSpawner.Spawn(0.05f, 1f, 0.2f, 3);
+                    
                     OnDropdownLandEvent.Invoke();
 
                 }

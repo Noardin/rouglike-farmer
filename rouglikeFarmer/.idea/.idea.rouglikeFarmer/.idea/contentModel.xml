@@ -22,6 +22,9 @@
         <e p="player.cs" t="Include" />
         <e p="PlayerMovement.cs" t="Include" />
         <e p="Rays.cs" t="Include" />
+        <e p="ShockWaveScript.cs" t="Include" />
+        <e p="shockwaveSpawner.cs" t="Include" />
+        <e p="WaveEffectShader.shader" t="Include" />
         <e p="worldSettings.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

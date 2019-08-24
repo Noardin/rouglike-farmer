@@ -116,6 +116,7 @@ MonoBehaviour:
   HP: 100
   player: {fileID: 0}
   enemybody: {fileID: 3915918830211081}
+  KnockBackFoce: 10
 --- !u!50 &3915918830211081
 Rigidbody2D:
   serializedVersion: 4

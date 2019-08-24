@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D enemybody;
     private Rigidbody2D playerbody;
     private Vector3 moveDirection;
+    public float KnockBackFoce = 10f;
     void Start()
     {
         if (player == null)
@@ -25,11 +26,23 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         playerbody = player.GetComponent<Rigidbody2D>();
-        moveDirection = playerbody.transform.position - enemybody.transform.position;
+        moveDirection =enemybody.transform.position - playerbody.transform.position;
+        Debug.Log("dircion"+moveDirection.normalized);
         HP -= damage;
+        float xForce;
+        if (moveDirection.x > 0)
+        {
+             xForce = 1 -moveDirection.normalized.x;
+        }
+        else
+        {
+            xForce = -1 -moveDirection.normalized.x;
+        }
+        Debug.Log("force "+ xForce);
+       
 
-
-        enemybody.AddForce(moveDirection.normalized * -200f*damage);
+        GetComponent<Rigidbody2D>().AddForce(new Vector3(xForce*KnockBackFoce, 5, 0),ForceMode2D.Impulse);
+        
         if(HP <= 0)
         {
             Destroy(gameObject);

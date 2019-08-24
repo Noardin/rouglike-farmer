@@ -5,14 +5,14 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private int currentAttack = 0;
-    public float DropdownExplosionRadius = 2f;
+    
     bool isAttacking = false;
     public ContactFilter2D whatisenemy;
     public GameObject attackobj;
     public Animator animator;
     private Collider2D[] enemiesHit = new Collider2D[5];
     private Collider2D attackCollider;
-
+    public shockwaveSpawner shockWaveSpawner;
     public Transform Feetpos;
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,7 @@ public class Attack : MonoBehaviour
         animator.SetBool("IsAttacking", true);
     }
        
-    IEnumerator DealDmg(int AttackNumber)
+    public IEnumerator DealDmg(int AttackNumber)
     {
         attackCollider = attackobj.GetComponents<Collider2D>()[AttackNumber-1];
   
@@ -67,10 +67,17 @@ public class Attack : MonoBehaviour
 
     public void DropDownAttack()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(Feetpos.position, DropdownExplosionRadius, whatisenemy.layerMask);
-        for (int i = 0; i < colliders.Length; i++)
+        float MaxExpand = shockWaveSpawner.MaxExpantion;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(Feetpos.transform.position, MaxExpand * 3, whatisenemy.layerMask);
+        
+        for(var i =0; i < colliders.Length; i++)
         {
-            colliders[i].gameObject.GetComponent<Enemy>().TakeDamage(20);
+            
+            if (colliders[i].GetComponent<Enemy>() != null)
+            {
+                Debug.Log("dropdownDeal");
+                colliders[i].GetComponent<Enemy>().TakeDamage(10);
+            }
         }
     }
 

@@ -1717,6 +1717,9 @@ MonoBehaviour:
   m_CrouchDisableCollider:
   - {fileID: 820667358}
   - {fileID: 2086353797}
+  isSliding: 0
+  DashSpeed: 20
+  animator: {fileID: 820667359}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1749,6 +1752,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  dashSpeed: 100
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1765,6 +1769,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isDroppingDown: 0
 --- !u!58 &820667355
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1887,6 +1892,8 @@ MonoBehaviour:
   animator: {fileID: 820667359}
   shockWaveSpawner: {fileID: 1633014496}
   Feetpos: {fileID: 531584058}
+  camshake: {fileID: 1000398613}
+  _shockWaveSpawner: {fileID: 1633014496}
 --- !u!114 &820667361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15726,6 +15733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 0}
   hitDelay: 0.2
+  Invincible: 0
   knockbackForce: 14.8
   knockupForce: 0
 --- !u!58 &2086353797

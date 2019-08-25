@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
+    private bool dash = false;
     
 
     // Update is called once per frame
@@ -44,6 +46,13 @@ public class PlayerMovement : MonoBehaviour {
         {
             crouch = false;
         }
+
+        if (Input.GetKeyDown("space"))
+        {
+            dash = true;
+            animator.SetBool("IsSliding", true);
+            Debug.Log("slide");
+        } 
     }
     public void OnLanding()
     {
@@ -57,7 +66,8 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump, dash);
+        dash = false;
 		jump = false;
 	}
 }

@@ -22,7 +22,12 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
-    
+	private Vector3 DashdDircetion;
+	public bool isSliding = false;
+	public float DashSpeed = 200f;
+	private float CurrentDashSpeed = 0;
+	public Animator animator;
+	private Hitboxcheck PlayerHitBox;
 
 	[Header("Events")]
 	[Space]
@@ -30,13 +35,14 @@ public class CharacterController2D : MonoBehaviour
 	public UnityEvent OnLandEvent;
 
     public UnityEvent OnDropdownLandEvent;
+    public float dashSpeed = 100;
 
-	[System.Serializable]
+    [System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
-    private bool isDroppingDown = false;
+    public bool isDroppingDown = false;
 
 
 	private void Awake()
@@ -49,14 +55,20 @@ public class CharacterController2D : MonoBehaviour
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
 
-        if (OnDropdownLandEvent == null)
-        {
-            OnDropdownLandEvent = new UnityEvent();
-        }
-    }
+		if (OnDropdownLandEvent == null)
+		{
+			OnDropdownLandEvent = new UnityEvent();
+		}
+
+		
+	}
 
     void Start()
     {
+	    if (PlayerHitBox == null)
+	    {
+		    PlayerHitBox = GetComponentInChildren<Hitboxcheck>();
+	    }
         camshake = Camera.main.GetComponent<CameraShake>();
         _shockWaveSpawner = GameObject.Find("ShockWaveSpawner").GetComponent<shockwaveSpawner>();
     }
@@ -80,19 +92,36 @@ public class CharacterController2D : MonoBehaviour
                 }
                if (isDroppingDown)
                {
-                    isDroppingDown = false;
-                    camshake.Shake(.3f, 2f, 1f);
-                    _shockWaveSpawner.Spawn(0.05f, 1f, 0.2f, 3);
-                    
+	               
+	               isDroppingDown = false;
+
                     OnDropdownLandEvent.Invoke();
 
                 }
             }
         }
+
+		if (isSliding)
+		{
+			if (CanMove())
+			{
+				transform.position += DashdDircetion * CurrentDashSpeed * Time.deltaTime;	
+			}
+			Debug.Log("speed" +CurrentDashSpeed);
+			CurrentDashSpeed =CurrentDashSpeed - CurrentDashSpeed * 10f * Time.deltaTime;
+			Debug.Log("-" + CurrentDashSpeed * 10f * Time.deltaTime);
+
+			if (CurrentDashSpeed < 5f)
+			{
+				isSliding = false;
+				Debug.Log("doneSliding");
+				animator.SetBool("IsSliding", false);
+			}
+		}
 	}
 
 
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -143,10 +172,38 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
-			// And then smoothing it out and applying it to the character
-			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+			if (!dash && !isSliding)
+			{
+				// Move the character by finding the target velocity
+				Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+				// And then smoothing it out and applying it to the character
+				m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+			}
+			else
+			{
+				if (!isSliding)
+				{
+					PlayerHitBox.ImInvincible(.8f);
+					isSliding = true;
+					Debug.Log("isSliding");
+					if (m_FacingRight)
+					{
+						DashdDircetion = new Vector3(1, 0, 0);
+					}
+					else
+					{
+						DashdDircetion = new Vector3(-1, 0, 0);
+					}
+
+					CurrentDashSpeed = DashSpeed;
+					Debug.Log("speed" + CurrentDashSpeed);
+
+				}
+
+			}
+
+			
+			
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
@@ -170,6 +227,7 @@ public class CharacterController2D : MonoBehaviour
 		}
         if(crouch && !m_Grounded)
         {
+	        PlayerHitBox.ImInvincible(.8f);
             isDroppingDown = true;
             m_Rigidbody2D.AddForce(new Vector2(0f, -m_DropdownForce));
         }
@@ -185,5 +243,27 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	private bool CanMove()
+	{
+		Vector3 direction;
+		if (m_FacingRight)
+		{
+			direction = new Vector3(1,0,0);
+		}
+		else
+		{
+			direction = new Vector3(-1,0,0);
+		}
+
+		RaycastHit2D ray = Physics2D.Raycast(transform.position, direction, 5f, m_WhatIsGround);
+		if (ray.collider == null)
+		{
+			return true;
+		}
+		
+		return false;
+		
 	}
 }

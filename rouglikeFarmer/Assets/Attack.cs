@@ -14,6 +14,10 @@ public class Attack : MonoBehaviour
     private Collider2D attackCollider;
     public shockwaveSpawner shockWaveSpawner;
     public Transform Feetpos;
+
+    public CameraShake camshake;
+
+    public shockwaveSpawner _shockWaveSpawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +72,8 @@ public class Attack : MonoBehaviour
     public void DropDownAttack()
     {
         float MaxExpand = shockWaveSpawner.MaxExpantion;
+        camshake.Shake(.3f, 2f, 1f);
+        _shockWaveSpawner.Spawn(0.05f, 1f, 0.2f, 3);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(Feetpos.transform.position, MaxExpand * 3, whatisenemy.layerMask);
         
         for(var i =0; i < colliders.Length; i++)

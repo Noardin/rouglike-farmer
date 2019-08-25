@@ -14,6 +14,8 @@ public class Hitboxcheck : MonoBehaviour
     private Transform EnemyTransform;
     private Vector3 MoveDirection;
     private player playerScript;
+    public bool Invincible;
+    private CharacterController2D controller;
     public float knockbackForce = 0f;
     [Range(0,-1)]public float knockupForce = 0f;
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class Hitboxcheck : MonoBehaviour
         playerScript = GetComponentInParent(typeof(player)) as player;
         playerBody = GetComponentInParent(typeof(Rigidbody2D)) as Rigidbody2D;
         animator = GetComponentInParent(typeof(Animator)) as Animator;
+        controller = GetComponentInParent<CharacterController2D>();
     }
 
     // Update is called once per frame
@@ -40,12 +43,25 @@ public class Hitboxcheck : MonoBehaviour
         
     }
 
+    public IEnumerator InvincibleEn(float seconds)
+    {
+        Invincible = true;
+        yield return new WaitForSeconds(seconds);
+        Invincible = false;
+
+    }
+
+    public void ImInvincible(float seconds)
+    {
+        StartCoroutine(InvincibleEn(seconds));
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("isHit");
-        if (col.gameObject.layer == LayerMask.NameToLayer("Enemy") && isBeeingHit == false)
+        if (col.gameObject.layer == LayerMask.NameToLayer("EnemyAttack") && isBeeingHit == false&& !Invincible)
         {
-            EnemyTransform = col.gameObject.GetComponent<Rigidbody2D>().transform;
+            EnemyTransform = col.gameObject.GetComponentInParent<Rigidbody2D>().transform;
             MoveDirection = EnemyTransform.position - playerBody.transform.position;
             MoveDirection.y = knockupForce;
             MoveDirection.z = 0f;

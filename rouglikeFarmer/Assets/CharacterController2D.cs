@@ -13,11 +13,15 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
-	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
+	[SerializeField] private Transform m_CeilingCheck; 							// A position marking where to check for ceilings
 	[SerializeField] private List<Collider2D> m_CrouchDisableCollider;				// A collider that will be disabled when crouching
-
+	[SerializeField] private Transform LedgeCheck;
+	[SerializeField] private Transform WallCheck;
+	
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-	private bool m_Grounded;            // Whether or not the player is grounded.
+	private bool m_Grounded; // Whether or not the player is grounded.
+	private bool AgainstWall;
+	private bool IsLedge;
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -28,6 +32,8 @@ public class CharacterController2D : MonoBehaviour
 	private float CurrentDashSpeed = 0;
 	public Animator animator;
 	private Hitboxcheck PlayerHitBox;
+	public BoxCollider2D LedgeHook;
+	private bool IsGripping;
 
 	[Header("Events")]
 	[Space]
@@ -35,17 +41,16 @@ public class CharacterController2D : MonoBehaviour
 	public UnityEvent OnLandEvent;
 
     public UnityEvent OnDropdownLandEvent;
-    public float dashSpeed = 100;
-
     [System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
-
 	public BoolEvent OnCrouchEvent;
+	
 	private bool m_wasCrouching = false;
-    public bool isDroppingDown = false;
+	public bool isDroppingDown = false;
+	private bool AirRolled;
 
 
-	private void Awake()
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -77,7 +82,15 @@ public class CharacterController2D : MonoBehaviour
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
-
+		
+		if (m_FacingRight)
+		{
+			DashdDircetion = new Vector3(1, 0, 0);
+		}
+		else
+		{
+			DashdDircetion = new Vector3(-1, 0, 0);
+		}
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
@@ -88,6 +101,7 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = true;
                 if (!wasGrounded)
                 {
+	                AirRolled = false;
                     OnLandEvent.Invoke();
                 }
                if (isDroppingDown)
@@ -100,6 +114,24 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
         }
+
+		if (!m_Grounded)
+		{
+			AgainstWall = Physics2D.Raycast(WallCheck.position, DashdDircetion, .5f, m_WhatIsGround);
+			Debug.Log("againsgWall"+ AgainstWall);
+			if (AgainstWall)
+			{
+				IsLedge = !Physics2D.Raycast(LedgeCheck.position, DashdDircetion, .5f, m_WhatIsGround);
+				Debug.Log("isLedge"+ IsLedge);
+				if (IsLedge)
+				{
+					IsGripping = true;
+					LedgeHook.enabled = true;
+				}
+				
+			}
+			
+		}
 
 		if (isSliding)
 		{
@@ -123,6 +155,12 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
+		if (IsGripping && m_FacingRight && move < 0 || !m_FacingRight && move > 0 && IsGripping || crouch && IsGripping)
+		{
+			IsGripping = false;
+			jump = true;
+			LedgeHook.enabled = false;
+		}
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{
@@ -181,19 +219,16 @@ public class CharacterController2D : MonoBehaviour
 			}
 			else
 			{
-				if (!isSliding)
+				if (!isSliding && !AirRolled)
 				{
+					if (!m_Grounded)
+					{
+						AirRolled = true;
+					}
 					PlayerHitBox.ImInvincible(.8f);
 					isSliding = true;
 					Debug.Log("isSliding");
-					if (m_FacingRight)
-					{
-						DashdDircetion = new Vector3(1, 0, 0);
-					}
-					else
-					{
-						DashdDircetion = new Vector3(-1, 0, 0);
-					}
+					
 
 					CurrentDashSpeed = DashSpeed;
 					Debug.Log("speed" + CurrentDashSpeed);
@@ -219,9 +254,10 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if ((m_Grounded || IsGripping) && jump)
 		{
 			// Add a vertical force to the player.
+			IsGripping = false;
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
@@ -257,7 +293,7 @@ public class CharacterController2D : MonoBehaviour
 			direction = new Vector3(-1,0,0);
 		}
 
-		RaycastHit2D ray = Physics2D.Raycast(transform.position, direction, 5f, m_WhatIsGround);
+		RaycastHit2D ray = Physics2D.Raycast(m_GroundCheck.position, direction, 1f, m_WhatIsGround);
 		if (ray.collider == null)
 		{
 			return true;

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -34,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
 	private Hitboxcheck PlayerHitBox;
 	public BoxCollider2D LedgeHook;
 	private bool IsGripping;
+	private bool WasAgainstWall;
 
 	[Header("Events")]
 	[Space]
@@ -101,6 +103,7 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = true;
                 if (!wasGrounded)
                 {
+	                animator.SetBool("WallSliding", false);
 	                AirRolled = false;
                     OnLandEvent.Invoke();
                 }
@@ -115,23 +118,7 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-		if (!m_Grounded)
-		{
-			AgainstWall = Physics2D.Raycast(WallCheck.position, DashdDircetion, .5f, m_WhatIsGround);
-			Debug.Log("againsgWall"+ AgainstWall);
-			if (AgainstWall)
-			{
-				IsLedge = !Physics2D.Raycast(LedgeCheck.position, DashdDircetion, .5f, m_WhatIsGround);
-				Debug.Log("isLedge"+ IsLedge);
-				if (IsLedge)
-				{
-					IsGripping = true;
-					LedgeHook.enabled = true;
-				}
-				
-			}
-			
-		}
+		
 
 		if (isSliding)
 		{
@@ -155,8 +142,10 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
+		//UnGripping
 		if (IsGripping && m_FacingRight && move < 0 || !m_FacingRight && move > 0 && IsGripping || crouch && IsGripping)
 		{
+			animator.SetBool("WallSliding", false);
 			IsGripping = false;
 			jump = true;
 			LedgeHook.enabled = false;
@@ -219,7 +208,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 			else
 			{
-				if (!isSliding && !AirRolled)
+				if (!isSliding && !AirRolled && !IsGripping)
 				{
 					if (!m_Grounded)
 					{
@@ -234,6 +223,11 @@ public class CharacterController2D : MonoBehaviour
 					Debug.Log("speed" + CurrentDashSpeed);
 
 				}
+				else
+				{
+					animator.SetBool("IsSliding", false);
+				}
+				
 
 			}
 
@@ -252,14 +246,48 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
+			
+			//Gripping
+			if (!m_Grounded && move !=0)
+			{
+				AgainstWall = Physics2D.Raycast(WallCheck.position, DashdDircetion, .5f, m_WhatIsGround);
+				Debug.Log("againsgWall"+ AgainstWall);
+				if (AgainstWall)
+				{
+					WasAgainstWall = true;
+					animator.SetBool("WallSliding", true);
+					animator.SetBool("IsJumping", false);
+					IsLedge = !Physics2D.Raycast(LedgeCheck.position, DashdDircetion, .5f, m_WhatIsGround);
+					Debug.Log("isLedge"+ IsLedge);
+					if (IsLedge)
+					{
+						IsGripping = true;
+						LedgeHook.enabled = true;
+					}
+				
+				}else if (WasAgainstWall)
+				{
+					WasAgainstWall = false;
+					animator.SetBool("WallSliding", false);
+				}
+
+			}
 		}
 		// If the player should jump...
-		if ((m_Grounded || IsGripping) && jump)
+		if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
 			IsGripping = false;
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+		}
+		//if Player is gripping and press jump
+
+		if (IsGripping && jump &&  (move >= 0 && m_FacingRight|| move <=0 && !m_FacingRight ))
+		{
+			//move to top of the ledge
+			StartCoroutine(Pull());
+
 		}
         if(crouch && !m_Grounded)
         {
@@ -279,6 +307,20 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	private IEnumerator Pull()
+	{
+		animator.SetBool("IsClimbing", true);
+		IsGripping = false;
+		LedgeHook.enabled = false;
+		Debug.Log("pulling");
+		m_Rigidbody2D.AddForce(new Vector2(0f, 700f));
+		yield return new WaitForSeconds(.4f);
+		Debug.Log("pull2");
+		m_Rigidbody2D.AddForce(DashdDircetion*800f);
+		yield return new WaitForSeconds(.4f);
+		animator.SetBool("IsClimbing", false);
 	}
 
 	private bool CanMove()

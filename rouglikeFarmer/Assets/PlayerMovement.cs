@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
             crouch = false;
         }
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Fire2") && !animator.GetBool("WallSliding") &&!animator.GetBool("IsSliding"))
         {
             dash = true;
             animator.SetBool("IsSliding", true);

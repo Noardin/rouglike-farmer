@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.IsolatedStorage;
+using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,7 +21,9 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private List<Collider2D> m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 	[SerializeField] private Transform LedgeCheck;
 	[SerializeField] private Transform WallCheck;
-	
+
+	public LayerMask WhatIsEdge;
+	public float RangeToDropdown;
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded; // Whether or not the player is grounded.
 	private bool AgainstWall;
@@ -36,6 +41,7 @@ public class CharacterController2D : MonoBehaviour
 	public BoxCollider2D LedgeHook;
 	private bool IsGripping;
 	private bool WasAgainstWall;
+	
 
 	[Header("Events")]
 	[Space]
@@ -137,11 +143,14 @@ public class CharacterController2D : MonoBehaviour
 				animator.SetBool("IsSliding", false);
 			}
 		}
+
+		
 	}
 
 
 	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
+		
 		//UnGripping
 		if (IsGripping && m_FacingRight && move < 0 || !m_FacingRight && move > 0 && IsGripping || crouch && IsGripping)
 		{
@@ -199,7 +208,7 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 
-			if (!dash && !isSliding)
+			if (!dash && !isSliding && !IsGripping)
 			{
 				// Move the character by finding the target velocity
 				Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -210,6 +219,7 @@ public class CharacterController2D : MonoBehaviour
 			{
 				if (!isSliding && !AirRolled && !IsGripping)
 				{
+					
 					if (!m_Grounded)
 					{
 						AirRolled = true;
@@ -257,9 +267,9 @@ public class CharacterController2D : MonoBehaviour
 					WasAgainstWall = true;
 					animator.SetBool("WallSliding", true);
 					animator.SetBool("IsJumping", false);
-					IsLedge = !Physics2D.Raycast(LedgeCheck.position, DashdDircetion, .5f, m_WhatIsGround);
+					IsLedge = Physics2D.Raycast(LedgeCheck.position, DashdDircetion, 1f, WhatIsEdge);
 					Debug.Log("isLedge"+ IsLedge);
-					if (IsLedge)
+					if (IsLedge )
 					{
 						IsGripping = true;
 						LedgeHook.enabled = true;
@@ -274,7 +284,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (m_Grounded && jump && !isSliding)
 		{
 			// Add a vertical force to the player.
 			IsGripping = false;
@@ -291,9 +301,15 @@ public class CharacterController2D : MonoBehaviour
 		}
         if(crouch && !m_Grounded)
         {
-	        PlayerHitBox.ImInvincible(.8f);
-            isDroppingDown = true;
-            m_Rigidbody2D.AddForce(new Vector2(0f, -m_DropdownForce));
+	        RaycastHit2D ray = Physics2D.Raycast(m_GroundCheck.position, new Vector2(0, -1), RangeToDropdown, m_WhatIsGround);
+	        Debug.Log("ray", ray.collider);
+	        if (ray.collider == null)
+	        {
+		         PlayerHitBox.ImInvincible(.8f);
+                isDroppingDown = true;
+                m_Rigidbody2D.AddForce(new Vector2(0f, -m_DropdownForce));
+	        }
+	       
         }
 	}
 
@@ -313,13 +329,54 @@ public class CharacterController2D : MonoBehaviour
 	{
 		animator.SetBool("IsClimbing", true);
 		IsGripping = false;
+		animator.SetBool("WallSliding", false);
 		LedgeHook.enabled = false;
+		m_Rigidbody2D.gravityScale = 0;
+		Vector3 pullDirection = new Vector3(0f, 1f, 0f);
 		Debug.Log("pulling");
-		m_Rigidbody2D.AddForce(new Vector2(0f, 700f));
-		yield return new WaitForSeconds(.4f);
+		bool MustClimbe;
+		RaycastHit2D ray = Physics2D.Raycast(m_GroundCheck.position, DashdDircetion, 1f, WhatIsEdge );
+		if (ray.collider == null)
+		{
+			MustClimbe = true;
+		}
+		else if(!ray.collider.gameObject.CompareTag("Edge"))
+		{
+			MustClimbe = true;
+		}
+		else
+		{
+			MustClimbe = false;
+		}
+		while(MustClimbe)
+		{
+			ray = Physics2D.Raycast(m_GroundCheck.position, DashdDircetion, 1f, WhatIsEdge );
+			if (ray.collider != null)
+			{
+				if (ray.collider.gameObject.CompareTag("Edge"))
+				{
+					MustClimbe = false;
+				}
+				
+			}
+			
+			transform.position += pullDirection  * Time.deltaTime*15f;
+			yield return new WaitForSeconds(.001f);
+			
+		}
+		
 		Debug.Log("pull2");
-		m_Rigidbody2D.AddForce(DashdDircetion*800f);
-		yield return new WaitForSeconds(.4f);
+		for (var i = 0; i < 10; i++)
+		{
+			transform.position += DashdDircetion * Time.deltaTime * 6f;
+			yield return new WaitForSeconds(.001f);
+			
+		}
+		
+		m_Rigidbody2D.gravityScale = 3;
+		yield return new WaitForSeconds(.05f);
+		
+		
 		animator.SetBool("IsClimbing", false);
 	}
 

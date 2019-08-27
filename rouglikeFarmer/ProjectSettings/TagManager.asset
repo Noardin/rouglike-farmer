@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerHitZone
+  - Edge
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Attacks
   - Obstacle
   - EnemyAttack
-  - 
+  - Edges
   - 
   - 
   - 

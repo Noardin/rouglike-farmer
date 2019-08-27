@@ -16,43 +16,54 @@ public class PlayerMovement : MonoBehaviour {
 	bool jump = false;
 	bool crouch = false;
     private bool dash = false;
+    public float slideDelay;
+    private float SlideTimer;
     
 
     // Update is called once per frame
     void Update()
     {
-        if (!animator.GetBool("IsAttacking"))
+        if (SlideTimer > 0)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-                    
-        }
-        else
-        {
-            horizontalMove = 0f;
-        }
-        
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("IsJumping", true);
-        }
-
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
-
-        if (Input.GetButtonDown("Fire2") && !animator.GetBool("WallSliding") &&!animator.GetBool("IsSliding"))
-        {
-            dash = true;
-            animator.SetBool("IsSliding", true);
-            Debug.Log("slide");
+            SlideTimer -= Time.deltaTime;
         } 
+        if (!animator.GetBool("IsClimbing")){
+        
+            if (!animator.GetBool("IsAttacking"))
+            {
+                horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+            }
+            else
+            {
+                horizontalMove = 0f;
+            }
+
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
+
+            if (Input.GetButtonDown("Fire2") && !animator.GetBool("WallSliding") && !animator.GetBool("IsSliding") &&
+                SlideTimer <= 0)
+            {
+                SlideTimer = slideDelay;
+                dash = true;
+                animator.SetBool("IsSliding", true);
+                Debug.Log("slide");
+            }
+        }
     }
     public void OnLanding()
     {
@@ -66,7 +77,11 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump, dash);
+        if (!animator.GetBool("IsClimbing"))
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump, dash);
+        }
+		
         dash = false;
 		jump = false;
 	}

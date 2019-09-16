@@ -1,9 +1,6 @@
 DropDownAttack
-- dropdown attack jen pri vetsi delce skoku
 - animace drop down attacku 
 	-chvili visi ve vzduchu a natahuje potom smash
-- postupne zvetsujici se radius ktery posune enemy
-
 
 Pohyb
 -rollovani

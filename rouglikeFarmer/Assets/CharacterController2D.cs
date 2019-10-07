@@ -34,7 +34,9 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 	private Vector3 DashdDircetion;
 	public bool isSliding = false;
-	public float DashSpeed = 200f;
+	public float DashSpeed = 400f;
+	public float DashDistance = 100f;
+	public float DashCurrentDistance;
 	private float CurrentDashSpeed = 0;
 	public Animator animator;
 	private Hitboxcheck PlayerHitBox;
@@ -109,7 +111,9 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = true;
                 if (!wasGrounded)
                 {
+	                animator.SetBool("Grounded", true);
 	                animator.SetBool("WallSliding", false);
+	                animator.SetBool("LedgeHooking", false);
 	                AirRolled = false;
                     OnLandEvent.Invoke();
                 }
@@ -122,7 +126,13 @@ public class CharacterController2D : MonoBehaviour
 
                 }
             }
+			
         }
+
+		if (!m_Grounded)
+		{
+			animator.SetBool("Grounded", false);
+		}
 
 		
 
@@ -130,13 +140,12 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (CanMove())
 			{
-				transform.position += DashdDircetion * CurrentDashSpeed * Time.deltaTime;	
+				transform.position += DashdDircetion * DashSpeed * Time.deltaTime;
+				
 			}
-			Debug.Log("speed" +CurrentDashSpeed);
-			CurrentDashSpeed =CurrentDashSpeed - CurrentDashSpeed * 10f * Time.deltaTime;
-			Debug.Log("-" + CurrentDashSpeed * 10f * Time.deltaTime);
-
-			if (CurrentDashSpeed < 5f)
+			Debug.Log("dash distance: "+DashCurrentDistance);
+			DashCurrentDistance += DashSpeed * Time.deltaTime;
+			if (DashCurrentDistance >= DashDistance)
 			{
 				isSliding = false;
 				Debug.Log("doneSliding");
@@ -151,10 +160,18 @@ public class CharacterController2D : MonoBehaviour
 	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
 		
+		//UnSliding
+		if (jump || crouch)
+		{	
+			isSliding = false;
+			animator.SetBool("IsSliding", false);
+			
+			
+		}
 		//UnGripping
 		if (IsGripping && m_FacingRight && move < 0 || !m_FacingRight && move > 0 && IsGripping || crouch && IsGripping)
 		{
-			animator.SetBool("WallSliding", false);
+			animator.SetBool("LedgeHooking", false);
 			IsGripping = false;
 			jump = true;
 			LedgeHook.enabled = false;
@@ -227,15 +244,11 @@ public class CharacterController2D : MonoBehaviour
 					PlayerHitBox.ImInvincible(.8f);
 					isSliding = true;
 					Debug.Log("isSliding");
+
+
+					DashCurrentDistance = 0;
 					
 
-					CurrentDashSpeed = DashSpeed;
-					Debug.Log("speed" + CurrentDashSpeed);
-
-				}
-				else
-				{
-					animator.SetBool("IsSliding", false);
 				}
 				
 
@@ -245,17 +258,21 @@ public class CharacterController2D : MonoBehaviour
 			
 
 			// If the input is moving the player right and the player is facing left...
-			if (move > 0 && !m_FacingRight)
+			if (!isSliding)
 			{
-				// ... flip the player.
-				Flip();
+				if (move > 0 && !m_FacingRight)
+				{
+					// ... flip the player.
+					Flip();
+				}
+				// Otherwise if the input is moving the player left and the player is facing right...
+				else if (move < 0 && m_FacingRight)
+				{
+					// ... flip the player.
+					Flip();
+				}
 			}
-			// Otherwise if the input is moving the player left and the player is facing right...
-			else if (move < 0 && m_FacingRight)
-			{
-				// ... flip the player.
-				Flip();
-			}
+			
 			
 			//Gripping
 			if (!m_Grounded && move !=0)
@@ -268,9 +285,12 @@ public class CharacterController2D : MonoBehaviour
 					animator.SetBool("WallSliding", true);
 					animator.SetBool("IsJumping", false);
 					IsLedge = Physics2D.Raycast(LedgeCheck.position, DashdDircetion, 1f, WhatIsEdge);
-					Debug.Log("isLedge"+ IsLedge);
+					
 					if (IsLedge )
 					{
+						
+						animator.SetBool("WallSliding", false);
+						animator.SetBool("LedgeHooking", true);
 						IsGripping = true;
 						LedgeHook.enabled = true;
 					}
@@ -278,13 +298,14 @@ public class CharacterController2D : MonoBehaviour
 				}else if (WasAgainstWall)
 				{
 					WasAgainstWall = false;
+					animator.SetBool("LedgeHooking", false);
 					animator.SetBool("WallSliding", false);
 				}
 
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump && !isSliding)
+		if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
 			IsGripping = false;
@@ -329,7 +350,7 @@ public class CharacterController2D : MonoBehaviour
 	{
 		animator.SetBool("IsClimbing", true);
 		IsGripping = false;
-		animator.SetBool("WallSliding", false);
+		animator.SetBool("LedgeHooking", false);
 		LedgeHook.enabled = false;
 		m_Rigidbody2D.gravityScale = 0;
 		Vector3 pullDirection = new Vector3(0f, 1f, 0f);

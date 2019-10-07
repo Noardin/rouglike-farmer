@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour {
                 crouch = false;
             }
 
-            if (Input.GetButtonDown("Fire2") && !animator.GetBool("WallSliding") && !animator.GetBool("IsSliding") &&
+            if (Input.GetButtonDown("Fire2") && !animator.GetBool("LedgeHooking") && !animator.GetBool("IsSliding") &&
                 SlideTimer <= 0)
             {
                 SlideTimer = slideDelay;

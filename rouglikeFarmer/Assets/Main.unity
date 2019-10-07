@@ -1553,7 +1553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531584057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.515, z: 0}
+  m_LocalPosition: {x: 0.125, y: -0.497, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 820667352}
@@ -2054,7 +2054,9 @@ MonoBehaviour:
     m_Bits: 8192
   RangeToDropdown: 1
   isSliding: 0
-  DashSpeed: 30
+  DashSpeed: 10
+  DashDistance: 5
+  DashCurrentDistance: 0
   animator: {fileID: 820667359}
   LedgeHook: {fileID: 1271931372}
   OnLandEvent:
@@ -4309,7 +4311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433352071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.013, y: -0.744, z: 0}
+  m_LocalPosition: {x: 0.013, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499833643}
@@ -4704,7 +4706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499833642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.134, y: 0.592, z: 0}
+  m_LocalPosition: {x: 0.134, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1433352072}

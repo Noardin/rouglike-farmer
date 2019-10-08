@@ -38,7 +38,7 @@ public class CharacterController2D : MonoBehaviour
 	public float DashDistance = 100f;
 	private float DashCurrentDistance;
 	public float FromAirRollDistance = 10f;
-	
+	public LedgeHook ledgeHook;
 	public Animator animator;
 	private Hitboxcheck PlayerHitBox;
 	private bool IsGripping;
@@ -276,7 +276,7 @@ public class CharacterController2D : MonoBehaviour
 					animator.SetBool("IsJumping", false);
 					
 					
-					if (IsLedge )
+					if (ledgeHook.IsEdge )
 					{
 						
 						

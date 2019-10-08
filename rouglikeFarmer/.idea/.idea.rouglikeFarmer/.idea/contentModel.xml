@@ -19,6 +19,7 @@
         <e p="Health_Manager.cs" t="Include" />
         <e p="Hitboxcheck.cs" t="Include" />
         <e p="LedgeCheck.cs" t="Include" />
+        <e p="LedgeHook.cs" t="Include" />
         <e p="Parallax.cs" t="Include" />
         <e p="player.cs" t="Include" />
         <e p="PlayerMovement.cs" t="Include" />

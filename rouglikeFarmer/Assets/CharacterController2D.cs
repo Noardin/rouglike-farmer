@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Runtime.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
+using Debug = UnityEngine.Debug;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -39,11 +41,13 @@ public class CharacterController2D : MonoBehaviour
 	private float DashCurrentDistance;
 	public float FromAirRollDistance = 10f;
 	public LedgeHook ledgeHook;
+	public LedgeCheck ledgeCheck;
 	public Animator animator;
 	private Hitboxcheck PlayerHitBox;
 	private bool IsGripping;
 	private bool WasAgainstWall;
 	private bool IsClimbing;
+	
 	
 
 	[Header("Events")]
@@ -117,9 +121,13 @@ public class CharacterController2D : MonoBehaviour
 	                animator.SetBool("LedgeHooking", false);
 	                AirRolled = false;
 	                //from air roll
-	                Vector3 targetVelocity = new Vector2(DashdDircetion.x*FromAirRollDistance * 10f, m_Rigidbody2D.velocity.y);
-	                // And then smoothing it out and applying it to the character
-	                m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+	                if (!IsClimbing)
+	                {
+		                Vector3 targetVelocity = new Vector2(DashdDircetion.x*FromAirRollDistance * 10f, m_Rigidbody2D.velocity.y);
+                        // And then smoothing it out and applying it to the character
+						m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+	                }
+	                
 	                
 	                
                     OnLandEvent.Invoke();
@@ -136,7 +144,6 @@ public class CharacterController2D : MonoBehaviour
 			
         }
 		AgainstWall = Physics2D.Raycast(WallCheck.position, DashdDircetion, .5f, m_WhatIsGround);
-		IsLedge = Physics2D.Raycast(LedgeCheck.position, DashdDircetion, 1f, WhatIsEdge);
 
 		if (!m_Grounded)
 		{
@@ -257,16 +264,9 @@ public class CharacterController2D : MonoBehaviour
 				
 
 			}
-
-			
-			
-
-			// If the input is moving the player right and the player is facing left...
-			
-			
 			
 			//Gripping
-			if (!m_Grounded && move !=0)
+			if (!m_Grounded && move !=0 && !IsClimbing)
 			{
 				
 				if (AgainstWall)
@@ -276,22 +276,22 @@ public class CharacterController2D : MonoBehaviour
 					animator.SetBool("IsJumping", false);
 					
 					
-					if (ledgeHook.IsEdge )
-					{
-						
-						
-						animator.SetBool("LedgeHooking", true);
-						IsGripping = true;
-						m_Rigidbody2D.velocity = new Vector2(0,0);
-						
-						m_Rigidbody2D.gravityScale = 0;
-					}
 				
 				}else if (WasAgainstWall)
 				{
 					WasAgainstWall = false;
 					animator.SetBool("LedgeHooking", false);
 					animator.SetBool("WallSliding", false);
+				}
+				if (ledgeHook.IsEdge)
+				{
+						
+						
+					animator.SetBool("LedgeHooking", true);
+					IsGripping = true;
+					m_Rigidbody2D.velocity = new Vector2(0,0);
+						
+					m_Rigidbody2D.gravityScale = 0;
 				}
 
 			}
@@ -306,21 +306,22 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.gravityScale = 3;
 		}
 		
+		
+		//if Player is gripping and press jump
+
+		if (IsGripping && jump)
+		{
+			//move to top of the ledge
+			StartCoroutine(Pull());
+
+		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (m_Grounded && jump && !IsClimbing)
 		{
 			// Add a vertical force to the player.
 			IsGripping = false;
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-		}
-		//if Player is gripping and press jump
-
-		if (IsGripping && jump &&  (move >= 0 && m_FacingRight|| move <=0 && !m_FacingRight ))
-		{
-			//move to top of the ledge
-			StartCoroutine(Pull());
-
 		}
         if(crouch && !m_Grounded)
         {
@@ -368,6 +369,7 @@ public class CharacterController2D : MonoBehaviour
 		animator.SetBool("IsClimbing", true);
 		IsGripping = false;
 		animator.SetBool("LedgeHooking", false);
+		
 		Vector3 pullDirection = new Vector3(0f, 1f, 0f);
 		Debug.Log("pulling");
 		bool MustClimbe;
@@ -386,26 +388,23 @@ public class CharacterController2D : MonoBehaviour
 		}
 		while(MustClimbe)
 		{
-			ray = Physics2D.Raycast(m_GroundCheck.position, DashdDircetion, 1f, WhatIsEdge );
-			if (ray.collider != null)
+
+			if (ledgeCheck.IsOnTop)
 			{
-				if (ray.collider.gameObject.CompareTag("Edge"))
-				{
-					MustClimbe = false;
-				}
-				
+				MustClimbe = false;
 			}
 			
-			transform.position += pullDirection  * Time.deltaTime*15f;
-			yield return new WaitForSeconds(.001f);
+			
+			transform.position += pullDirection  * Time.deltaTime*20f;
+			yield return new WaitForSeconds(.002f);
 			
 		}
 		
 		Debug.Log("pull2");
 		for (var i = 0; i < 10; i++)
 		{
-			transform.position += DashdDircetion * Time.deltaTime * 6f;
-			yield return new WaitForSeconds(.001f);
+			transform.position += DashdDircetion * Time.deltaTime * 20f;
+			yield return new WaitForSeconds(.002f);
 			
 		}
 		

@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class LedgeCheck : MonoBehaviour
 {
-    public bool isLedge;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool IsOnTop;
 
-    // Update is called once per frame
-    void Update()
+    public LayerMask WhatIsEdge;
+    void FixedUpdate()
     {
-        
+        IsOnTop = false;
+        Collider2D[] htiCollider = Physics2D.OverlapCircleAll(gameObject.transform.position,.5f,WhatIsEdge );
+        for (var i = 0; i < htiCollider.Length; i++)
+        {
+            if (htiCollider[i].gameObject != gameObject)
+            {
+                Debug.Log("IsOnTop");
+                IsOnTop = true;
+            }
+           
+        }
     }
 }

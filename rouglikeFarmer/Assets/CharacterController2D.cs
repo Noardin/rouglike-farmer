@@ -388,14 +388,14 @@ public class CharacterController2D : MonoBehaviour
 		}
 		while(MustClimbe)
 		{
-
+			transform.position += pullDirection  * Time.deltaTime*5f;
 			if (ledgeCheck.IsOnTop)
 			{
 				MustClimbe = false;
 			}
 			
 			
-			transform.position += pullDirection  * Time.deltaTime*20f;
+			
 			yield return new WaitForSeconds(.002f);
 			
 		}

@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4872fca7-792f-4434-9f39-8768475196be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/WallSliding/wallslideAnim9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.controller" afterDir="false" />
-    </list>
+    <list default="true" id="4872fca7-792f-4434-9f39-8768475196be" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +12,7 @@
     <session id="782719506">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.46" value="1" />
@@ -351,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="125" />
     <option name="width" value="1440" />
@@ -446,8 +429,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

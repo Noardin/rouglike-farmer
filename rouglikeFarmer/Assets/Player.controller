@@ -118,9 +118,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
   - m_ConditionMode: 2
     m_ConditionEvent: WallSliding
     m_EventTreshold: 0
@@ -857,7 +854,7 @@ AnimatorStateMachine:
     m_Position: {x: 880, y: -180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8297469279335418127}
-    m_Position: {x: -100, y: -110, z: 0}
+    m_Position: {x: -150, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4236216469589825187}
     m_Position: {x: 110, y: -230, z: 0}

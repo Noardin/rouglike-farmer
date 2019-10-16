@@ -401,12 +401,12 @@ public class CharacterController2D : MonoBehaviour
 		}
 		
 		Debug.Log("pull2");
-		for (var i = 0; i < 10; i++)
-		{
+		while(!m_Grounded){
+		
 			transform.position += DashdDircetion * Time.deltaTime * 5f;
 			yield return new WaitForSeconds(.002f);
-			
-		}
+		}	
+		
 		
 		m_Rigidbody2D.gravityScale = 3;
 		yield return new WaitForSeconds(.05f);

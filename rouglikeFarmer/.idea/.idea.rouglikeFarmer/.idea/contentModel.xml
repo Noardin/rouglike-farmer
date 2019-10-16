@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\triks\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\triks\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_rouglikeFarmer.-87817425.00" t="ExcludeRecursive" />
-    <e p="C:\Users\triks\Desktop\Programming\Project\UnityProjects\rouglike-farmer\rouglikeFarmer" t="IncludeRecursive">
+    <e p="C:\Users\Toshiba\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Toshiba\.Rider2019.1\system\resharper-host\Local\Transient\ReSharperHost\v191\SolutionCaches\_rouglikeFarmer.-1842344153.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Toshiba\Desktop\rouglike-farmer\rouglikeFarmer" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Attack.cs" t="Include" />
@@ -30,13 +30,10 @@
         <e p="WaveEffectShader.shader" t="Include" />
         <e p="worldSettings.cs" t="Include" />
       </e>
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="rouglikeFarmer.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

@@ -897,7 +897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210161321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0.422, y: 0.118, z: 0}
   m_LocalScale: {x: 0.1, y: 0.12, z: 1}
   m_Children: []
   m_Father: {fileID: 820667352}
@@ -915,8 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39b224c935dc804e9f3725d2dd36391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &210161325
-CircleCollider2D:
+--- !u!60 &210161325
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -928,9 +928,25 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4.45}
-  serializedVersion: 2
-  m_Radius: 0.01
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.0371795, y: 1.2823198}
+      - {x: 3.227281, y: -1.996599}
+      - {x: 1.6745216, y: -3.2199867}
+      - {x: -5.7824807, y: -5.2555614}
+      - {x: 4.653196, y: -4.1733336}
+      - {x: 6.132333, y: -1.5598382}
+      - {x: 5.1293974, y: 2.6616857}
 --- !u!1 &216950973
 GameObject:
   m_ObjectHideFlags: 0

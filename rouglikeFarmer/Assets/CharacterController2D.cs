@@ -47,7 +47,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool IsGripping;
 	private bool WasAgainstWall;
 	private bool IsClimbing;
-	
+	private RigidbodyConstraints2D originalConstraints;
 	
 
 	[Header("Events")]
@@ -66,7 +66,8 @@ public class CharacterController2D : MonoBehaviour
 
 
     private void Awake()
-	{
+    {
+	   
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
 		if (OnLandEvent == null)
@@ -79,7 +80,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			OnDropdownLandEvent = new UnityEvent();
 		}
-
+		originalConstraints = m_Rigidbody2D.constraints;
 		
 	}
 
@@ -134,7 +135,7 @@ public class CharacterController2D : MonoBehaviour
                 }
                if (isDroppingDown)
                {
-	               
+	               animator.SetBool("DroppingDown", false);
 	               isDroppingDown = false;
 
                     OnDropdownLandEvent.Invoke();
@@ -329,9 +330,7 @@ public class CharacterController2D : MonoBehaviour
 	        Debug.Log("ray", ray.collider);
 	        if (ray.collider == null)
 	        {
-		         PlayerHitBox.ImInvincible(.8f);
-                isDroppingDown = true;
-                m_Rigidbody2D.AddForce(new Vector2(0f, -m_DropdownForce));
+		        StartCoroutine(DropDownAttack());
 	        }
 	       
         }
@@ -416,6 +415,23 @@ public class CharacterController2D : MonoBehaviour
 		IsClimbing = false;
 	}
 
+	private IEnumerator Freeze(float sec)
+	{
+		m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+		yield return new WaitForSeconds(sec);
+		m_Rigidbody2D.constraints = originalConstraints;
+
+	}
+
+	private IEnumerator DropDownAttack()
+	{
+		PlayerHitBox.ImInvincible(.8f);
+		isDroppingDown = true;
+		animator.SetBool("DroppingDown", true);
+		StartCoroutine(Freeze(.5f));
+		yield return new WaitForSeconds(.5f);
+		m_Rigidbody2D.AddForce(new Vector2(0f, -m_DropdownForce));
+	}
 	private bool CanMove()
 	{
 		Vector3 direction;

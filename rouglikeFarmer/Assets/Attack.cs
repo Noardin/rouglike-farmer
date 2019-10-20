@@ -29,7 +29,7 @@ public class Attack : MonoBehaviour
     {
         if (!isAttacking)
         {
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButtonDown("Fire1"))
             {
                 animator.SetBool("IsAttacking", true);
                 Attackfun();
@@ -63,6 +63,7 @@ public class Attack : MonoBehaviour
         attackCollider = attackobj.GetComponents<Collider2D>()[AttackNumber-1];
   
         attackCollider.enabled = true;
+        camshake.Shake(.3f, 2f, 1f);
         yield return new WaitForSeconds(0.25f);
         attackCollider.enabled = false;
 

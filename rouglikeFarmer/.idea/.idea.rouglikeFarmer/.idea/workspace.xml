@@ -3,44 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4872fca7-792f-4434-9f39-8768475196be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Attack1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Attack1.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/adventurer.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/LedgeClimbAnim/LedgeClimb9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack110.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack110.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack111.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack111.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack112.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack112.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack113.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack113.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack114.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack114.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack123.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack123.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack124.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack124.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack125.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack125.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack126.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack126.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/AttackAnim/Attack1/Attack19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parallax.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,20 +28,20 @@
     <session id="782719506">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.52" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="583" />
+          <entry key="cs" value="584" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="583" />
+          <entry key="C#" value="584" />
         </counts>
       </usages-collector>
     </session>
@@ -101,11 +77,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Attack.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="1071">
               <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
               <folding>
                 <marker date="1571581977802" expanded="false" signature="6:78" ph="..." />
-                <marker date="1571581977802" expanded="true" signature="115:2656" ph="{...}" />
                 <marker date="1571581977802" expanded="true" signature="614:627" ph="{...}" />
                 <marker date="1571581977802" expanded="true" signature="685:1124" ph="{...}" />
                 <marker date="1571581977802" expanded="true" signature="717:895" ph="{...}" />
@@ -134,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="428" column="30" lean-forward="true" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
+            <state relative-caret-position="7140">
+              <caret line="428" column="30" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
               <folding>
                 <marker date="1571585777381" expanded="false" signature="6:277" ph="..." />
                 <marker date="1571585777381" expanded="true" signature="329:11843" ph="{...}" />
@@ -200,6 +175,23 @@
                 <marker date="1571585777381" expanded="true" signature="11571:11614" ph="{...}" />
                 <marker date="1571585777381" expanded="true" signature="11621:11665" ph="{...}" />
                 <marker date="1571585777381" expanded="true" signature="11789:11813" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="39" column="86" lean-forward="true" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+              <folding>
+                <marker date="1571671382369" expanded="false" signature="6:78" ph="..." />
+                <marker date="1571671382369" expanded="true" signature="117:1303" ph="{...}" />
+                <marker date="1571671382369" expanded="true" signature="372:670" ph="{...}" />
+                <marker date="1571671382369" expanded="true" signature="572:664" ph="{...}" />
+                <marker date="1571671382369" expanded="true" signature="728:1301" ph="{...}" />
+                <marker date="1571671382369" expanded="true" signature="787:1255" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -285,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Parallax.cs" />
         <option value="$PROJECT_DIR$/Assets/Shcokwawe.cs" />
         <option value="$PROJECT_DIR$/Assets/ShockWaveScript.cs" />
         <option value="$PROJECT_DIR$/Assets/shockwaveSpawner.cs" />
@@ -298,6 +289,7 @@
         <option value="$PROJECT_DIR$/Assets/LedgeCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Attack.cs" />
         <option value="$PROJECT_DIR$/Assets/CharacterController2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Parallax.cs" />
       </list>
     </option>
   </component>
@@ -345,12 +337,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
     </panes>
@@ -416,12 +408,13 @@
       <workItem from="1570977058761" duration="1654000" />
       <workItem from="1571216889250" duration="441000" />
       <workItem from="1571236556499" duration="557000" />
-      <workItem from="1571580808006" duration="3841000" />
+      <workItem from="1571580808006" duration="4062000" />
+      <workItem from="1571671174144" duration="805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97054000" />
+    <option name="totallyTimeSpent" value="98080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,9 +427,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26652452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26918977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -526,13 +518,6 @@
     <entry file="file://$PROJECT_DIR$/Assets/WaveEffectShader.shader">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Rays.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -558,47 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Enemy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LedgeCheck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/worldSettings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <marker date="1567517962389" expanded="false" signature="6:78" ph="..." />
-            <marker date="1567517962389" expanded="true" signature="122:425" ph="{...}" />
-            <marker date="1567517962389" expanded="true" signature="196:344" ph="{...}" />
-            <marker date="1567517962389" expanded="true" signature="402:423" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/AttackColliders.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -616,11 +560,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Attack.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="1071">
           <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
           <folding>
             <marker date="1571581977802" expanded="false" signature="6:78" ph="..." />
-            <marker date="1571581977802" expanded="true" signature="115:2656" ph="{...}" />
             <marker date="1571581977802" expanded="true" signature="614:627" ph="{...}" />
             <marker date="1571581977802" expanded="true" signature="685:1124" ph="{...}" />
             <marker date="1571581977802" expanded="true" signature="717:895" ph="{...}" />
@@ -639,10 +582,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Enemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LedgeCheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/worldSettings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <marker date="1567517962389" expanded="false" signature="6:78" ph="..." />
+            <marker date="1567517962389" expanded="true" signature="122:425" ph="{...}" />
+            <marker date="1567517962389" expanded="true" signature="196:344" ph="{...}" />
+            <marker date="1567517962389" expanded="true" signature="402:423" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="428" column="30" lean-forward="true" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
+        <state relative-caret-position="7140">
+          <caret line="428" column="30" selection-start-line="428" selection-start-column="30" selection-end-line="428" selection-end-column="30" />
           <folding>
             <marker date="1571585777381" expanded="false" signature="6:277" ph="..." />
             <marker date="1571585777381" expanded="true" signature="329:11843" ph="{...}" />
@@ -704,6 +688,21 @@
             <marker date="1571585777381" expanded="true" signature="11571:11614" ph="{...}" />
             <marker date="1571585777381" expanded="true" signature="11621:11665" ph="{...}" />
             <marker date="1571585777381" expanded="true" signature="11789:11813" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" column="86" lean-forward="true" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+          <folding>
+            <marker date="1571671382369" expanded="false" signature="6:78" ph="..." />
+            <marker date="1571671382369" expanded="true" signature="117:1303" ph="{...}" />
+            <marker date="1571671382369" expanded="true" signature="372:670" ph="{...}" />
+            <marker date="1571671382369" expanded="true" signature="572:664" ph="{...}" />
+            <marker date="1571671382369" expanded="true" signature="728:1301" ph="{...}" />
+            <marker date="1571671382369" expanded="true" signature="787:1255" ph="{...}" />
           </folding>
         </state>
       </provider>

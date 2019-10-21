@@ -3393,7 +3393,7 @@ MonoBehaviour:
   - {fileID: 726301207}
   - {fileID: 1745778351}
   - {fileID: 127727250}
-  smoothing: 2
+  smoothing: 7
   cam: {fileID: 1000398612}
 --- !u!4 &1015445760
 Transform:

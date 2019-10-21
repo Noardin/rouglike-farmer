@@ -273,6 +273,7 @@ public class CharacterController2D : MonoBehaviour
 				if (AgainstWall)
 				{
 					WasAgainstWall = true;
+					
 					animator.SetBool("WallSliding", true);
 					animator.SetBool("IsJumping", false);
 					

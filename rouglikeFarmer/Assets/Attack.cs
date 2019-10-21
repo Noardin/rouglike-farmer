@@ -63,7 +63,7 @@ public class Attack : MonoBehaviour
         attackCollider = attackobj.GetComponents<Collider2D>()[AttackNumber-1];
   
         attackCollider.enabled = true;
-        camshake.Shake(.3f, 2f, 1f);
+        camshake.Shake(.1f, 1f, 10f);
         yield return new WaitForSeconds(0.25f);
         attackCollider.enabled = false;
 

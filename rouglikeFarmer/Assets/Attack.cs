@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    private int currentAttack = 0;
-    
-    bool isAttacking = false;
+    private int currentAttack;
+
+    private bool isAttacking;
+    public Transform AttackPoint;
+    public float AttackRadius = 10f;
     public ContactFilter2D whatisenemy;
-    public GameObject attackobj;
     public Animator animator;
     private Collider2D[] enemiesHit = new Collider2D[5];
     private Collider2D attackCollider;
@@ -58,16 +59,19 @@ public class Attack : MonoBehaviour
         animator.SetBool("IsAttacking", true);
     }
        
-    public IEnumerator DealDmg(int AttackNumber)
+    public void DealDmg(int AttackNumber)
     {
-        attackCollider = attackobj.GetComponents<Collider2D>()[AttackNumber-1];
-  
-        attackCollider.enabled = true;
         camshake.Shake(.1f, 1f, 10f);
-        yield return new WaitForSeconds(0.25f);
-        attackCollider.enabled = false;
 
-      
+        Collider2D[] hits = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRadius, whatisenemy.layerMask);
+        foreach (var collider in hits)
+        {
+            if (collider.gameObject != null)
+            {
+                collider.GetComponent<Enemy>().TakeDamage(10);
+            }
+        }
+
     }
 
     public void DropDownAttack()
@@ -84,6 +88,10 @@ public class Attack : MonoBehaviour
             {
                 Debug.Log("dropdownDeal");
                 colliders[i].GetComponent<Enemy>().TakeDamage(10);
+            }
+            else
+            {
+                Debug.Log("missingEnemyScript");
             }
         }
     }

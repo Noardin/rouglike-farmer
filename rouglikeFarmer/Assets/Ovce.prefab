@@ -115,9 +115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  player: {fileID: 0}
   enemybody: {fileID: 3915918830211081}
   KnockBackFoce: 10
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!50 &3915918830211081
 Rigidbody2D:
   serializedVersion: 4

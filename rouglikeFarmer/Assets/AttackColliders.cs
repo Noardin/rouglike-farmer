@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
+
 
 public class AttackColliders : MonoBehaviour
 {
@@ -21,7 +24,16 @@ public class AttackColliders : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            other.GetComponent<Enemy>().TakeDamage(20);
+            Debug.Log("whatwehit "+ gameObject);
+            Enemy enemyScript = other.GetComponent<Enemy>();
+            if (enemyScript != null)
+            {
+                enemyScript.TakeDamage(20);
+            }
+            else
+            {
+                Debug.Log("notEnemyScript");
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Mrkev : Enemy
 {
@@ -9,8 +10,9 @@ public class Mrkev : Enemy
     private bool _playerDetected;
     private bool _wasDetected;
     public Animator animator;
-    private void Awake()
+     protected override void Awake()
     {
+        base.Awake();
         if (enemybody == null)
         {
             enemybody = gameObject.GetComponent<Rigidbody2D>();
@@ -19,12 +21,19 @@ public class Mrkev : Enemy
         
     }
 
+     protected override void Start()
+     {
+         base.Start();
+         Debug.Log("Start");
+     }
+
 
     // Start is called before the first frame update
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         _wasDetected = _playerDetected;
         _playerDetected = false;
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, terrorRadius, whatisPlayer);

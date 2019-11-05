@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3915918830211086}
   - component: {fileID: 3915918830211087}
   - component: {fileID: 3915918830211084}
-  - component: {fileID: 3915918830211085}
   - component: {fileID: 3915918830211081}
   - component: {fileID: 3915918830211080}
   - component: {fileID: 584635963654237127}
+  - component: {fileID: 4694326090497074970}
   m_Layer: 9
   m_Name: Ovce
   m_TagString: Untagged
@@ -32,8 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.99, y: 0.43, z: 7.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 991929659355916713}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 61
   m_Sprite: {fileID: 21300000, guid: fa8192200f784ad40b7635a4348dba4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,24 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 1.0479469, y: 0.42723083}
   serializedVersion: 2
   m_Radius: 0.63530445
---- !u!114 &3915918830211085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3915918830211074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b740ae0d54d7d44db76aec56702ce4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  enemybody: {fileID: 3915918830211081}
-  KnockBackFoce: 10
-  whatisPlayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!50 &3915918830211081
 Rigidbody2D:
   serializedVersion: 4
@@ -186,50 +167,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &2763795476195121856
-GameObject:
+--- !u!114 &4694326090497074970
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 991929659355916713}
-  - component: {fileID: 2652892339839619345}
-  m_Layer: 12
-  m_Name: Attack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &991929659355916713
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763795476195121856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.317, y: 0.182, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3915918830211086}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2652892339839619345
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763795476195121856}
+  m_GameObject: {fileID: 3915918830211074}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.45
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05214b5bcedbef43ba445723345b89b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  enemybody: {fileID: 3915918830211081}
+  KnockBackFoce: 10
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  particleSystem: {fileID: 5394207413767268820, guid: b6ecb0d2d3b62b64389208315270b1d0,
+    type: 3}
+  HurtParticleColor: {r: 1, g: 1, b: 1, a: 1}

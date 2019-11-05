@@ -13,8 +13,9 @@ public class Enemy: MonoBehaviour
     public float KnockBackFoce = 10f;
     public LayerMask whatisPlayer;
     public GameObject particleSystem;
+    public Color HurtParticleColor;
 
-    void Awake()
+    protected virtual void Awake()
     {
         if (player == null)
         {
@@ -22,10 +23,21 @@ public class Enemy: MonoBehaviour
         }
     }
 
+    protected virtual void Start()
+    {
+        
+    }
+
+    protected virtual void Update()
+    {
+        
+    }
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
-        Instantiate(particleSystem,transform.position,Quaternion.identity);
+        GameObject instanceParticle = Instantiate(particleSystem,transform.position,Quaternion.identity);
+        ParticleSystem.MainModule mainModule = instanceParticle.GetComponent<ParticleSystem>().main;
+        mainModule.startColor = HurtParticleColor;
 //        Debug.Log("player", player);
 //        playerbody = player.GetComponent<Rigidbody2D>();
 //        moveDirection = enemybody.transform.position - playerbody.transform.position;

@@ -168,7 +168,8 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 256
-  particleSystem: {fileID: 7417047722474519145, guid: b6ecb0d2d3b62b64389208315270b1d0,
+  particleSystem: {fileID: 5394207413767268820, guid: b6ecb0d2d3b62b64389208315270b1d0,
     type: 3}
+  HurtParticleColor: {r: 0.9811321, g: 0.66839623, b: 0.06016379, a: 1}
   terrorRadius: 5
   animator: {fileID: 7505821630005557605}

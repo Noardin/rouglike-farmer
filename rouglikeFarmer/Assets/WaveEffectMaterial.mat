@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaveEffectMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 14ac22781da5f124891cfcde21f16d5a,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: a79a4ca2db4c87f4fb42618374aad755, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0

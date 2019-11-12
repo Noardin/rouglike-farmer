@@ -188,3 +188,5 @@ MonoBehaviour:
   particleSystem: {fileID: 5394207413767268820, guid: b6ecb0d2d3b62b64389208315270b1d0,
     type: 3}
   HurtParticleColor: {r: 1, g: 1, b: 1, a: 1}
+  animator: {fileID: 0}
+  AgroRange: 2

@@ -56,7 +56,7 @@ public class Hitboxcheck : MonoBehaviour
         StartCoroutine(InvincibleEn(seconds));
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         Debug.Log("isHit");
         if (col.gameObject.layer == LayerMask.NameToLayer("EnemyAttack") && isBeeingHit == false&& !Invincible)
@@ -65,11 +65,14 @@ public class Hitboxcheck : MonoBehaviour
             MoveDirection = EnemyTransform.position - playerBody.transform.position;
             MoveDirection.y = knockupForce;
             MoveDirection.z = 0f;
+            Enemy enemy = col.GetComponentInParent<Enemy>();
+            double damage = enemy.DmgDeal;
+            
             playerBody.AddForce(MoveDirection.normalized * -200f*knockbackForce);
             isBeeingHit = true;
             animator.SetBool("IsHit", true);
 
-            playerScript.TakeDamage(0.5);
+            playerScript.TakeDamage(damage);
         }
        
     }

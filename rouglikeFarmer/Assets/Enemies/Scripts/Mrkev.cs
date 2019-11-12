@@ -6,13 +6,18 @@ using Debug = UnityEngine.Debug;
 
 public class Mrkev : Enemy
 {
-    public float terrorRadius = 5f;
-    private bool _playerDetected;
-    private bool _wasDetected;
-    public Animator animator;
-     protected override void Awake()
+    public float hideDelay = 3f;
+    private float hideTimer;
+    private IdlingState idlingState;
+    public Transform attackPosition;
+    private enum IdlingState
+    {
+        Popped, Hidden
+    }
+    protected override void Awake()
     {
         base.Awake();
+        
         if (enemybody == null)
         {
             enemybody = gameObject.GetComponent<Rigidbody2D>();
@@ -27,33 +32,103 @@ public class Mrkev : Enemy
          Debug.Log("Start");
      }
 
+     protected override void FixedUpdate()
+     {
+         base.FixedUpdate();
+         
+         
+     }
 
-    // Start is called before the first frame update
+     public override void DealDmg()
+     {
+         Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(0, 0), new Vector2(8f, 7f), 0f, whatisPlayer);
+         foreach (Collider2D col in colliders)
+         {
+             if (col != null)
+             {
+                 col.gameObject.GetComponentInParent<player>().TakeDamage(DmgDeal);
+             }
+         }
+     }
+
+     public override void OnAttackEnd()
+     {
+         base.OnAttackEnd();
+         
+     }
+     // Start is called before the first frame update
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
-        _wasDetected = _playerDetected;
-        _playerDetected = false;
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, terrorRadius, whatisPlayer);
-        foreach (Collider2D collider in hits)
+        switch (State)
         {
-            if (collider != null)
-            {
-                _playerDetected = true;
-                if (!_wasDetected)
+            case EnemyState.Idling:
+                if (idlingState == IdlingState.Hidden)
                 {
-                    animator.SetBool("playerDetected",true);
+                    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
+                    foreach (Collider2D collision in hits)
+                    {
+                        if (collision != null)
+                        {
+                            animator.ResetTrigger("Hide");
+                            idlingState = IdlingState.Popped;
+                            State = EnemyState.Attacking;
+                            
+                        }
+                    }
+            
+                }
+                if(idlingState == IdlingState.Popped)
+                {
+                    // hides after x seconds...
+                    if (hideTimer >= hideDelay)
+                    {
+                        
+                        hideTimer = 0f;
+                        animator.ResetTrigger("Idling");
+                        animator.SetTrigger("Hide");
+                        idlingState = IdlingState.Hidden;
+                    }
+                    else
+                    {
+                        Debug.Log("countdown"+ hideTimer);
+                        hideTimer += Time.deltaTime;
+                    }
+                }
+
+                break;
+            case EnemyState.Attacking:
+                if (!isAttacking)
+                {
+                    if (AttackTimer >= AttackDelay)
+                    {
+                        animator.ResetTrigger("Preparing");
+                        animator.SetTrigger("Attacking");
+                    }
+                    else
+                    {
+                        if (!isPreparing)
+                        {
+                            isPreparing = true;
+                            animator.SetTrigger("Preparing");
+                        }
+                        AttackTimer += Time.deltaTime;
+                        Debug.Log("Preparing To Attack");
+                    }
                 }
                 
-            }
-        }
+                
+                //attack code...
+                    
+                
+                //reset to Idling state
 
-        if (!_playerDetected)
-        {
-            animator.SetBool("playerDetected",false);
+                break;
         }
+        
+        
         
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -14,7 +15,18 @@ public class Enemy: MonoBehaviour
     public LayerMask whatisPlayer;
     public GameObject particleSystem;
     public Color HurtParticleColor;
-
+    public Animator animator;
+    public float AgroRange;
+    public float AttackDelay = 0.5f;
+    protected bool isAttacking;
+    protected bool isPreparing;
+    public double DmgDeal;
+    protected float AttackTimer;
+    protected EnemyState State = EnemyState.Idling;
+    protected enum EnemyState
+    {
+        Popped, Stunned, Attacking, Idling
+    }
     protected virtual void Awake()
     {
         if (player == null)
@@ -31,6 +43,41 @@ public class Enemy: MonoBehaviour
     protected virtual void Update()
     {
         
+    }
+
+    protected virtual void FixedUpdate()
+    {
+    }
+
+    protected virtual IEnumerator Stun(float duration)
+    {
+
+        yield return new WaitForSeconds(duration);
+    }
+    
+    public virtual void OnAttackEnd()
+    {
+        isAttacking = false;
+        State = EnemyState.Idling;
+        animator.ResetTrigger("Attacking");
+        animator.SetTrigger("Idling");
+        
+    }
+
+    public virtual void DealDmg()
+    {
+        
+    }
+    public void OnAttackStart()
+    {
+        isPreparing = false;
+        AttackTimer = 0;
+        isAttacking = true;
+    }
+    protected virtual void Die()
+    {
+        animator.SetTrigger("IsDying");
+        Destroy(gameObject);
     }
     // Update is called once per frame
     public void TakeDamage(int damage)
@@ -59,7 +106,7 @@ public class Enemy: MonoBehaviour
         
         if(HP <= 0)
         {
-            Destroy(gameObject);
+            Die();
 
         }
 

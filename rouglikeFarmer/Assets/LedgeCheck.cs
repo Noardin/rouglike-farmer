@@ -7,7 +7,7 @@ public class LedgeCheck : MonoBehaviour
     public bool IsOnTop;
 
     public LayerMask WhatIsEdge;
-    void FixedUpdate()
+    void Update()
     {
         IsOnTop = false;
         Collider2D[] htiCollider = Physics2D.OverlapCircleAll(gameObject.transform.position,.5f,WhatIsEdge );

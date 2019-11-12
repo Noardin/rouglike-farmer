@@ -94,7 +94,7 @@ public class CharacterController2D : MonoBehaviour
         _shockWaveSpawner = GameObject.Find("ShockWaveSpawner").GetComponent<shockwaveSpawner>();
     }
 
-	private void FixedUpdate()
+    private void Update()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -401,7 +401,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 		
 		Debug.Log("pull2");
-		while(!m_Grounded){
+		for(var i=0; i <3; i++){
 		
 			transform.position += DashdDircetion * Time.deltaTime * 5f;
 			yield return new WaitForSeconds(.002f);

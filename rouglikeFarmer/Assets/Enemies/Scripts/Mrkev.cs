@@ -9,49 +9,87 @@ public class Mrkev : Enemy
     public float hideDelay = 3f;
     private float hideTimer;
     private IdlingState idlingState;
-    public Transform attackPosition;
+   
     private enum IdlingState
     {
         Popped, Hidden
     }
-    protected override void Awake()
-    {
-        base.Awake();
-        
-        if (enemybody == null)
-        {
-            enemybody = gameObject.GetComponent<Rigidbody2D>();
-        }
 
-        
+    protected override void Start()
+    {
+        base.Start();
+        Debug.Log("Start");
     }
 
-     protected override void Start()
+    protected override void Idling()
      {
-         base.Start();
-         Debug.Log("Start");
-     }
-
-     protected override void FixedUpdate()
-     {
-         base.FixedUpdate();
-         
-         
-     }
-
-     public override void DealDmg()
-     {
-         Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(0, 0), new Vector2(8f, 7f), 0f, whatisPlayer);
-         foreach (Collider2D col in colliders)
+         if (idlingState == IdlingState.Hidden)
          {
-             if (col != null)
+             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
+             foreach (Collider2D collision in hits)
              {
-                 col.gameObject.GetComponentInParent<player>().TakeDamage(DmgDeal);
+                 if (collision != null)
+                 {
+                     animator.ResetTrigger("Hide");
+                     idlingState = IdlingState.Popped;
+                     State = EnemyState.Attacking;
+                            
+                 }
+             }
+            
+         }
+         if(idlingState == IdlingState.Popped)
+         {
+             // hides after x seconds...
+             if (hideTimer >= hideDelay)
+             {
+                        
+                 hideTimer = 0f;
+                 animator.ResetTrigger("Idling");
+                 animator.SetTrigger("Hide");
+                 idlingState = IdlingState.Hidden;
+             }
+             else{
+                 hideTimer += Time.deltaTime;
              }
          }
      }
 
-     public override void OnAttackEnd()
+    public override void DealDmg()
+    {
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(0, 0), new Vector2(8f, 7f), 0f, whatisPlayer);
+        foreach (Collider2D col in colliders)
+        {
+            if (col != null)
+            {
+                col.gameObject.GetComponentInParent<player>().TakeDamage(DmgDeal);
+            }
+        }
+    }
+
+    protected override void Attacking()
+    {
+        if (!isAttacking)
+        {
+            if (AttackTimer >= AttackDelay)
+            {
+                animator.ResetTrigger("Preparing");
+                animator.SetTrigger("Attacking");
+            }
+            else
+            {
+                if (!isPreparing)
+                {
+                    isPreparing = true;
+                    animator.SetTrigger("Preparing");
+                }
+                AttackTimer += Time.deltaTime;
+                Debug.Log("Preparing To Attack");
+            }
+        }
+    }
+
+    public override void OnAttackEnd()
      {
          base.OnAttackEnd();
          
@@ -62,71 +100,7 @@ public class Mrkev : Enemy
     protected override void Update()
     {
         base.Update();
-        switch (State)
-        {
-            case EnemyState.Idling:
-                if (idlingState == IdlingState.Hidden)
-                {
-                    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
-                    foreach (Collider2D collision in hits)
-                    {
-                        if (collision != null)
-                        {
-                            animator.ResetTrigger("Hide");
-                            idlingState = IdlingState.Popped;
-                            State = EnemyState.Attacking;
-                            
-                        }
-                    }
-            
-                }
-                if(idlingState == IdlingState.Popped)
-                {
-                    // hides after x seconds...
-                    if (hideTimer >= hideDelay)
-                    {
-                        
-                        hideTimer = 0f;
-                        animator.ResetTrigger("Idling");
-                        animator.SetTrigger("Hide");
-                        idlingState = IdlingState.Hidden;
-                    }
-                    else
-                    {
-                        Debug.Log("countdown"+ hideTimer);
-                        hideTimer += Time.deltaTime;
-                    }
-                }
-
-                break;
-            case EnemyState.Attacking:
-                if (!isAttacking)
-                {
-                    if (AttackTimer >= AttackDelay)
-                    {
-                        animator.ResetTrigger("Preparing");
-                        animator.SetTrigger("Attacking");
-                    }
-                    else
-                    {
-                        if (!isPreparing)
-                        {
-                            isPreparing = true;
-                            animator.SetTrigger("Preparing");
-                        }
-                        AttackTimer += Time.deltaTime;
-                        Debug.Log("Preparing To Attack");
-                    }
-                }
-                
-                
-                //attack code...
-                    
-                
-                //reset to Idling state
-
-                break;
-        }
+        
         
         
         

@@ -9,7 +9,7 @@ public class Enemy: MonoBehaviour
     public int HP = 100;
     private GameObject player;
     private Rigidbody2D playerbody;
-    private Vector3 moveDirection;
+    private Vector3 moveDirection = new Vector3(1f,0f,0);
     public Rigidbody2D enemybody;
     public float KnockBackFoce = 10f;
     public LayerMask whatisPlayer;
@@ -18,17 +18,33 @@ public class Enemy: MonoBehaviour
     public Animator animator;
     public float AgroRange;
     public float AttackDelay = 0.5f;
+    public float idleMoveSpeed = 10f;
+    public float attackMoveSpeed = 20f;
+    public LayerMask WhatisGround;
+    public Transform attackPosition;
+    public Transform feetPosition;
+    public float movementSmoothing;
+    public float moveDistance;
+    private float moveCurrentDistance;
+    public float moveWait;
+    private float currentMoveWait;
+    private Vector3 velocity = Vector3.zero;
     protected bool isAttacking;
     protected bool isPreparing;
     public double DmgDeal;
+    public float attackRange = 3f;
     protected float AttackTimer;
     protected EnemyState State = EnemyState.Idling;
     protected enum EnemyState
     {
-        Popped, Stunned, Attacking, Idling
+        Stunned, Attacking, Idling
     }
     protected virtual void Awake()
     {
+        if (enemybody == null)
+        {
+            enemybody = gameObject.GetComponent<Rigidbody2D>();
+        }
         if (player == null)
         {
             player = GameObject.Find("Player");
@@ -42,7 +58,116 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Update()
     {
+        switch (State)
+        {
+            case EnemyState.Idling:
+                Idling();
+                break;
+            
+            case EnemyState.Attacking:
+                Attacking();
+                break;
+        }
+    }
+
+    protected virtual void Idling()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
+        foreach (Collider2D collision in hits)
+        {
+            if (collision.gameObject != gameObject)
+            {
+                            
+                State = EnemyState.Attacking;
+                            
+            }
+        }
         
+        Move(idleMoveSpeed);
+    }
+
+    protected virtual void Attacking()
+    {
+        if (!FacingPlayer())
+        {
+            Flip();
+        }
+        if (PlayerInAttackRange())
+        {
+            if (!isAttacking)
+            {
+                if (AttackTimer >= AttackDelay)
+                {
+                    animator.ResetTrigger("Preparing");
+                    animator.SetTrigger("Attacking");
+                }
+                else
+                {
+                    if (!isPreparing)
+                    {
+                        isPreparing = true;
+                        animator.SetTrigger("Preparing");
+                    }
+                    AttackTimer += Time.deltaTime;
+                    Debug.Log("Preparing To Attack");
+                }
+            }
+        }
+        else
+        {
+            Move(attackMoveSpeed);
+        }
+        
+    }
+
+    protected virtual void Move(float moveSpeed)
+    {
+        if (moveCurrentDistance >= moveDistance)
+        {
+            moveCurrentDistance = 0;
+            currentMoveWait = moveWait;
+            Flip();
+            
+        }
+        if (!CanMove())
+        {
+          Flip();   
+        }
+
+        if (currentMoveWait <= 0)
+        {
+            moveCurrentDistance += 10f * Time.deltaTime;
+            Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
+            enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
+        }
+        else
+        {
+            currentMoveWait -= Time.deltaTime;
+        }
+        
+        
+        
+        
+    }
+
+    protected virtual bool CanMove()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(feetPosition.position, moveDirection, 1f, WhatisGround);
+        return hit.collider == null;
+    }
+
+    protected bool PlayerInAttackRange()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(attackPosition.position, moveDirection, attackRange, whatisPlayer);
+        return hit.collider != null;
+    }
+
+    protected bool FacingPlayer()
+    {
+        
+        Vector3 playerDirection = player.transform.position - gameObject.transform.position;
+        
+        return Vector3.Dot(playerDirection, moveDirection) > 0;
     }
 
     protected virtual void FixedUpdate()
@@ -66,7 +191,14 @@ public class Enemy: MonoBehaviour
 
     public virtual void DealDmg()
     {
-        
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition.position, 3f, whatisPlayer);
+        foreach (Collider2D col in colliders)
+        {
+            if (col != null)
+            {
+                col.gameObject.GetComponentInParent<player>().TakeDamage(DmgDeal);
+            }
+        }
     }
     public void OnAttackStart()
     {
@@ -78,6 +210,15 @@ public class Enemy: MonoBehaviour
     {
         animator.SetTrigger("IsDying");
         Destroy(gameObject);
+    }
+
+    protected void Flip()
+    {
+        moveDirection.x *= -1;
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
     // Update is called once per frame
     public void TakeDamage(int damage)

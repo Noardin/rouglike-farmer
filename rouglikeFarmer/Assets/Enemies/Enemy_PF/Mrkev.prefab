@@ -205,6 +205,15 @@ MonoBehaviour:
   animator: {fileID: 7505821630005557605}
   AgroRange: 2
   AttackDelay: 0.5
+  idleMoveSpeed: 0
+  attackMoveSpeed: 0
+  WhatisGround:
+    serializedVersion: 2
+    m_Bits: 0
+  attackPosition: {fileID: 6805183681618374691}
+  feetPosition: {fileID: 0}
+  movementSmoothing: 0
+  moveDistance: 0
+  moveWait: 0
   DmgDeal: 0.5
   hideDelay: 3
-  attackCollider: {fileID: 0}

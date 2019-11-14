@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -16,7 +17,7 @@ public class Enemy: MonoBehaviour
     public GameObject particleSystem;
     public Color HurtParticleColor;
     public Animator animator;
-    public float AgroRange;
+    public float AgroRange = 3f;
     public float AttackDelay = 0.5f;
     public float idleMoveSpeed = 10f;
     public float attackMoveSpeed = 20f;
@@ -30,10 +31,12 @@ public class Enemy: MonoBehaviour
     private float currentMoveWait;
     private Vector3 velocity = Vector3.zero;
     protected bool isAttacking;
+    public float looseAgroRange = 5f;
     protected bool isPreparing;
     public double DmgDeal;
-    public float attackRange = 3f;
+    public float attackRange = 1f;
     protected float AttackTimer;
+    public PopUps popUps;
     protected EnemyState State = EnemyState.Idling;
     protected enum EnemyState
     {
@@ -72,22 +75,39 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Idling()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
-        foreach (Collider2D collision in hits)
+        if (IsInRange(AgroRange, whatisPlayer))
         {
-            if (collision.gameObject != gameObject)
-            {
-                            
-                State = EnemyState.Attacking;
-                            
-            }
+            State = EnemyState.Attacking;
         }
         
         Move(idleMoveSpeed);
     }
 
+    protected bool IsInRange(float range, LayerMask whatToLookFor)
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range, whatToLookFor);
+        foreach (Collider2D collision in hits)
+        {
+            if (collision.gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     protected virtual void Attacking()
     {
+        if (!IsInRange(looseAgroRange, whatisPlayer))
+        {
+            isAttacking = false;
+            isPreparing = false;
+            AttackTimer = 0;
+            State = EnemyState.Idling;
+            animator.ResetTrigger("Attacking");
+            animator.SetTrigger("Idling");
+            return;
+        }
         if (!FacingPlayer())
         {
             Flip();
@@ -106,6 +126,7 @@ public class Enemy: MonoBehaviour
                     if (!isPreparing)
                     {
                         isPreparing = true;
+                        popUps.PopUp(PopUps.PopUpTypes.Exclemation, AttackDelay,1.2f, 1.1f );
                         animator.SetTrigger("Preparing");
                     }
                     AttackTimer += Time.deltaTime;

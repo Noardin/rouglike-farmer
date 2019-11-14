@@ -25,18 +25,12 @@ public class Mrkev : Enemy
      {
          if (idlingState == IdlingState.Hidden)
          {
-             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AgroRange, whatisPlayer);
-             foreach (Collider2D collision in hits)
+             if (IsInRange(AgroRange, whatisPlayer))
              {
-                 if (collision != null)
-                 {
-                     animator.ResetTrigger("Hide");
-                     idlingState = IdlingState.Popped;
-                     State = EnemyState.Attacking;
-                            
-                 }
+                 animator.ResetTrigger("Hide");
+                 idlingState = IdlingState.Popped;
+                 State = EnemyState.Attacking;
              }
-            
          }
          if(idlingState == IdlingState.Popped)
          {
@@ -81,6 +75,7 @@ public class Mrkev : Enemy
                 if (!isPreparing)
                 {
                     isPreparing = true;
+                    popUps.PopUp(PopUps.PopUpTypes.Exclemation, AttackDelay,1.8f, 1.1f );
                     animator.SetTrigger("Preparing");
                 }
                 AttackTimer += Time.deltaTime;

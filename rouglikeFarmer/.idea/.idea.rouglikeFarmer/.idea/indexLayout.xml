@@ -31,6 +31,7 @@
       <Path>DesignTimeBuild</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UIElementsSchema</Path>
       <Path>obj</Path>
       <Path>v15</Path>

@@ -31,6 +31,7 @@
         <e p="Parallax.cs" t="Include" />
         <e p="player.cs" t="Include" />
         <e p="PlayerMovement.cs" t="Include" />
+        <e p="PopUps.cs" t="Include" />
         <e p="Rays.cs" t="Include" />
         <e p="ShockWaveScript.cs" t="Include" />
         <e p="shockwaveSpawner.cs" t="Include" />

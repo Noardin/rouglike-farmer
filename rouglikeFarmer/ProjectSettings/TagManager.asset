@@ -21,7 +21,7 @@ TagManager:
   - Obstacle
   - EnemyAttack
   - Edges
-  - 
+  - ForeGround
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1723928837
     locked: 0
   - name: PopUps
     uniqueID: 610836985

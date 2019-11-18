@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
+    public Health_Manager healthManager;
+    public Transform position;
+    private void Awake()
     {
-        
+        healthManager = GetComponentInChildren<Health_Manager>();
+        position = transform;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(double damage)
     {
-        
-    }
-    public void TakeDamage(double Damage)
-    {
-        Health_Manager healthManager = GetComponentInChildren<Health_Manager>();
-        healthManager.TakeDamage(Damage);
+        healthManager.TakeDamage(damage);
     }
 
 

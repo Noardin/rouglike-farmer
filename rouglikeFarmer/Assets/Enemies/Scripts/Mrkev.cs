@@ -18,6 +18,7 @@ public class Mrkev : Enemy
     protected override void Start()
     {
         base.Start();
+        undamagable = true;
         Debug.Log("Start");
     }
 
@@ -30,6 +31,7 @@ public class Mrkev : Enemy
                  animator.ResetTrigger("Hide");
                  idlingState = IdlingState.Popped;
                  State = EnemyState.Attacking;
+                 
              }
          }
          if(idlingState == IdlingState.Popped)
@@ -39,6 +41,7 @@ public class Mrkev : Enemy
              {
                         
                  hideTimer = 0f;
+                 undamagable = true;
                  animator.ResetTrigger("Idling");
                  animator.SetTrigger("Hide");
                  idlingState = IdlingState.Hidden;
@@ -67,6 +70,7 @@ public class Mrkev : Enemy
         {
             if (AttackTimer >= AttackDelay)
             {
+                undamagable = false;
                 animator.ResetTrigger("Preparing");
                 animator.SetTrigger("Attacking");
             }

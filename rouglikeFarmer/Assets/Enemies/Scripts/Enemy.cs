@@ -34,6 +34,7 @@ public class Enemy: MonoBehaviour
     public float looseAgroRange = 5f;
     protected bool isPreparing;
     public double DmgDeal;
+    protected bool undamagable;
     public float attackRange = 1f;
     protected float AttackTimer;
     public PopUps popUps;
@@ -244,14 +245,16 @@ public class Enemy: MonoBehaviour
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
-        GameObject instanceParticle = Instantiate(particleSystem,transform.position,Quaternion.identity);
-        ParticleSystem.MainModule mainModule = instanceParticle.GetComponent<ParticleSystem>().main;
-        mainModule.startColor = HurtParticleColor;
+        if (!undamagable)
+        {
+            GameObject instanceParticle = Instantiate(particleSystem,transform.position,Quaternion.identity);
+            ParticleSystem.MainModule mainModule = instanceParticle.GetComponent<ParticleSystem>().main;
+            mainModule.startColor = HurtParticleColor;
 //        Debug.Log("player", player);
 //        playerbody = player.GetComponent<Rigidbody2D>();
 //        moveDirection = enemybody.transform.position - playerbody.transform.position;
 //        Debug.Log("dircion"+moveDirection.normalized);
-        HP -= damage;
+            HP -= damage;
 //        float xForce;
 //        if (moveDirection.x > 0)
 //        {
@@ -266,11 +269,13 @@ public class Enemy: MonoBehaviour
 //
 //        GetComponent<Rigidbody2D>().AddForce(new Vector3(xForce*KnockBackFoce, 5, 0),ForceMode2D.Impulse);
         
-        if(HP <= 0)
-        {
-            Die();
+            if(HP <= 0)
+            {
+                Die();
 
+            }  
         }
+        
 
     }
 }

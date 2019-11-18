@@ -401,7 +401,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 		
 		Debug.Log("pull2");
-		for(var i=0; i <5; i++){
+		while(!m_Grounded){
 		
 			transform.position += DashdDircetion * Time.deltaTime * 5f;
 			yield return new WaitForSeconds(.002f);

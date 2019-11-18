@@ -1,9 +1,5 @@
-DropDownAttack
-- animace drop down attacku 
-	-chvili visi ve vzduchu a natahuje potom smash
-
 Pohyb
--rollovani
-	-skok do kotrmelce
--Attack2,3
+-Attack 3
 
+Pause Menu
+Save/load

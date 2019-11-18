@@ -23,47 +23,51 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (SlideTimer > 0)
+        if (!PauseMenu.paused)
         {
-            SlideTimer -= Time.deltaTime;
-        } 
-        if (!animator.GetBool("IsClimbing")){
+            if (SlideTimer > 0)
+                {
+                    SlideTimer -= Time.deltaTime;
+                } 
+                if (!animator.GetBool("IsClimbing")){
+                
+                    if (!animator.GetBool("IsAttacking"))
+                    {
+                        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         
-            if (!animator.GetBool("IsAttacking"))
-            {
-                horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-            }
-            else
-            {
-                horizontalMove = 0f;
-            }
-
-            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-            if (Input.GetButtonDown("Jump"))
-            {
-                jump = true;
-                animator.SetBool("IsJumping", true);
-            }
-
-            if (Input.GetButtonDown("Crouch"))
-            {
-                crouch = true;
-            }
-            else if (Input.GetButtonUp("Crouch"))
-            {
-                crouch = false;
-            }
-
-            if (Input.GetButtonDown("Fire2") && !animator.GetBool("LedgeHooking") && !animator.GetBool("IsSliding") &&
-                SlideTimer <= 0)
-            {
-                SlideTimer = slideDelay;
-                dash = true;
-                animator.SetBool("IsSliding", true);
-                Debug.Log("slide");
-            }
+                    }
+                    else
+                    {
+                        horizontalMove = 0f;
+                    }
+        
+                    animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+                    if (Input.GetButtonDown("Jump"))
+                    {
+                        jump = true;
+                        animator.SetBool("IsJumping", true);
+                    }
+        
+                    if (Input.GetButtonDown("Crouch"))
+                    {
+                        crouch = true;
+                    }
+                    else if (Input.GetButtonUp("Crouch"))
+                    {
+                        crouch = false;
+                    }
+        
+                    if (Input.GetButtonDown("Fire2") && !animator.GetBool("LedgeHooking") && !animator.GetBool("IsSliding") &&
+                        SlideTimer <= 0)
+                    {
+                        SlideTimer = slideDelay;
+                        dash = true;
+                        animator.SetBool("IsSliding", true);
+                        Debug.Log("slide");
+                    }
+                }
         }
+        
     }
     public void OnLanding()
     {

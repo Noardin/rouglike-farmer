@@ -24,6 +24,8 @@ public class PopUps : MonoBehaviour
         SPACE,
     }
 
+    public PopUpTypes popUpType;
+
     private void Awake()
     {
         _SR = gameObject.GetComponent<SpriteRenderer>();

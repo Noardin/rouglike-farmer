@@ -83,4 +83,9 @@ public class Health_Manager : MonoBehaviour
         HP -= Damage;
 
     }
+
+    public void Heal(double amount)
+    {
+        HP += amount;
+    }
 }

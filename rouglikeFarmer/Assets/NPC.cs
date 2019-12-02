@@ -13,14 +13,19 @@ public class NPC : MonoBehaviour
     public Transform DialogWindowTransform;
     private GameObject DialogWindow;
     public PopUps PopUps;
-    private UnityEvent TriggerByButtonEvent;
+    private UnityEvent TriggerByButtonEvent = new UnityEvent();
+     private void Start()
+    {
+        TriggerByButtonEvent.AddListener(OnTriggerEventFunction);
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EventTrigger"))
         {
             Debug.Log("entered");
-            TriggerSystem.TriggerByButton(EventTriggerSystem.button.ENTER, TriggerByButtonEvent);
+            TriggerSystem.TriggerByButton(EventTriggerSystem.button.SPACE, TriggerByButtonEvent);
             
         }
         
@@ -32,23 +37,28 @@ public class NPC : MonoBehaviour
         DialogWindow = Instantiate(Dialog, DialogWindowTransform);
         DialogWindow.transform.parent = DialogCanvas.transform;
         Dialog dialog = DialogWindow.GetComponent<Dialog>();
-        dialog.Say(text);
+        dialog.Say(text, false);
+    }
+
+    protected void LeaveDialog()
+    {
+        Dialog dialog = DialogWindow.GetComponent<Dialog>();
+        dialog.LeaveDialog();
     }
 
     public void OnTriggerEventFunction()
     {
+        Debug.Log("triggerFunction");
         StartDialog("ahoj");
     }
 
-    private void Start()
-    {
-        TriggerByButtonEvent.AddListener(OnTriggerEventFunction);
-    }
-
+   
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EventTrigger"))
         {
+            TriggerSystem.CancelTriggerByButton();
+            LeaveDialog();
             Debug.Log("exited");
         }
         

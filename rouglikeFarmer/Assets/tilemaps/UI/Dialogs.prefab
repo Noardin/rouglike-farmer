@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogTextGUI: {fileID: 2923011313302972313}
+  Background: {fileID: 4526877518223173719}
 --- !u!1 &4259888953486716155
 GameObject:
   m_ObjectHideFlags: 0

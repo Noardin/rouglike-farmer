@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8147562347816749475}
   - component: {fileID: 3264490027953918517}
   - component: {fileID: 1636658652621450555}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PopUps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,10 @@ MonoBehaviour:
   popUpSprites:
   - {fileID: 21300000, guid: e6babbeada99d3e49b9247aafc6689f6, type: 3}
   - {fileID: 21300000, guid: 0e2625362efbf8e4a82ae9c8815d500f, type: 3}
+  - {fileID: 21300000, guid: 0e2625362efbf8e4a82ae9c8815d500f, type: 3}
+  - {fileID: 21300000, guid: 0e2625362efbf8e4a82ae9c8815d500f, type: 3}
+  - {fileID: 21300000, guid: 0e2625362efbf8e4a82ae9c8815d500f, type: 3}
+  popUpType: 0
 --- !u!212 &1636658652621450555
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -19,6 +19,17 @@ public class EventTriggerSystem : MonoBehaviour
       ENTER, ESC, SPACE
    }
 
+   private void Start()
+   {
+      float x = transform.localScale.x;
+      float y = transform.localScale.y;
+      Transform parentTransform = transform.parent;
+      Debug.Log("scalex" + parentTransform.localScale.x);
+      float _scaleX = x/parentTransform.localScale.x;
+      float _scaleY = y/parentTransform.localScale.y;
+      transform.localScale = new Vector3(_scaleX,_scaleY );
+   }
+
    KeyCode ButtonToKeyCode(button button)
    {
       switch (button)
@@ -54,11 +65,21 @@ public class EventTriggerSystem : MonoBehaviour
       KeyToPress = ButtonToKeyCode(button);
       if (KeyToPress != KeyCode.None)
       {
+         
          PopUpType = ButtonToPopUpTypes(button);
          popUps.ShowPopUp(PopUpType);
          this.EventToTrigger = EventToTrigger;
+         WaitingForTrigger = true;
       }
       
+   }
+
+   public void CancelTriggerByButton()
+   {
+      WaitingForTrigger = false;
+      KeyToPress = KeyCode.None;
+      EventToTrigger = null;
+      popUps.HidePopUp();
    }
    private void Update()
    {
@@ -66,8 +87,11 @@ public class EventTriggerSystem : MonoBehaviour
       {
          if (Input.GetKeyDown(KeyToPress))
          {
+            Debug.Log("triggered");
             popUps.HidePopUp();
             EventToTrigger.Invoke();
+            EventToTrigger = null;
+            WaitingForTrigger = false;
 
          }
       }

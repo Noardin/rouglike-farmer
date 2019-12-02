@@ -8,11 +8,17 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI dialogTextGUI;
+    public Image Background;
 
-    public void Say(string text)
+    public void LeaveDialog()
+    {
+        Destroy(gameObject);
+    }
+    public void Say(string text, bool background)
     {
         dialogTextGUI.text = "";
         StartCoroutine(SetText(text));
+        Background.enabled = background;
     }
     private IEnumerator SetText(string text)
     {

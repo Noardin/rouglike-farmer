@@ -58,7 +58,6 @@ public class Hitboxcheck : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        Debug.Log("isHit");
         if (col.gameObject.layer == LayerMask.NameToLayer("EnemyAttack") && isBeeingHit == false&& !Invincible)
         {
             EnemyTransform = col.gameObject.GetComponentInParent<Rigidbody2D>().transform;

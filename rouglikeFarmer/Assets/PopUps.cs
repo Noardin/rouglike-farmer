@@ -18,7 +18,10 @@ public class PopUps : MonoBehaviour
     public Sprite[] popUpSprites;
     public enum PopUpTypes
     {
-        Exclemation, Enter
+        Exclemation, 
+        ENTER,
+        ESC,
+        SPACE,
     }
 
     private void Awake()

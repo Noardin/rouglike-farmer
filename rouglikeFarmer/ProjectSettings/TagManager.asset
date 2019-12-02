@@ -7,6 +7,7 @@ TagManager:
   - PlayerHitZone
   - Edge
   - EventTrigger
+  - PickUp
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - Obstacle
   - NPC
   - Edges
+  - PopUps
   - ForeGround
-  - 
   - 
   - 
   - 

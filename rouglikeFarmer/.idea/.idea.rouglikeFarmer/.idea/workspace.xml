@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4872fca7-792f-4434-9f39-8768475196be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventSystem/EventTriggerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventSystem/EventTriggerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hitboxcheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hitboxcheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NPCs/Prefab/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NPCs/Prefab/NPC.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PopUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PopUps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/dalt7ak-f1e3636a-fc98-4eae-9003-6c13c9303ed4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/dalt7ak-f1e3636a-fc98-4eae-9003-6c13c9303ed4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/popUPS/PopUps.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/popUPS/PopUps.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tilemaps/UI/Dialogs.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tilemaps/UI/Dialogs.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/worldSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/worldSettings.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4872fca7-792f-4434-9f39-8768475196be" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,28 +12,29 @@
     <session id="782719506">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1322" />
+          <entry key="cs" value="1383" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1322" />
+          <entry key="C#" value="1383" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="5" />
+          <entry key="cs" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="5" />
+          <entry key="C#" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -133,14 +118,41 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/PickUps/Hearth/Hearth.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="357">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <marker date="1575308447682" expanded="false" signature="6:78" ph="..." />
-                <marker date="1575308447682" expanded="true" signature="109:552" ph="{...}" />
-                <marker date="1575308447682" expanded="true" signature="229:352" ph="{...}" />
-                <marker date="1575308447682" expanded="true" signature="396:474" ph="{...}" />
-                <marker date="1575308447682" expanded="true" signature="505:550" ph="{...}" />
+                <marker date="1575308879894" expanded="false" signature="6:78" ph="..." />
+                <marker date="1575308879894" expanded="true" signature="109:552" ph="{...}" />
+                <marker date="1575308879894" expanded="true" signature="229:352" ph="{...}" />
+                <marker date="1575308879894" expanded="true" signature="396:474" ph="{...}" />
+                <marker date="1575308879894" expanded="true" signature="505:550" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Health_Manager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <marker date="1575308879945" expanded="false" signature="6:114" ph="..." />
+                <marker date="1575308879945" expanded="true" signature="159:2024" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="564:585" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="643:1849" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="670:741" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="754:899" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="954:1004" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1053:1843" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1089:1164" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1181:1488" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1257:1365" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1369:1457" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1520:1668" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1685:1833" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1892:1951" ph="{...}" />
+                <marker date="1575308879945" expanded="true" signature="1988:2022" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -286,15 +298,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Mrkev.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="75" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -371,6 +374,7 @@
         <option value="$PROJECT_DIR$/Assets/worldSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Hitboxcheck.cs" />
         <option value="$PROJECT_DIR$/Assets/PickUps/PickUps.cs" />
+        <option value="$PROJECT_DIR$/Assets/Health_Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/PickUps/Hearth/Hearth.cs" />
       </list>
     </option>
@@ -504,12 +508,12 @@
       <workItem from="1573638235753" duration="10900000" />
       <workItem from="1573728559389" duration="18837000" />
       <workItem from="1574675561497" duration="14851000" />
-      <workItem from="1575300788800" duration="6914000" />
+      <workItem from="1575300788800" duration="7583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183709000" />
+    <option name="totallyTimeSpent" value="184378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,8 +525,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119936034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -692,9 +695,6 @@
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Health_Manager.cs">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -941,16 +941,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Health_Manager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <marker date="1575308879945" expanded="false" signature="6:114" ph="..." />
+            <marker date="1575308879945" expanded="true" signature="159:2024" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="564:585" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="643:1849" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="670:741" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="754:899" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="954:1004" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1053:1843" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1089:1164" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1181:1488" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1257:1365" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1369:1457" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1520:1668" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1685:1833" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1892:1951" ph="{...}" />
+            <marker date="1575308879945" expanded="true" signature="1988:2022" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/PickUps/Hearth/Hearth.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="357">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <marker date="1575308447682" expanded="false" signature="6:78" ph="..." />
-            <marker date="1575308447682" expanded="true" signature="109:552" ph="{...}" />
-            <marker date="1575308447682" expanded="true" signature="229:352" ph="{...}" />
-            <marker date="1575308447682" expanded="true" signature="396:474" ph="{...}" />
-            <marker date="1575308447682" expanded="true" signature="505:550" ph="{...}" />
+            <marker date="1575308879894" expanded="false" signature="6:78" ph="..." />
+            <marker date="1575308879894" expanded="true" signature="109:552" ph="{...}" />
+            <marker date="1575308879894" expanded="true" signature="229:352" ph="{...}" />
+            <marker date="1575308879894" expanded="true" signature="396:474" ph="{...}" />
+            <marker date="1575308879894" expanded="true" signature="505:550" ph="{...}" />
           </folding>
         </state>
       </provider>

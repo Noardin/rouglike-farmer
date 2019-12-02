@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EventTrigger"))
         {
+            Debug.Log("entered");
             PopUps.ShowPopUp(PopUps.PopUpTypes.Enter);
         }
         
@@ -33,6 +34,7 @@ public class NPC : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EventTrigger"))
         {
+            Debug.Log("exited");
             PopUps.HidePopUp();
         }
         

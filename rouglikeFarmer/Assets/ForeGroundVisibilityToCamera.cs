@@ -35,11 +35,9 @@ public class ForeGroundVisibilityToCamera : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("somethingEntered");
 
         if (other.gameObject.layer == player.layer)
         {
-            Debug.Log("PlayerEntered");
             fadeToMin = true;
             fadeToMax = false;
         }

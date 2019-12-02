@@ -25,7 +25,7 @@ public class NPC : MonoBehaviour
         if (other.gameObject.CompareTag("EventTrigger"))
         {
             Debug.Log("entered");
-            TriggerSystem.TriggerByButton(EventTriggerSystem.button.SPACE, TriggerByButtonEvent);
+            TriggerSystem.TriggerByButton(EventTriggerSystem.button.ENTER, TriggerByButtonEvent);
             
         }
         
@@ -42,8 +42,12 @@ public class NPC : MonoBehaviour
 
     protected void LeaveDialog()
     {
-        Dialog dialog = DialogWindow.GetComponent<Dialog>();
-        dialog.LeaveDialog();
+        if (DialogWindow != null)
+        {
+            Dialog dialog = DialogWindow.GetComponent<Dialog>();
+            dialog.LeaveDialog();
+        }
+        
     }
 
     public void OnTriggerEventFunction()

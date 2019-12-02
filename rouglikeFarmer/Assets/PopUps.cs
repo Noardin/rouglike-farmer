@@ -37,7 +37,6 @@ public class PopUps : MonoBehaviour
         float x = transform.localScale.x;
         float y = transform.localScale.y;
         Transform parentTransform = transform.parent;
-        Debug.Log("scalex" + parentTransform.localScale.x);
         _scaleX = x/parentTransform.localScale.x;
         _scaleY = y/parentTransform.localScale.y;
         transform.localScale = new Vector3(_scaleX,_scaleY );
@@ -47,7 +46,7 @@ public class PopUps : MonoBehaviour
     public void PopUp(PopUpTypes popUpType,float time)
     {
         _animated = false;
-        Debug.Log("HASHCODE "+popUpType.GetHashCode());
+        
         _SR.sprite = popUpSprites[popUpType.GetHashCode()];
         _SR.enabled = true;
         _popUpTimer = time;
@@ -58,7 +57,6 @@ public class PopUps : MonoBehaviour
     public void ShowPopUp(PopUpTypes popUpType)
     {
         _animated = false;
-        Debug.Log("HASHCODE "+popUpType.GetHashCode());
         _SR.sprite = popUpSprites[popUpType.GetHashCode()];
         _SR.enabled = true;
         isTimed = false;

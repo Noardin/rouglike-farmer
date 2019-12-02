@@ -24,7 +24,7 @@ public class EventTriggerSystem : MonoBehaviour
       float x = transform.localScale.x;
       float y = transform.localScale.y;
       Transform parentTransform = transform.parent;
-      Debug.Log("scalex" + parentTransform.localScale.x);
+      
       float _scaleX = x/parentTransform.localScale.x;
       float _scaleY = y/parentTransform.localScale.y;
       transform.localScale = new Vector3(_scaleX,_scaleY );

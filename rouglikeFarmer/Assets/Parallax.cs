@@ -21,9 +21,8 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         previousCamPos = cam.position;
-        Debug.Log("camx:" + cam.position.x);
 
-       parallaxScales = new float[backgrounds.Length];
+        parallaxScales = new float[backgrounds.Length];
 
         for (int i = 0; i < backgrounds.Length; i++)
         {

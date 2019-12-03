@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void Exit()
     {
         SaveSystem.SavePlayer(player);
+        Loader.Load(Loader.Scene.MainMenu);
     }
 
     public void Load()

@@ -66,8 +66,8 @@ MonoBehaviour:
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 256
-  flySpeed: 10
-  flySmoothing: 0.2
+  flySpeed: 100
+  flySmoothing: 1
   IsFying: 0
   pickUpType: 0
   HpRestoreNumber: 1

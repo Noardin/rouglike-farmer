@@ -24,9 +24,7 @@ public class NPC : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EventTrigger"))
         {
-            Debug.Log("entered");
             TriggerSystem.TriggerByButton(EventTriggerSystem.button.ENTER, TriggerByButtonEvent);
-            
         }
         
     }
@@ -52,7 +50,6 @@ public class NPC : MonoBehaviour
 
     public void OnTriggerEventFunction()
     {
-        Debug.Log("triggerFunction");
         StartDialog("ahoj");
     }
 

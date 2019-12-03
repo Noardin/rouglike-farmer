@@ -37,7 +37,7 @@ public class EventTriggerSystem : MonoBehaviour
          case button.ESC:
             return KeyCode.Escape;
          case button.ENTER:
-            return KeyCode.KeypadEnter;
+            return KeyCode.Return;
          case button.SPACE:
             return KeyCode.Space;
       }

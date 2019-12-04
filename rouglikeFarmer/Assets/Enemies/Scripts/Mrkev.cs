@@ -19,7 +19,7 @@ public class Mrkev : Enemy
     {
         base.Start();
         undamagable = true;
-        Debug.Log("Start");
+   
     }
 
     protected override void Idling()
@@ -54,7 +54,8 @@ public class Mrkev : Enemy
 
     public override void DealDmg()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(0, 0), new Vector2(8f, 7f), 0f, whatisPlayer);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(0.2f, 1f), 0f, whatisPlayer);
+        
         foreach (Collider2D col in colliders)
         {
             if (col != null)
@@ -83,7 +84,7 @@ public class Mrkev : Enemy
                     animator.SetTrigger("Preparing");
                 }
                 AttackTimer += Time.deltaTime;
-                Debug.Log("Preparing To Attack");
+             
             }
         }
     }

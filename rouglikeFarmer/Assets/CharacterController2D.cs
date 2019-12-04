@@ -371,7 +371,7 @@ public class CharacterController2D : MonoBehaviour
 		animator.SetBool("LedgeHooking", false);
 		
 		Vector3 pullDirection = new Vector3(0f, 1f, 0f);
-		Debug.Log("pulling");
+
 		bool MustClimbe;
 		RaycastHit2D ray = Physics2D.Raycast(m_GroundCheck.position, DashdDircetion, 1f, WhatIsEdge );
 		if (ray.collider == null)
@@ -400,7 +400,7 @@ public class CharacterController2D : MonoBehaviour
 			
 		}
 		
-		Debug.Log("pull2");
+	
 		while(!m_Grounded){
 		
 			transform.position += DashdDircetion * Time.deltaTime * 5f;

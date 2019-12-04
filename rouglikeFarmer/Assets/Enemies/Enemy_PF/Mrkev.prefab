@@ -220,6 +220,7 @@ MonoBehaviour:
   DmgDeal: 0.5
   attackRange: 1
   popUps: {fileID: 49328861474777543}
+  SR: {fileID: 8881514650253191752}
   hideDelay: 3
 --- !u!1001 &3306359235597532146
 PrefabInstance:

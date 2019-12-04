@@ -19,6 +19,7 @@ public class Health_Manager : MonoBehaviour
     public Sprite fullHearth;
     public Sprite halfHearth;
     public Sprite emptyHearth;
+    public ParticleSystem healParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -87,5 +88,6 @@ public class Health_Manager : MonoBehaviour
     public void Heal(double amount)
     {
         HP += amount;
+        healParticle.Play();
     }
 }

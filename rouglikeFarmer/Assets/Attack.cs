@@ -28,21 +28,26 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAttacking)
+        if (!PauseMenu.paused)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (!isAttacking)
             {
-                animator.SetBool("IsAttacking", true);
-                Attackfun();
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    animator.SetBool("IsAttacking", true);
+                    Attackfun();
+                }
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                animator.SetInteger("Attack", 0);
+                currentAttack = 0;
+                isAttacking = false;
+                animator.SetBool("IsAttacking", false);
             }
         }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            animator.SetInteger("Attack", 0);
-            currentAttack = 0;
-            isAttacking = false;
-            animator.SetBool("IsAttacking", false);
-        }
+       
+        
 
     }
 
@@ -55,7 +60,7 @@ public class Attack : MonoBehaviour
     public void onAttackStart()
     {
         isAttacking = true;
-        Debug.Log("attack has started");
+    
         animator.SetBool("IsAttacking", true);
     }
        
@@ -86,13 +91,10 @@ public class Attack : MonoBehaviour
             
             if (colliders[i].GetComponent<Enemy>() != null)
             {
-                Debug.Log("dropdownDeal");
+                
                 colliders[i].GetComponent<Enemy>().TakeDamage(10);
             }
-            else
-            {
-                Debug.Log("missingEnemyScript");
-            }
+            
         }
     }
 
@@ -100,12 +102,12 @@ public class Attack : MonoBehaviour
     {
         if (currentAttack <= 3)
         {
-            Debug.Log(currentAttack);
+        
             currentAttack += 1;
         }
         else
         {
-            Debug.Log("again");
+          
             currentAttack = 0;
 
         }

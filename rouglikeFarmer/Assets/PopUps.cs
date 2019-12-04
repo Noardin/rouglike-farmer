@@ -16,6 +16,7 @@ public class PopUps : MonoBehaviour
     private SpriteRenderer _SR;
     private bool isTimed;
     public Sprite[] popUpSprites;
+    private Transform parentTransform;
     public enum PopUpTypes
     {
         Exclemation, 
@@ -26,23 +27,30 @@ public class PopUps : MonoBehaviour
 
     public PopUpTypes popUpType;
 
-    private void Awake()
-    {
-        _SR = gameObject.GetComponent<SpriteRenderer>();
-        
-    }
-
-    protected virtual void Start()
+    void AdjustSize()
     {
         float x = transform.localScale.x;
         float y = transform.localScale.y;
-        Transform parentTransform = transform.parent;
+        parentTransform = transform.root;
         _scaleX = x/parentTransform.localScale.x;
         _scaleY = y/parentTransform.localScale.y;
         transform.localScale = new Vector3(_scaleX,_scaleY );
     }
+    protected virtual void Awake()
+    {
+        AdjustSize();
+        _SR = gameObject.GetComponent<SpriteRenderer>();
+    }
 
-   
+    private void Update()
+    {
+        if (parentTransform.localScale != transform.root.localScale)
+        {
+            AdjustSize();
+        }
+    }
+
+
     public void PopUp(PopUpTypes popUpType,float time)
     {
         _animated = false;
@@ -74,7 +82,6 @@ public class PopUps : MonoBehaviour
         _animated = true;
         _maxScale = maxScale;
         _minScale = minScale;
-        Debug.Log("HASHCODE "+popUpType.GetHashCode());
         _SR.sprite = popUpSprites[popUpType.GetHashCode()];
         _SR.enabled = true;
         _popUpTimer = time;

@@ -7,11 +7,6 @@ public class PauseMenu : MonoBehaviour
     public static bool paused = false;
     public player player;
     public GameObject pauseMenuUI;
-
-    void Awake()
-    {
-        Time.timeScale = 0f;   
-    }
     // Update is called once per frame
     void Update()
     {
@@ -45,18 +40,10 @@ public class PauseMenu : MonoBehaviour
     public void Exit()
     {
         SaveSystem.SavePlayer(player);
+        paused = false;
         Loader.Load(Loader.Scene.MainMenu);
+        Time.timeScale = 1f;
+
     }
 
-    public void Load()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-        player.healthManager.HP = data.HP;
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-
-        player.transform.position = position;
-    }
 }

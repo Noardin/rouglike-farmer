@@ -54,7 +54,7 @@ public class PickUps : MonoBehaviour
         {
             if (col != null)
             {
-                Debug.Log("collected");
+               
                 CollectPickUp();
             }
         }

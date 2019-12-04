@@ -39,6 +39,7 @@ public class Enemy: MonoBehaviour
     protected float AttackTimer;
     public PopUps popUps;
     protected EnemyState State = EnemyState.Idling;
+    public SpriteRenderer SR;
     protected enum EnemyState
     {
         Stunned, Attacking, Idling
@@ -131,7 +132,6 @@ public class Enemy: MonoBehaviour
                         animator.SetTrigger("Preparing");
                     }
                     AttackTimer += Time.deltaTime;
-                    Debug.Log("Preparing To Attack");
                 }
             }
         }

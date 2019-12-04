@@ -15,7 +15,7 @@ public class LedgeHook : MonoBehaviour
         {
             if (htiCollider[i].gameObject != gameObject)
             {
-                Debug.Log("IsEdge");
+         
                 IsEdge = true;
             }
            

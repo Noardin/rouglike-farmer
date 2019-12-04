@@ -15,7 +15,6 @@ public class LedgeCheck : MonoBehaviour
         {
             if (htiCollider[i].gameObject != gameObject)
             {
-                Debug.Log("IsOnTop");
                 IsOnTop = true;
             }
            

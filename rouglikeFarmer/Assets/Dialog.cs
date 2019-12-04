@@ -22,11 +22,9 @@ public class Dialog : MonoBehaviour
     }
     private IEnumerator SetText(string text)
     {
-        Debug.Log("lengthtext "+text.Length);
         foreach(char character in text)
         {
             dialogTextGUI.text += character;
-            Debug.Log("text " + dialogTextGUI.text);
             yield return new WaitForSeconds(0.2f);
         }
     }

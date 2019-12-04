@@ -13,23 +13,14 @@ public class EventTriggerSystem : MonoBehaviour
    private KeyCode KeyToPress;
    private PopUps.PopUpTypes PopUpType;
    private UnityEvent EventToTrigger;
+ 
 
    public enum button
    {
       ENTER, ESC, SPACE
    }
 
-   private void Start()
-   {
-      float x = transform.localScale.x;
-      float y = transform.localScale.y;
-      Transform parentTransform = transform.parent;
-      
-      float _scaleX = x/parentTransform.localScale.x;
-      float _scaleY = y/parentTransform.localScale.y;
-      transform.localScale = new Vector3(_scaleX,_scaleY );
-   }
-
+  
    KeyCode ButtonToKeyCode(button button)
    {
       switch (button)
@@ -87,7 +78,6 @@ public class EventTriggerSystem : MonoBehaviour
       {
          if (Input.GetKeyDown(KeyToPress))
          {
-            Debug.Log("triggered");
             popUps.HidePopUp();
             EventToTrigger.Invoke();
             EventToTrigger = null;
@@ -95,5 +85,7 @@ public class EventTriggerSystem : MonoBehaviour
 
          }
       }
+
+      
    }
 }

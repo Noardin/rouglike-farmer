@@ -67,7 +67,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   flySpeed: 100
-  flySmoothing: 1
+  flySmoothing: 0.2
   IsFying: 0
   pickUpType: 0
   HpRestoreNumber: 1

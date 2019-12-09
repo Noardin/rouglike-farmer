@@ -82,12 +82,28 @@ public class Health_Manager : MonoBehaviour
     {
         damaged = true;
         HP -= Damage;
+        if (HP <= 0)
+        {
+            Die();
+        }
 
+    }
+
+    public void Die()
+    {
+        checkpointController.SaveCheckpoints();
+        Loader.Load(Loader.Scene.GameOver);
     }
 
     public void Heal(double amount)
     {
         HP += amount;
+        healParticle.Play();
+    }
+
+    public void HealFull()
+    {
+        HP = numOfHearts;
         healParticle.Play();
     }
 }

@@ -14,14 +14,18 @@ public class LoadManagement : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        PlayerData data = SaveSystem.LoadPlayer();
-        player.healthManager.HP = data.HP;
+        PlayerData playerdata = SaveSystem.LoadPlayer();
+        checkpointController.LoadCheckpoints();
+        checkpoint checkpointData = checkpointController.LastCheckpoint;
+    
+        player.healthManager.HP = playerdata.HP;
         Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
+        position.x = checkpointData.transform.position.x;
+        position.y = checkpointData.transform.position.y;
+        position.z = player.transform.position.z;
 
-       player.transform.position = position;
+        player.transform.position = position;
+        checkpointData.DestroyCheckpoint();
     }
 
     private void OnDisable()

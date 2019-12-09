@@ -8,6 +8,7 @@ TagManager:
   - Edge
   - EventTrigger
   - PickUp
+  - checkpoint
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,8 @@ public static class Loader
     public enum Scene {
         Main,
         MainMenu,
-        LoadingScene
+        LoadingScene,
+        GameOver
     
     }
     private class LoadingMonoBehaviour : MonoBehaviour {}

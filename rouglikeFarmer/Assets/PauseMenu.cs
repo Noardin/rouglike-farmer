@@ -39,8 +39,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Exit()
     {
-        SaveSystem.SavePlayer(player);
         paused = false;
+        checkpointController.SaveCheckpoints();
         Loader.Load(Loader.Scene.MainMenu);
         Time.timeScale = 1f;
 

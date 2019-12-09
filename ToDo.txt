@@ -1,5 +1,6 @@
 Pohyb
 -Attack 3
 
-Pause Menu
-Save/load
+checkpoints;
+dungeonMaster;
+

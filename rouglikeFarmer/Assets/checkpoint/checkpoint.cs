@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class checkpoint : MonoBehaviour
 {
-    public player player;
+    private player player;
     public EventTriggerSystem TriggerSystem;
-    public string Id;
+    public UniqueId UniqueId;
     public bool isSet;
     public bool isActive;
 
@@ -16,8 +16,9 @@ public class checkpoint : MonoBehaviour
 
     void Awake()
     {
-        Id = transform.position.x + "_" + transform.position.y + "_" + transform.position.z;
+        UniqueId = gameObject.GetComponent<UniqueId>();
         TriggerEvent.AddListener(SetCheckpoint);
+        player = GameObject.Find("Player").GetComponent<player>();
     }
 
     // Update is called once per frame
@@ -55,28 +56,30 @@ public class checkpoint : MonoBehaviour
     {
         if (!isActive)
         {
-            isSet = true;
-            isActive = true;
-            checkpointController.SetCheckpoint(this);
+            checkpointController.AcitivateCheckpoint(this);
+        }
+
+        if (!isSet)
+        {
+            checkpointController.SetCheckpointAndUnsetLast(this);
             player.healthManager.HealFull();
             SaveSystem.SavePlayer(player);
-            Debug.Log("Checkpoint Set");
-        }    
+        }
+        
     }
 
-    public void DestroyCheckpoint()
+    public void DeactivateCheckpoint()
     {
 
         if (isSet)
         {
-            checkpointController.UnsetLastCheckpoint();
+            checkpointController.DeactivateLastCheckpoint();
         }
         else
         {
             checkpointController.removeCheckpoint(this);
         }
-        
-        Destroy(gameObject);
-        
+
+
     }
 }

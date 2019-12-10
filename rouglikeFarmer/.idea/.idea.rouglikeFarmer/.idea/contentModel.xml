@@ -92,6 +92,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="UniqueID.cs" t="Include" />
         <e p="WallCheck.cs" t="Include" />
         <e p="WaveEffectShader.shader" t="Include" />
         <e p="worldSettings.cs" t="Include" />

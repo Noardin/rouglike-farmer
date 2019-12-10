@@ -12,7 +12,7 @@ public class checkpointData
    {
       isActive = checkpoint.isActive;
       isSet = checkpoint.isSet;
-      Id = checkpoint.Id;
+      Id = checkpoint.UniqueId.uniqueId;
       position = new[] {checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z};
    }
 }

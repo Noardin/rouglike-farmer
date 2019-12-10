@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2047451800557518405}
   - component: {fileID: 2047451800557518402}
   - component: {fileID: 2047451800557518407}
+  - component: {fileID: 941230991475789475}
   m_Layer: 12
   m_Name: checkpoint
   m_TagString: checkpoint
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   TriggerSystem: {fileID: 5782276961965329387}
+  UniqueId: {fileID: 941230991475789475}
   isSet: 0
   isActive: 0
 --- !u!212 &2047451800557518402
@@ -115,6 +117,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
+--- !u!114 &941230991475789475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047451800557518403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a773df2b0611a4a9fe8581702026b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: Main_15d28e64-676a-4964-bd1b-64207277493b
 --- !u!1001 &2047451801094421120
 PrefabInstance:
   m_ObjectHideFlags: 0

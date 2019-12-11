@@ -93,9 +93,55 @@ public class SaveSystem : MonoBehaviour
          
          
       }
-      
-      
-      
+   }
+
+   public static void SaveSceneData(SceneData sceneData)
+   {
+      BinaryFormatter formatter = new BinaryFormatter();
+      string path = Application.persistentDataPath + "/sceneData.mix";
+      Debug.Log("seving path "+path);
+      FileStream stream = new FileStream(path, FileMode.Create);
+      try
+      {
+         formatter.Serialize(stream, sceneData);
+      }
+      finally
+      {
+         stream.Close();
+      }
+   }
+
+   public static SceneData LoadSceneData()
+   {
+      string path = Application.persistentDataPath + "/sceneData.mix";
+      if (File.Exists(path))
+      {
+         BinaryFormatter formatter = new BinaryFormatter();
+         FileStream stream = new FileStream(path, FileMode.Open);
+
+         try
+         {
+            SceneData data = formatter.Deserialize(stream) as SceneData;
+            return data;
+         }
+         catch
+         {
+            return null;
+         }
+         finally
+         {
+             stream.Close();
+             
+         }
+         
+        
+         
+      }
+      else
+      {
+         Debug.LogError("Save file not found in"+ path);
+         return null;
+      }
    }
 
 

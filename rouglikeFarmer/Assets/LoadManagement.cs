@@ -16,16 +16,25 @@ public class LoadManagement : MonoBehaviour
     {
         PlayerData playerdata = SaveSystem.LoadPlayer();
         checkpointController.LoadCheckpoints();
-        checkpoint checkpointData = checkpointController.LastCheckpoint;
-        
-        player.healthManager.HP = playerdata.HP;
-        Vector3 position;
-        position.x = checkpointData.transform.position.x;
-        position.y = checkpointData.transform.position.y;
-        position.z = player.transform.position.z;
+        if (checkpointController.CanRespawn)
+        {
+            checkpoint checkpointData = checkpointController.LastCheckpoint;
+            mainSceneController.PrepareLvl();
+            
+            player.healthManager.HP = playerdata.HP;
+            Vector3 position;
+            position.x = checkpointData.transform.position.x;
+            position.y = checkpointData.transform.position.y;
+            position.z = player.transform.position.z;
 
-        player.transform.position = position;
-        checkpointData.DeactivateCheckpoint();
+            player.transform.position = position;
+            checkpointData.DeactivateCheckpoint();
+        }
+        else
+        {
+            
+        }
+        
     }
 
     private void OnDisable()

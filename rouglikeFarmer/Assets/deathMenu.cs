@@ -25,7 +25,7 @@ public class deathMenu : MonoBehaviour
          
     }
 
-    private void Start()
+    private void Update()
     {
         if (!checkpointController.CanRespawn)
         {

@@ -14,7 +14,13 @@ public class NPC : MonoBehaviour
     private GameObject DialogWindow;
     public PopUps PopUps;
     private UnityEvent TriggerByButtonEvent = new UnityEvent();
-     private void Start()
+
+    private void Awake()
+    {
+        DialogCanvas = GameObject.Find("DialogCanvas");
+    }
+
+    private void Start()
     {
         TriggerByButtonEvent.AddListener(OnTriggerEventFunction);
         

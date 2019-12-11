@@ -25,7 +25,6 @@ public static class checkpointController
         foreach (var ob in objects)
         {
             AllCheckpoints.Add(ob.GetComponent<checkpoint>());
-            Debug.Log("find"+ ob.GetComponent<checkpoint>().transform.position.x);
 
         }
 
@@ -49,6 +48,7 @@ public static class checkpointController
 
                 if (cp.isSet)
                 {
+                    CanRespawn = true;
                     LastCheckpoint = cp;
                 }
             }
@@ -58,10 +58,6 @@ public static class checkpointController
 
     public static void SaveCheckpoints()
     {
-        foreach (var cp in AllCheckpoints)
-        {
-            Debug.Log("cp "+ cp);
-        }
         SaveSystem.SaveCheckpoints(AllCheckpoints);
         
     }

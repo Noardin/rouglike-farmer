@@ -15,8 +15,11 @@ public class Parallax : MonoBehaviour
 
     private Vector3 previousCamPos;
 
+    private void Awake()
+    {
+        cam = Camera.main.transform;
+    }
 
- 
     // Start is called before the first frame update
     void Start()
     {

@@ -22,8 +22,9 @@ public class Health_Manager : MonoBehaviour
     public ParticleSystem healParticle;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        FlashImageRenderer = GameObject.Find("FlashScreen").GetComponent<Image>();
         
     }
 

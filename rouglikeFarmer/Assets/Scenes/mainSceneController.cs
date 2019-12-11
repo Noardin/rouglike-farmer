@@ -5,6 +5,10 @@ using UnityEngine;
 public static class mainSceneController
 {
     private static int sceneSeed;
+    public enum Levels{
+        FirstLevel,
+        SecondLevel
+    }
     public static int SceneSeed
     {
         get { return sceneSeed; }

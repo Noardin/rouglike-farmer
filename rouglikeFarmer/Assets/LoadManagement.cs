@@ -18,9 +18,9 @@ public class LoadManagement : MonoBehaviour
         checkpointController.LoadCheckpoints();
         if (checkpointController.CanRespawn)
         {
+            Debug.Log("can respawn");
             checkpoint checkpointData = checkpointController.LastCheckpoint;
             mainSceneController.PrepareLvl();
-            
             player.healthManager.HP = playerdata.HP;
             Vector3 position;
             position.x = checkpointData.transform.position.x;

@@ -128,7 +128,8 @@ public class Enemy: MonoBehaviour
                     if (!isPreparing)
                     {
                         isPreparing = true;
-                        popUps.PopUp(PopUps.PopUpTypes.Exclemation, AttackDelay,1.2f, 1.1f );
+                        Debug.Log("preparing");
+                        popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.2f, 1.1f );
                         animator.SetTrigger("Preparing");
                     }
                     AttackTimer += Time.deltaTime;

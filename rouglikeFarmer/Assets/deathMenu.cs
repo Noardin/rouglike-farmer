@@ -25,7 +25,15 @@ public class deathMenu : MonoBehaviour
          
     }
 
-    private void Update()
+    private void Awake()
+    {
+        if (LoadCheckpointText == null)
+        {
+            
+        }
+    }
+
+    private void Start()
     {
         if (!checkpointController.CanRespawn)
         {

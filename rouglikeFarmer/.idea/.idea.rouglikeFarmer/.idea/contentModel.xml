@@ -40,6 +40,7 @@
         <e p="LedgeCheck.cs" t="Include" />
         <e p="LedgeHook.cs" t="Include" />
         <e p="Levels" t="Include">
+          <e p="layoutBuilder.cs" t="Include" />
           <e p="levelBuilder.cs" t="Include" />
         </e>
         <e p="Loader.cs" t="Include" />

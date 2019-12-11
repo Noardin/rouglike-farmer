@@ -5,9 +5,12 @@ using UnityEngine;
 public class SceneData
 {
     public int seed;
+    public mainSceneController.Levels currentLevel;
 
-    public SceneData(int seed)
+    public SceneData()
     {
-        this.seed = seed;
+        seed = mainSceneController.SceneSeed;
+        currentLevel = mainSceneController.currentLvel;
+
     }
 }

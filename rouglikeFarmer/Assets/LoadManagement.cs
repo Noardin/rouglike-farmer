@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadManagement : MonoBehaviour
 {
     public player player;
+    public levelBuilder LevelBuilder;
     
     void OnEnable()
     {
@@ -21,6 +23,7 @@ public class LoadManagement : MonoBehaviour
             Debug.Log("can respawn");
             checkpoint checkpointData = checkpointController.LastCheckpoint;
             mainSceneController.PrepareLvl();
+            LevelBuilder.BuildLevel(mainSceneController.currentLvel);
             player.healthManager.HP = playerdata.HP;
             Vector3 position;
             position.x = checkpointData.transform.position.x;

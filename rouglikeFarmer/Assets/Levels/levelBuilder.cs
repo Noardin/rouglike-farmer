@@ -13,19 +13,19 @@ public class levelBuilder : MonoBehaviour
       switch (level)
       {
          case mainSceneController.Levels.FirstLevel:
-            levelLayout = FirstlevelLayouts[Random.Range(0, FirstlevelLayouts.Length-1)];
+            levelLayout = FirstlevelLayouts[Random.Range(0, FirstlevelLayouts.Length)];
             break;
          case mainSceneController.Levels.SecondLevel:
-            levelLayout = SecondlevelLayouts[Random.Range(0, SecondlevelLayouts.Length-1)];
+            levelLayout = SecondlevelLayouts[Random.Range(0, SecondlevelLayouts.Length)];
             break;
          default:
-            levelLayout = FirstlevelLayouts[Random.Range(0, FirstlevelLayouts.Length-1)];
+            levelLayout = FirstlevelLayouts[Random.Range(0, FirstlevelLayouts.Length)];
             break;
             
       }
 
       Instantiate(levelLayout, Vector3.zero, Quaternion.identity);
-      _layoutBuilder = levelLayout.GetComponent<layoutBuilder>();
+      _layoutBuilder = levelLayout.GetComponentInChildren<layoutBuilder>();
       _layoutBuilder.BuildLayout();
 
    }

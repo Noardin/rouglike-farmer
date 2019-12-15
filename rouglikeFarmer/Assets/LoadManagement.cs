@@ -17,26 +17,35 @@ public class LoadManagement : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         PlayerData playerdata = SaveSystem.LoadPlayer();
-        checkpointController.LoadCheckpoints();
-        if (checkpointController.CanRespawn)
+
+        mainSceneController.PrepareLvl();
+        LevelBuilder.BuildLevel(mainSceneController.currentLvel);
+        checkpointController.LoadCheckpoints(); 
+        checkpoint checkpointData = checkpointController.LastCheckpoint;
+        player.healthManager.HP = playerdata.HP;
+        Vector3 position;
+        if (checkpointData != null)
         {
-            Debug.Log("can respawn");
-            checkpoint checkpointData = checkpointController.LastCheckpoint;
-            mainSceneController.PrepareLvl();
-            LevelBuilder.BuildLevel(mainSceneController.currentLvel);
-            player.healthManager.HP = playerdata.HP;
-            Vector3 position;
+            print("loading checkpoint");
             position.x = checkpointData.transform.position.x;
             position.y = checkpointData.transform.position.y;
             position.z = player.transform.position.z;
-
-            player.transform.position = position;
-            checkpointData.DeactivateCheckpoint();
         }
         else
         {
-            
+            Transform LevelStart = GameObject.Find("LevelStart").transform;
+            position = LevelStart.position;
         }
+        
+
+        player.transform.position = position;
+        if (checkpointData != null & Loader.LastSceneLoaded != Loader.Scene.MainMenu)
+        {
+             checkpointData.DeactivateCheckpoint();
+        }
+       
+        
+        
         
     }
 

@@ -14,24 +14,10 @@ public class deathMenu : MonoBehaviour
 
     public void LoadLastCheckpoint()
     {
-        if (checkpointController.CanRespawn)
-        {
-            Loader.Load(Loader.Scene.Main);
-        }
-        else
-        {
-            Application.Quit();
-        }
+        Loader.Load(Loader.Scene.GameOver, Loader.Scene.Main);
          
     }
 
-    private void Awake()
-    {
-        if (LoadCheckpointText == null)
-        {
-            
-        }
-    }
 
     private void Start()
     {

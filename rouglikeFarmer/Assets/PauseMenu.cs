@@ -37,11 +37,18 @@ public class PauseMenu : MonoBehaviour
         paused = true;
     }
 
+    public void GiveUp()
+    {
+        paused = false;
+        checkpointController.ClearCheckpointsAndSave();
+        Time.timeScale = 1f;
+        player.healthManager.Die();
+    }
     public void Exit()
     {
         paused = false;
         checkpointController.SaveCheckpoints();
-        Loader.Load(Loader.Scene.MainMenu);
+        Loader.Load(Loader.Scene.Main, Loader.Scene.MainMenu);
         Time.timeScale = 1f;
 
     }

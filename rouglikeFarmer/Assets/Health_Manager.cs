@@ -92,9 +92,8 @@ public class Health_Manager : MonoBehaviour
 
     public void Die()
     {
-        checkpointController.SaveCheckpoints();
         mainSceneController.SaveScene();
-        Loader.Load(Loader.Scene.GameOver);
+        Loader.Load(Loader.Scene.Main, Loader.Scene.GameOver);
     }
 
     public void Heal(double amount)

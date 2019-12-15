@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8568626252427892141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.19, y: 1.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 6805183681618374691}
@@ -210,7 +210,7 @@ MonoBehaviour:
   attackMoveSpeed: 0
   WhatisGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2065
   attackPosition: {fileID: 6805183681618374691}
   feetPosition: {fileID: 0}
   movementSmoothing: 0

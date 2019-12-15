@@ -38,9 +38,20 @@ public static class mainSceneController
     public static void GoToNextLevel()
     {
         currentLvel = currentLvel.Next();
-    } 
+    }
+
+    public static void GoToFirstLevel()
+    {
+        SceneSeed = Random.Range(int.MinValue, int.MaxValue);
+        currentLvel = Levels.FirstLevel;
+    }
     public static void SaveScene()
     {
+        if (!checkpointController.canRespawn())
+        {
+            GoToFirstLevel();
+        }
+        checkpointController.SaveCheckpoints();
         SceneData sceneData = new SceneData();
         SaveSystem.SaveSceneData(sceneData);
     }

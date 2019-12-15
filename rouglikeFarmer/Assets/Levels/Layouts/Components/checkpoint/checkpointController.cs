@@ -20,6 +20,7 @@ public static class checkpointController
     public static void LoadCheckpoints()
     {
         GameObject[] objects =GameObject.FindGameObjectsWithTag("checkpoint");
+        Debug.Log("objects "+objects.Length);
         AllCheckpoints = new List<checkpoint>();
         activeCheckpoints = new List<checkpoint>();
         foreach (var ob in objects)
@@ -27,13 +28,14 @@ public static class checkpointController
             AllCheckpoints.Add(ob.GetComponent<checkpoint>());
 
         }
-
+        Debug.Log("allCheckpoints "+AllCheckpoints.Count);
         foreach (checkpoint cp in AllCheckpoints)
         {
             
             checkpointData data = SaveSystem.LoadCheckpoint(cp.UniqueId.uniqueId);
             if (data == null)
             {
+                Debug.Log("newCheckpoints");
                 SaveSystem.SaveCheckpoint(cp);
             }
             else
@@ -54,12 +56,39 @@ public static class checkpointController
             }
             
         }
+
     }
 
     public static void SaveCheckpoints()
     {
         SaveSystem.SaveCheckpoints(AllCheckpoints);
         
+    }
+
+    public static void ClearCheckpointsAndSave()
+    {
+        foreach (var checkpoint in activeCheckpoints)
+        {
+            checkpoint.isActive = false;
+            checkpoint.isSet = false;
+        }
+
+        CanRespawn = false;
+        SaveSystem.SaveCheckpoints(AllCheckpoints);
+    }
+
+    public static bool canRespawn()
+    {
+        foreach (checkpoint cp in activeCheckpoints)
+        {
+
+            if (cp.isSet)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void SetCheckpoint(checkpoint checkpoint)

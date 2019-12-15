@@ -12,10 +12,6 @@
         <e p="CameraFollow.cs" t="Include" />
         <e p="CameraShake.cs" t="Include" />
         <e p="CharacterController2D.cs" t="Include" />
-        <e p="checkpoint" t="Include">
-          <e p="checkpoint.cs" t="Include" />
-          <e p="checkpointController.cs" t="Include" />
-        </e>
         <e p="CutScenes.cs" t="Include" />
         <e p="deathMenu.cs" t="Include" />
         <e p="Destroy.cs" t="Include" />
@@ -29,6 +25,7 @@
         </e>
         <e p="EnemiesSpawn.cs" t="Include" />
         <e p="Enemy_ScriptObj.cs" t="Include" />
+        <e p="EnemySpawner.cs" t="Include" />
         <e p="EventSystem" t="Include">
           <e p="EventTriggerSystem.cs" t="Include" />
         </e>
@@ -41,6 +38,20 @@
         <e p="LedgeHook.cs" t="Include" />
         <e p="Levels" t="Include">
           <e p="layoutBuilder.cs" t="Include" />
+          <e p="Layouts" t="Include">
+            <e p="Components" t="Include">
+              <e p="checkpoint" t="Include">
+                <e p="checkpoint.cs" t="Include" />
+                <e p="checkpointController.cs" t="Include" />
+              </e>
+              <e p="PickUps" t="Include">
+                <e p="Hearth" t="Include">
+                  <e p="Hearth.cs" t="Include" />
+                </e>
+                <e p="PickUps.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="levelBuilder.cs" t="Include" />
         </e>
         <e p="Loader.cs" t="Include" />
@@ -51,12 +62,7 @@
         <e p="NPC.cs" t="Include" />
         <e p="Parallax.cs" t="Include" />
         <e p="PauseMenu.cs" t="Include" />
-        <e p="PickUps" t="Include">
-          <e p="Hearth" t="Include">
-            <e p="Hearth.cs" t="Include" />
-          </e>
-          <e p="PickUps.cs" t="Include" />
-        </e>
+        <e p="PlatformSpawner.cs" t="Include" />
         <e p="player.cs" t="Include" />
         <e p="PlayerMovement.cs" t="Include" />
         <e p="PopUps.cs" t="Include" />

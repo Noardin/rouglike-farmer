@@ -1,6 +1,7 @@
 Pohyb
 -Attack 3
-
-checkpoints;
 dungeonMaster;
+
+levelBuilder;
+	Buildlevel from layouts -> build random elements
 

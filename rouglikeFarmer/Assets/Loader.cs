@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class Loader 
+public static class Loader
 {
+    public static Scene LastSceneLoaded;
     public enum Scene {
         Main,
         MainMenu,
@@ -18,7 +19,7 @@ public static class Loader
     private static AsyncOperation loadingAsyncOperation;
 
     private static Action onLoaderCallback;
-    public static void Load(Scene scene)
+    public static void Load(Scene currentScene, Scene scene)
     {
         
         onLoaderCallback = () =>
@@ -27,6 +28,7 @@ public static class Loader
             loadingGameObject.AddComponent<LoadingMonoBehaviour>().StartCoroutine(LoadSceneAsync(scene));
 
         };
+        LastSceneLoaded = currentScene;
         SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 

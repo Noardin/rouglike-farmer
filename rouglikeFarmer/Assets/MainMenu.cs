@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Continue()
     {
-        Loader.Load(Loader.Scene.Main);
+        Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
     }
 
     public void Quit()

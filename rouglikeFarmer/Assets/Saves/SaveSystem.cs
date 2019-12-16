@@ -111,6 +111,11 @@ public class SaveSystem : MonoBehaviour
       }
    }
 
+   public static bool SavesExist()
+   {
+      string path = Application.persistentDataPath + "/sceneData.mix";
+      return File.Exists(path);
+   }
    public static SceneData LoadSceneData()
    {
       string path = Application.persistentDataPath + "/sceneData.mix";

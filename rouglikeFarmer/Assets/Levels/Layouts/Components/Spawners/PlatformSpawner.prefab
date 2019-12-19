@@ -43,6 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0eeae357473c6a408aad90e5f9419b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Platforms:
-  - {fileID: 5143169290231805225, guid: fa43c7333057ce5498e562ccb722ce06, type: 3}
-  - {fileID: 4030294980401926968, guid: 4f04b3191e1f0cc4f91ff52cf1300f71, type: 3}
+  LevelPlatforms:
+  - platforms:
+    - {fileID: 9024191189609423790, guid: 0958bb8a4f1d683479733ca5a3e04d30, type: 3}
+    - {fileID: 8121493584781321497, guid: 7aae6aa276ad55d4a94d9165f2694565, type: 3}
+    - {fileID: 2945552459661948870, guid: ab3ba470ea54c1b42a92a9f2623ff430, type: 3}
+    - {fileID: 8992872945669283973, guid: 0d357cc0277cd8a4eab38b93c41298ed, type: 3}
+  - platforms: []
+  - platforms: []

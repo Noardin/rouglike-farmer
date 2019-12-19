@@ -23,7 +23,8 @@ public static class mainSceneController
     public static Levels currentLvel;
     public enum Levels{
         FirstLevel,
-        SecondLevel
+        SecondLevel,
+        ThirdLevel
     }
     public static int SceneSeed
     {

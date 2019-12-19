@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8456544530674906401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663634339296900629}
+  - component: {fileID: 3273801252038248213}
+  m_Layer: 0
+  m_Name: LayoutBlockSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1663634339296900629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456544530674906401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2721105, y: 1.3693672, z: -0.83203125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3273801252038248213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456544530674906401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d16790930791d49bee8ee90d496458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelLayoutBlocks:
+  - NormalBlocks:
+    - {fileID: 8783823717395087089, guid: 9135cb44b34d60a49a4d951f30a80d64, type: 3}
+    ShopBlocks: []
+    ChestBlocks: []
+    StartingBlocks:
+    - {fileID: 4344492106226415785, guid: 69291623a6a889646a4e424fbea54ec3, type: 3}
+  - NormalBlocks: []
+    ShopBlocks: []
+    ChestBlocks: []
+    StartingBlocks: []
+  - NormalBlocks: []
+    ShopBlocks: []
+    ChestBlocks: []
+    StartingBlocks: []
+  CurrentBlockType: 0

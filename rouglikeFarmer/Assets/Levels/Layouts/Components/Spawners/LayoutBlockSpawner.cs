@@ -35,7 +35,8 @@ public class LayoutBlockSpawner : MonoBehaviour
     {
         Blocks currentLevelBlocks = LevelLayoutBlocks[(int) mainSceneController.currentLvel];
         GameObject[] BlocksOfType = currentLevelBlocks.GetType().GetField(CurrentBlockType.ToString()).GetValue(currentLevelBlocks) as GameObject[];
-        GameObject block = BlocksOfType[Random.Range(0, currentLevelBlocks.NormalBlocks.Length)];
+       
+        GameObject block = BlocksOfType[Random.Range(0, BlocksOfType.Length)];
         GameObject Instance = Instantiate(block, transform.position, Quaternion.identity);
         Instance.transform.parent = transform.parent;
     }

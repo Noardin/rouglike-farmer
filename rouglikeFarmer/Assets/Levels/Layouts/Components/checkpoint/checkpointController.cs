@@ -10,6 +10,7 @@ public static class checkpointController
     public static List<checkpoint> activeCheckpoints = new List<checkpoint>();
     public static List<checkpoint> AllCheckpoints = new List<checkpoint>();
     public static checkpoint LastCheckpoint;
+    public static GameObject CheckpointFolder;
     public static bool CanRespawn;
 
     public static void addCheckpoint(checkpoint checkpoint)
@@ -31,7 +32,7 @@ public static class checkpointController
         Debug.Log("allCheckpoints "+AllCheckpoints.Count);
         foreach (checkpoint cp in AllCheckpoints)
         {
-            
+            cp.transform.parent = CheckpointFolder.transform;
             checkpointData data = SaveSystem.LoadCheckpoint(cp.UniqueId.uniqueId);
             if (data == null)
             {

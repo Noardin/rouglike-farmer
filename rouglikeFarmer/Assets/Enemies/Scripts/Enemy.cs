@@ -217,9 +217,9 @@ public class Enemy: MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition.position, 3f, whatisPlayer);
         foreach (Collider2D col in colliders)
         {
-            if (col != null)
+            if (col != null && col.CompareTag("PlayerHitZone"))
             {
-                col.gameObject.GetComponentInParent<player>().TakeDamage(DmgDeal);
+                col.gameObject.GetComponent<Hitboxcheck>().HitPlayer(this);
             }
         }
     }

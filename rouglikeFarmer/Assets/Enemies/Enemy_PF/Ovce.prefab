@@ -101,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0479469, y: 0.42723083}
+  m_Offset: {x: 0.84, y: 0.4}
   serializedVersion: 2
-  m_Radius: 0.63530445
+  m_Radius: 0.48090374
 --- !u!50 &3915918830211081
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37844896, y: 0.013515949}
+  m_Offset: {x: -0.3127904, y: 0.013515949}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,7 +149,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.28, y: 1.92}
+  m_Size: {x: 1.6890709, y: 1.92}
   m_EdgeRadius: 0
 --- !u!95 &584635963654237127
 Animator:
@@ -276,11 +276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3915918830211086}
     m_Modifications:
-    - target: {fileID: 4320668379965111378, guid: b721585cb9579a6438b3e1c205980ee1,
-        type: 3}
-      propertyPath: m_Name
-      value: PopUps
-      objectReference: {fileID: 0}
     - target: {fileID: 8147562347816749475, guid: b721585cb9579a6438b3e1c205980ee1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320668379965111378, guid: b721585cb9579a6438b3e1c205980ee1,
+        type: 3}
+      propertyPath: m_Name
+      value: PopUps
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b721585cb9579a6438b3e1c205980ee1, type: 3}

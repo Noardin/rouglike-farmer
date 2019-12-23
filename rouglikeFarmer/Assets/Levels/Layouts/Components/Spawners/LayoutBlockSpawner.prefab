@@ -46,6 +46,7 @@ MonoBehaviour:
   LevelLayoutBlocks:
   - NormalBlocks:
     - {fileID: 8783823717395087089, guid: 9135cb44b34d60a49a4d951f30a80d64, type: 3}
+    - {fileID: 4838186634322964157, guid: 970081a022b51a64a8ec49f9098de1e1, type: 3}
     ShopBlocks: []
     ChestBlocks: []
     StartingBlocks:

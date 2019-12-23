@@ -56,10 +56,11 @@ public class Hitboxcheck : MonoBehaviour
         StartCoroutine(InvincibleEn(seconds));
     }
 
-    void OnTriggerStay2D(Collider2D col)
+    public void HitPlayer(Enemy col)
     {
-        if (col.gameObject.layer == LayerMask.NameToLayer("EnemyAttack") && isBeeingHit == false&& !Invincible)
+        if (col.gameObject.layer == LayerMask.NameToLayer("Enemy") && isBeeingHit == false && !Invincible)
         {
+            Debug.Log("hitboxcheck");
             EnemyTransform = col.gameObject.GetComponentInParent<Rigidbody2D>().transform;
             MoveDirection = EnemyTransform.position - playerBody.transform.position;
             MoveDirection.y = knockupForce;

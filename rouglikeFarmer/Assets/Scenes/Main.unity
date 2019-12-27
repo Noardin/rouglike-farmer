@@ -1488,7 +1488,8 @@ MonoBehaviour:
   FirstlevelLayouts:
   - {fileID: 3913449490885564748, guid: 1b1e1d938f7e82248864eaabcb9b46fd, type: 3}
   - {fileID: 8684411830297585763, guid: 364dca50a0d8d6d4c8044a0a40a75222, type: 3}
-  SecondlevelLayouts: []
+  SecondlevelLayouts:
+  - {fileID: 2868110511420737662, guid: ceae2c2b0e26b7c42a8c559806adbf37, type: 3}
 --- !u!4 &1015445760
 Transform:
   m_ObjectHideFlags: 0
@@ -2220,6 +2221,26 @@ PrefabInstance:
       propertyPath: camshake
       value: 
       objectReference: {fileID: 1000398613}
+    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.041328713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1173853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.45069173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.76048833
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!1 &1215628963
@@ -3217,7 +3238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867757430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.055483, y: -5.4741597, z: -7.0848446}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

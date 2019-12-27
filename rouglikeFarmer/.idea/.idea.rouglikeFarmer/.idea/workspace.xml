@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9cd90f-82b9-455e-9d8b-972ef2435e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Movement/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Movement/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Movement/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Movement/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Movement/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Scripts/Mrkev.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Scripts/Mrkev.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hitboxcheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hitboxcheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpointController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpointController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/EmptyLayout.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/EmptyLayout.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Layout_1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Layout_1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Layout_2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Layout_2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,12 +30,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="734" />
+          <entry key="cs" value="767" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="734" />
+          <entry key="C#" value="767" />
         </counts>
       </usages-collector>
     </session>
@@ -117,13 +93,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/CheckpointSpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="136">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
-                <marker date="1577451984113" expanded="false" signature="6:78" ph="..." />
-                <marker date="1577451984113" expanded="true" signature="126:457" ph="{...}" />
-                <marker date="1577451984113" expanded="true" signature="230:455" ph="{...}" />
-                <marker date="1577451984113" expanded="true" signature="313:412" ph="{...}" />
+                <marker date="1577452208002" expanded="false" signature="6:78" ph="..." />
+                <marker date="1577452208002" expanded="true" signature="126:465" ph="{...}" />
+                <marker date="1577452208002" expanded="true" signature="232:463" ph="{...}" />
+                <marker date="1577452208002" expanded="true" signature="321:420" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -436,12 +412,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577444297873</updated>
-      <workItem from="1577444324462" duration="6698000" />
+      <workItem from="1577444324462" duration="7499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6698000" />
+    <option name="totallyTimeSpent" value="7499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,13 +835,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CheckpointSpawner.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="136">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <marker date="1577451984113" expanded="false" signature="6:78" ph="..." />
-            <marker date="1577451984113" expanded="true" signature="126:457" ph="{...}" />
-            <marker date="1577451984113" expanded="true" signature="230:455" ph="{...}" />
-            <marker date="1577451984113" expanded="true" signature="313:412" ph="{...}" />
+            <marker date="1577452208002" expanded="false" signature="6:78" ph="..." />
+            <marker date="1577452208002" expanded="true" signature="126:465" ph="{...}" />
+            <marker date="1577452208002" expanded="true" signature="232:463" ph="{...}" />
+            <marker date="1577452208002" expanded="true" signature="321:420" ph="{...}" />
           </folding>
         </state>
       </provider>

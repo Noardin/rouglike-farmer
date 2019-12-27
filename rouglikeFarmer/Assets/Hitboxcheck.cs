@@ -67,8 +67,8 @@ public class Hitboxcheck : MonoBehaviour
             MoveDirection.z = 0f;
             Enemy enemy = col.GetComponentInParent<Enemy>();
             double damage = enemy.DmgDeal;
-            
-            playerBody.AddForce(MoveDirection.normalized * -200f*knockbackForce);
+            playerBody.velocity = Vector2.zero;
+            playerBody.AddForce(MoveDirection.normalized * -50f*knockbackForce);
             isBeeingHit = true;
             animator.SetBool("IsHit", true);
 

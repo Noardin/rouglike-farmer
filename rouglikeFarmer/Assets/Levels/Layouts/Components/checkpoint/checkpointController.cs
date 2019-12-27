@@ -22,6 +22,7 @@ public static class checkpointController
     {
         GameObject[] objects =GameObject.FindGameObjectsWithTag("checkpoint");
         Debug.Log("objects "+objects.Length);
+        CheckpointFolder = GameObject.Find("Checkpoints");
         AllCheckpoints = new List<checkpoint>();
         activeCheckpoints = new List<checkpoint>();
         foreach (var ob in objects)

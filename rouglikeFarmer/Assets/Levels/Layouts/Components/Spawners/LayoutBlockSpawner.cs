@@ -15,7 +15,8 @@ public class LayoutBlockSpawner : MonoBehaviour
         NormalBlocks,
         ShopBlocks,
         ChestBlocks,
-        StartingBlocks
+        StartingBlocks,
+        EndingBlocks
     }
 
     public BlockType CurrentBlockType;
@@ -31,7 +32,7 @@ public class LayoutBlockSpawner : MonoBehaviour
         #endif
     }
 
-    private void Start()
+    private void Awake()
     {
         Blocks currentLevelBlocks = LevelLayoutBlocks[(int) mainSceneController.currentLvel];
         GameObject[] BlocksOfType = currentLevelBlocks.GetType().GetField(CurrentBlockType.ToString()).GetValue(currentLevelBlocks) as GameObject[];
@@ -39,6 +40,7 @@ public class LayoutBlockSpawner : MonoBehaviour
         GameObject block = BlocksOfType[Random.Range(0, BlocksOfType.Length)];
         GameObject Instance = Instantiate(block, transform.position, Quaternion.identity);
         Instance.transform.parent = transform.parent;
+        Destroy(gameObject);
     }
 }
 [Serializable]
@@ -48,6 +50,7 @@ public class Blocks
     public GameObject[] ShopBlocks;
     public GameObject[] ChestBlocks;
     public GameObject[] StartingBlocks;
+    public GameObject[] EndingBlocks;
 }
 [CustomEditor(typeof(LayoutBlockSpawner))]
 public class LayoutBlockSpawnerInspector : Editor

@@ -41,6 +41,12 @@ public static class mainSceneController
         currentLvel = currentLvel.Next();
     }
 
+    public static void GoToLevel(Levels level)
+    {
+        currentLvel = level;
+        NextLvlSaveScene();
+        Loader.Load(Loader.Scene.Main, Loader.Scene.Main);
+    }
     public static void GoToFirstLevel()
     {
         SceneSeed = Random.Range(int.MinValue, int.MaxValue);
@@ -53,6 +59,13 @@ public static class mainSceneController
             GoToFirstLevel();
         }
         checkpointController.SaveCheckpoints();
+        SceneData sceneData = new SceneData();
+        SaveSystem.SaveSceneData(sceneData);
+    }
+
+    public static void NextLvlSaveScene()
+    {
+        checkpointController.ClearCheckpointsAndSave();
         SceneData sceneData = new SceneData();
         SaveSystem.SaveSceneData(sceneData);
     }

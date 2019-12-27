@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class checkpoint : MonoBehaviour
@@ -26,6 +27,12 @@ public class checkpoint : MonoBehaviour
     {
         
     }
+
+    private void OnEnable()
+    {
+        Debug.Log("checkpoint");
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isActive)

@@ -54,7 +54,7 @@ public class Mrkev : Enemy
 
     public override void DealDmg()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(0.5f, 1f), 0f, whatisPlayer);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(4f, 1f), 0f, whatisPlayer);
         
         foreach (Collider2D col in colliders)
         {

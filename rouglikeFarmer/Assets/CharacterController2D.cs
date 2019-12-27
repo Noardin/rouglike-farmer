@@ -160,12 +160,12 @@ public class CharacterController2D : MonoBehaviour
 				transform.position += DashdDircetion * DashSpeed * Time.deltaTime;
 				
 			}
-			Debug.Log("dash distance: "+DashCurrentDistance);
+			
 			DashCurrentDistance += DashSpeed * Time.deltaTime;
 			if (DashCurrentDistance >= DashDistance)
 			{
 				isSliding = false;
-				Debug.Log("doneSliding");
+		
 				animator.SetBool("IsSliding", false);
 			}
 		}

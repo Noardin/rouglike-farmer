@@ -188,7 +188,7 @@ public class PopUps : MonoBehaviour
         {
             animationDirection = 1;
         }
-        transform.localScale = new Vector3(x+Time.deltaTime*animationDirection*10f, y+Time.deltaTime*animationDirection*10f);
+        transform.localScale = new Vector3(x+Time.deltaTime*animationDirection*(_maxScale/_minScale), y+Time.deltaTime*animationDirection*(_maxScale/_minScale));
     }
 }
 

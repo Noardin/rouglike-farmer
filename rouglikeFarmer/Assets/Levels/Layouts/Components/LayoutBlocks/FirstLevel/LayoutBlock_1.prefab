@@ -2033,12 +2033,12 @@ PrefabInstance:
     - target: {fileID: 6208350016712323341, guid: 3a5290764bc706f49bb74a469e9f3dc1,
         type: 3}
       propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
-      value: 76
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6208350016712323341, guid: 3a5290764bc706f49bb74a469e9f3dc1,
         type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_RefCount
-      value: 76
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6208350016712323341, guid: 3a5290764bc706f49bb74a469e9f3dc1,
         type: 3}

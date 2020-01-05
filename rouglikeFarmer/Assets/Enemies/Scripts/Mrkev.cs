@@ -80,7 +80,7 @@ public class Mrkev : Enemy
                 if (!isPreparing)
                 {
                     isPreparing = true;
-                    popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.8f, 1.1f );
+                    popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,2f, 1.1f );
                     animator.SetTrigger("Preparing");
                 }
                 AttackTimer += Time.deltaTime;

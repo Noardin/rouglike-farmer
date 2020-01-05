@@ -33,6 +33,7 @@ public class Enemy: MonoBehaviour
     protected bool isAttacking;
     public float looseAgroRange = 5f;
     protected bool isPreparing;
+    protected bool isMoving;
     public double DmgDeal;
     protected bool undamagable;
     public float attackRange = 1f;
@@ -116,8 +117,14 @@ public class Enemy: MonoBehaviour
         }
         if (PlayerInAttackRange())
         {
+            
             if (!isAttacking)
             {
+                if (isMoving)
+                {
+                    isMoving = false;
+                    animator.SetBool("Walking", false);
+                }
                 if (AttackTimer >= AttackDelay)
                 {
                     animator.ResetTrigger("Preparing");
@@ -127,9 +134,11 @@ public class Enemy: MonoBehaviour
                 {
                     if (!isPreparing)
                     {
+                        
+                        
                         isPreparing = true;
                         Debug.Log("preparing");
-                        popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.2f, 1.1f );
+                        popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.5f, 1.1f );
                         animator.SetTrigger("Preparing");
                     }
                     AttackTimer += Time.deltaTime;
@@ -159,12 +168,24 @@ public class Enemy: MonoBehaviour
 
         if (currentMoveWait <= 0)
         {
+            if (!isMoving)
+            {
+                isMoving = true;
+                animator.ResetTrigger("Idling");
+                animator.SetBool("Walking", true);
+            }
             moveCurrentDistance += 10f * Time.deltaTime;
             Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
             enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
         }
         else
         {
+            if (isMoving)
+            {
+                isMoving = false;
+                animator.SetBool("Walking", false);
+                animator.SetTrigger("Idling");
+            }
             currentMoveWait -= Time.deltaTime;
         }
         
@@ -176,6 +197,7 @@ public class Enemy: MonoBehaviour
     protected virtual bool CanMove()
     {
         RaycastHit2D hit = Physics2D.Raycast(feetPosition.position, moveDirection, 1f, WhatisGround);
+        
         return hit.collider == null;
     }
 
@@ -237,6 +259,7 @@ public class Enemy: MonoBehaviour
 
     protected void Flip()
     {
+        
         moveDirection.x *= -1;
         // Multiply the player's x local scale by -1.
         Vector3 theScale = transform.localScale;

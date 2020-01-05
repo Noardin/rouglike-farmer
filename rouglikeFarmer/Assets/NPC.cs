@@ -41,7 +41,7 @@ public class NPC : MonoBehaviour
         DialogWindow = Instantiate(Dialog, DialogWindowTransform);
         DialogWindow.transform.parent = DialogCanvas.transform;
         Dialog dialog = DialogWindow.GetComponent<Dialog>();
-        dialog.Say(text, false);
+        dialog.Say(text, true);
     }
 
     protected void LeaveDialog()

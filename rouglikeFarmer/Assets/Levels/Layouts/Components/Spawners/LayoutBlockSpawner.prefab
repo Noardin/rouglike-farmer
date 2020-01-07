@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663634339296900629}
   - component: {fileID: 3273801252038248213}
+  - component: {fileID: 345268775210622822}
   m_Layer: 0
   m_Name: LayoutBlockSpawner
   m_TagString: Untagged
@@ -47,12 +48,16 @@ MonoBehaviour:
   - NormalBlocks:
     - {fileID: 8783823717395087089, guid: 9135cb44b34d60a49a4d951f30a80d64, type: 3}
     - {fileID: 4838186634322964157, guid: 970081a022b51a64a8ec49f9098de1e1, type: 3}
+    - {fileID: 531562963189078596, guid: 15d8efe60bc7ac44f99b5d48e68f41e4, type: 3}
+    - {fileID: 7246967997397236953, guid: 34f000e540d984e4b891c7d38ca2f054, type: 3}
     ShopBlocks: []
     ChestBlocks: []
     StartingBlocks:
     - {fileID: 4344492106226415785, guid: 69291623a6a889646a4e424fbea54ec3, type: 3}
     EndingBlocks:
     - {fileID: 2112461181374865343, guid: 5ed61ae65dec4794eb029f6d909bfa2f, type: 3}
+    CheckpointBlocks:
+    - {fileID: 8671515563828578549, guid: a466947466905de43b326c8900729149, type: 3}
   - NormalBlocks:
     - {fileID: 2277854058653274712, guid: 1f95aebb5a0374d43967c4aa61be0724, type: 3}
     - {fileID: 343826936698566833, guid: 5d320724a8e15ab4c95ed24b5777068d, type: 3}
@@ -62,9 +67,24 @@ MonoBehaviour:
     - {fileID: 8457712438491120062, guid: 1d3954edaea3d8e41ab84a802709a69b, type: 3}
     EndingBlocks:
     - {fileID: 3581089225626876562, guid: 08f304aa935439a4bb045af5d56241dc, type: 3}
+    CheckpointBlocks: []
   - NormalBlocks: []
     ShopBlocks: []
     ChestBlocks: []
     StartingBlocks: []
     EndingBlocks: []
+    CheckpointBlocks: []
   CurrentBlockType: 0
+--- !u!114 &345268775210622822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456544530674906401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a773df2b0611a4a9fe8581702026b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: LayoutBlockSpawner_78b1c34f-96c4-4d79-9e86-a23b0ee8ec30

@@ -55,7 +55,8 @@
  
          // if we are not part of a scene then we are a prefab so do not attempt to set 
          // the id
-         if  (sceneName == null) return;
+         Debug.Log(gameObject.scene);
+         if  (gameObject.scene == null) return;
  
          // Test if we need to make a new id
          bool hasSceneNameAtBeginning = (uniqueId != null && 
@@ -67,7 +68,9 @@
              allGuids [uniqueId] != this);
  
          if (!hasSceneNameAtBeginning || anotherComponentAlreadyHasThisID){
+             
              uniqueId =  sceneName + Guid.NewGuid ();
+             Debug.Log("id "+ uniqueId);
              EditorUtility.SetDirty (this);
              EditorSceneManager.MarkSceneDirty (gameObject.scene);
          }
@@ -85,6 +88,31 @@
      // our ID
      void OnDestroy(){
          allGuids.Remove(uniqueId);
+     }
+
+     public void SetID()
+     {
+         string sceneName = gameObject.scene.name + "_";
+         bool hasSceneNameAtBeginning = (uniqueId != null && 
+                                         uniqueId.Length > sceneName.Length && 
+                                         uniqueId.Substring (0, sceneName.Length) == sceneName);
+         
+         bool anotherComponentAlreadyHasThisID = (uniqueId != null && 
+                                                  allGuids.ContainsKey (uniqueId) && 
+                                                  allGuids [uniqueId] != this);
+ 
+         if (!hasSceneNameAtBeginning || anotherComponentAlreadyHasThisID){
+             
+             uniqueId =  sceneName + Guid.NewGuid ();
+             Debug.Log("id "+ uniqueId);
+             EditorUtility.SetDirty (this);
+             EditorSceneManager.MarkSceneDirty (gameObject.scene);
+         }
+         // We can be sure that the key is unique - now make sure we have 
+         // it in our list
+         if (!allGuids.ContainsKey (uniqueId)) {
+             allGuids.Add(uniqueId, this);
+         }
      }
      #endif
  }

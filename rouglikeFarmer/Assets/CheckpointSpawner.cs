@@ -9,6 +9,7 @@ public class CheckpointSpawner : MonoBehaviour
 
     private void Awake()
     {
+        
         float randInt = Random.value;
         if (randInt > (1-SpawnChance/100f) )
         {

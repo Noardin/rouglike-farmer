@@ -7,35 +7,34 @@ using UnityEngine.Events;
 public class checkpoint : MonoBehaviour
 {
     private player player;
+    public Sprite AciteCheckpointSprite;
+    public Sprite InactiveCheckpointSprite;
+    public ParticleSystem ParticleSystem;
+    [HideInInspector]public SpriteRenderer SR;
     public EventTriggerSystem TriggerSystem;
-    public UniqueId UniqueId;
-    public bool isSet;
-    public bool isActive;
+    [HideInInspector]public UniqueId UniqueId;
+    
+    [HideInInspector]public bool isSet;
+    [HideInInspector]public bool isActive;
 
     private UnityEvent TriggerEvent = new UnityEvent();
     // Start is called before the first frame update
 
     void Awake()
     {
-        UniqueId = gameObject.GetComponent<UniqueId>();
+        SR = gameObject.GetComponent<SpriteRenderer>();
         TriggerEvent.AddListener(SetCheckpoint);
         player = GameObject.Find("Player").GetComponent<player>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetID(UniqueId uniqueId)
     {
-        
-    }
-
-    private void OnEnable()
-    {
-        Debug.Log("checkpoint");
+        UniqueId = uniqueId;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isActive)
+        if (!isActive | !isSet)
         {
             if (other.gameObject.CompareTag("EventTrigger"))
                     {
@@ -47,12 +46,12 @@ public class checkpoint : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!isActive)
+        if (!isActive | !isSet)
         {
             if (other.gameObject.CompareTag("EventTrigger"))
-                    {
-                        TriggerSystem.CancelTriggerByButton();
-                    }
+            {
+                TriggerSystem.CancelTriggerByButton();
+            }
         }
         
         
@@ -64,15 +63,19 @@ public class checkpoint : MonoBehaviour
         if (!isActive)
         {
             checkpointController.AcitivateCheckpoint(this);
+            player.healthManager.HealFull();
         }
 
         if (!isSet)
         {
             checkpointController.SetCheckpointAndUnsetLast(this);
-            player.healthManager.HealFull();
+            
             SaveSystem.SavePlayer(player);
         }
-        
+
+        SR.sprite = AciteCheckpointSprite;
+        ParticleSystem.Play();
+
     }
 
     public void DeactivateCheckpoint()
@@ -87,6 +90,7 @@ public class checkpoint : MonoBehaviour
             checkpointController.removeCheckpoint(this);
         }
 
-
+        SR.sprite = InactiveCheckpointSprite;
+        ParticleSystem.Stop();
     }
 }

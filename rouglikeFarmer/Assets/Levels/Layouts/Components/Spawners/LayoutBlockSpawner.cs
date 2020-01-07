@@ -16,11 +16,13 @@ public class LayoutBlockSpawner : MonoBehaviour
         ShopBlocks,
         ChestBlocks,
         StartingBlocks,
-        EndingBlocks
+        EndingBlocks,
+        CheckpointBlocks
     }
 
     public BlockType CurrentBlockType;
     
+
     void OnDrawGizmos()
     {
         #if UNITY_EDITOR
@@ -39,6 +41,10 @@ public class LayoutBlockSpawner : MonoBehaviour
        
         GameObject block = BlocksOfType[Random.Range(0, BlocksOfType.Length)];
         GameObject Instance = Instantiate(block, transform.position, Quaternion.identity);
+        if (CurrentBlockType == BlockType.CheckpointBlocks)
+        {
+            Instance.GetComponentInChildren<checkpoint>().SetID(gameObject.GetComponent<UniqueId>());
+        }
         Instance.transform.parent = transform.parent;
         Destroy(gameObject);
     }
@@ -51,6 +57,7 @@ public class Blocks
     public GameObject[] ChestBlocks;
     public GameObject[] StartingBlocks;
     public GameObject[] EndingBlocks;
+    public GameObject[] CheckpointBlocks;
 }
 [CustomEditor(typeof(LayoutBlockSpawner))]
 public class LayoutBlockSpawnerInspector : Editor
@@ -67,7 +74,7 @@ public class LayoutBlockSpawnerInspector : Editor
     {
         serializedObject.Update();
 
-        EditorGUILayout.PropertyField(_BlockType, new GUIContent("Block Type"), true);
+        EditorGUILayout.PropertyField(_BlockType, new GUIContent("Block Type"), false);
         
         _LevelBlocks.arraySize = Enum.GetNames(typeof(mainSceneController.Levels)).Length;
         for (var i = 0; i < Enum.GetNames(typeof(mainSceneController.Levels)).Length; i++)

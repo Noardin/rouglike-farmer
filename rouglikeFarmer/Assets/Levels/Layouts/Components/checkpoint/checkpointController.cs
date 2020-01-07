@@ -48,6 +48,8 @@ public static class checkpointController
                 if (cp.isActive)
                 {
                     activeCheckpoints.Add(cp);
+                    cp.SR.sprite = cp.AciteCheckpointSprite;
+                    cp.ParticleSystem.Play();
                 }
 
                 if (cp.isSet)

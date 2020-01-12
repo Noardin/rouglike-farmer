@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Cinemachine.Utility;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class LoadManagement : MonoBehaviour
 {
     public player player;
     public levelBuilder LevelBuilder;
+    public CameraFollow cameraController;
     
     void OnEnable()
     {
@@ -24,6 +27,7 @@ public class LoadManagement : MonoBehaviour
         checkpoint checkpointData = checkpointController.LastCheckpoint;
         player.healthManager.HP = playerdata.HP;
         Vector3 position;
+        Vector3 GoToPosition;
         if (checkpointData != null)
         {
             print("loading checkpoint");
@@ -33,12 +37,23 @@ public class LoadManagement : MonoBehaviour
         }
         else
         {
-            Transform LevelStart = GameObject.Find("LevelStart").transform;
-            position = LevelStart.position;
+           
+            Transform PlayerSpawn = GameObject.Find("PlayerSpawn").transform;
+           
+            position = PlayerSpawn.position;
         }
         
 
         player.transform.position = position;
+        if (checkpointData == null)
+        {
+            Transform LevelStart = GameObject.Find("LevelStart").transform;
+            GoToPosition = LevelStart.position;
+            player.GoTo(GoToPosition, 10);
+            cameraController.LookAt(GoToPosition);
+           
+        }
+       
         if (checkpointData != null & Loader.LastSceneLoaded != Loader.Scene.MainMenu)
         {
              checkpointData.DeactivateCheckpoint();

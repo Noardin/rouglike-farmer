@@ -6,13 +6,42 @@ public class CameraFollow : MonoBehaviour
 {
     public CinemachineVirtualCamera camera;
     private Transform player;
+    private bool IsChasingFollow;
+    private Transform ChasingPosition;
+    
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
-        if (camera.Follow == null)
+       
+    }
+
+    public void LookAt(Vector3 LookAtPosition)
+    {
+        camera.transform.position = LookAtPosition;
+    }
+
+    public void Follow(Transform FollowPosition)
+    {
+        IsChasingFollow = true;
+        ChasingPosition = FollowPosition;
+    }
+
+    public void StopFollow()
+    {
+        camera.Follow = null;
+    }
+
+    private void Update()
+    {
+        if (IsChasingFollow)
         {
-            camera.Follow = player;
+            Vector3 nextPos = Vector3.Lerp(camera.transform.position, new Vector3(ChasingPosition.position.x,ChasingPosition.position.y,-11f), 10f*Time.deltaTime);
+            camera.transform.position = nextPos;
+            if (Vector2.Distance(camera.transform.position, ChasingPosition.position) <= 0.5f)
+            {
+                camera.Follow = ChasingPosition;
+                IsChasingFollow = false;
+            }
         }
     }
 }

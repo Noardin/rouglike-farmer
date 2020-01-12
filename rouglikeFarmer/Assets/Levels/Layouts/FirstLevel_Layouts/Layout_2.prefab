@@ -589,36 +589,6 @@ Transform:
   m_Father: {fileID: 5356818438689246644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8309351766437212041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8953349566644169381}
-  m_Layer: 0
-  m_Name: LevelStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8953349566644169381
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8309351766437212041}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.5, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4172617686551346217}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8503590681277951986
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +659,6 @@ Transform:
   - {fileID: 7754699275956317700}
   - {fileID: 6486189895497067731}
   - {fileID: 1176631695425485963}
-  - {fileID: 8953349566644169381}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1007,15 +976,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: LayoutBlockSpawner (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
-        type: 3}
-      propertyPath: CurrentBlockType
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 345268775210622822, guid: 6611b2295dcde8d4095d8e82f8071014,
         type: 3}
       propertyPath: uniqueId
       value: Layout_2_b1aa645b-f4b8-4d1e-9aa6-19793f5cde7b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
+        type: 3}
+      propertyPath: CurrentBlockType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6611b2295dcde8d4095d8e82f8071014, type: 3}
@@ -1092,15 +1061,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: LayoutBlockSpawner (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
-        type: 3}
-      propertyPath: CurrentBlockType
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 345268775210622822, guid: 6611b2295dcde8d4095d8e82f8071014,
         type: 3}
       propertyPath: uniqueId
       value: Layout_2_69806fc7-d09e-4fb8-bb39-1f701f005954
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
+        type: 3}
+      propertyPath: CurrentBlockType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6611b2295dcde8d4095d8e82f8071014, type: 3}
@@ -1657,15 +1626,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: LayoutBlockSpawner (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
-        type: 3}
-      propertyPath: CurrentBlockType
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 345268775210622822, guid: 6611b2295dcde8d4095d8e82f8071014,
         type: 3}
       propertyPath: uniqueId
       value: Layout_2_6b620ece-9416-484f-a1fe-f4e9574f42b7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
+        type: 3}
+      propertyPath: CurrentBlockType
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6611b2295dcde8d4095d8e82f8071014, type: 3}
@@ -1875,17 +1844,17 @@ PrefabInstance:
     - target: {fileID: 6215686267789317331, guid: 13d0126a24d58454ab944aba65932581,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.925
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 6215686267789317331, guid: 13d0126a24d58454ab944aba65932581,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.042
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6215686267789317331, guid: 13d0126a24d58454ab944aba65932581,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6215686267789317331, guid: 13d0126a24d58454ab944aba65932581,
         type: 3}
@@ -2082,15 +2051,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: LayoutBlockSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
-        type: 3}
-      propertyPath: CurrentBlockType
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 345268775210622822, guid: 6611b2295dcde8d4095d8e82f8071014,
         type: 3}
       propertyPath: uniqueId
       value: Layout_2_15017b98-304d-49a2-a6cd-6b6c934571f4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273801252038248213, guid: 6611b2295dcde8d4095d8e82f8071014,
+        type: 3}
+      propertyPath: CurrentBlockType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6611b2295dcde8d4095d8e82f8071014, type: 3}

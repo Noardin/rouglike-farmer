@@ -18,12 +18,18 @@ public class PlayerMovement : MonoBehaviour {
     private bool dash = false;
     public float slideDelay;
     private float SlideTimer;
-    
+    private player _player;
+
+
+    private void Awake()
+    {
+        _player = GetComponent<player>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (!PauseMenu.paused)
+        if (!PauseMenu.paused && !_player.PlayerControlledMovementDisabled )
         {
             if (SlideTimer > 0)
                 {

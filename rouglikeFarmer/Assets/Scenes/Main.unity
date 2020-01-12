@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -284,7 +284,7 @@ Transform:
   m_Children:
   - {fileID: 1492098207}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &53731561
 MonoBehaviour:
@@ -1400,7 +1400,7 @@ Transform:
   - {fileID: 481124558}
   - {fileID: 1095426300}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1000398613
 MonoBehaviour:
@@ -1518,6 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1851988598}
   LevelBuilder: {fileID: 1015445759}
+  cameraController: {fileID: 53731561}
 --- !u!114 &1015445762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,7 +2070,7 @@ PrefabInstance:
     - target: {fileID: 4309707554479728455, guid: ab7d15ce835678043bdec12208befbce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4309707554479728455, guid: ab7d15ce835678043bdec12208befbce,
         type: 3}
@@ -2241,6 +2242,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.76048833
       objectReference: {fileID: 0}
+    - target: {fileID: 4309707554479728510, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 53731561}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!1 &1215628963
@@ -2689,8 +2695,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1492098207}
   - component: {fileID: 1492098209}
-  - component: {fileID: 1492098208}
   - component: {fileID: 1492098210}
+  - component: {fileID: 1492098208}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2724,24 +2730,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0.315
+  m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 1
+  m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.699
+  m_ScreenY: 0.5
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.56
-  m_SoftZoneHeight: 1.36
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
   m_BiasX: 0
-  m_BiasY: 0.000000043826944
-  m_CenterOnActivate: 1
+  m_BiasY: 0
+  m_CenterOnActivate: 0
   m_GroupFramingMode: 2
   m_AdjustmentMode: 2
   m_GroupFramingSize: 0.8
@@ -2779,7 +2785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_AmplitudeGain: 0
-  m_FrequencyGain: 1
+  m_FrequencyGain: 10
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1542919954
 GameObject:

@@ -12,6 +12,7 @@ public class LevelDoor : MonoBehaviour
     private UnityEvent EventToTrigger = new UnityEvent();
     private Transform LeavePosition;
     private CameraFollow cameraController;
+    private CloseDoor closeDoor;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class LevelDoor : MonoBehaviour
         _player = GameObject.Find("Player").GetComponent<player>();
         LeavePosition = GameObject.Find("LeavePosition").transform;
         cameraController = GameObject.Find("CM vcam1").GetComponent<CameraFollow>();
+        closeDoor = GameObject.Find("Door_close").GetComponentInChildren<CloseDoor>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,6 +41,7 @@ public class LevelDoor : MonoBehaviour
     private void GoToLeavePosition()
     {
         cameraController.StopFollow();
+        closeDoor.OpenDoor();
         _player.GoTo(LeavePosition.position, 10);
     }
 

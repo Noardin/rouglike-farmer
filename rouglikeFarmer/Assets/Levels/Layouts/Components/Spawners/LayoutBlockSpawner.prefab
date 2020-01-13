@@ -58,6 +58,7 @@ MonoBehaviour:
     - {fileID: 2112461181374865343, guid: 5ed61ae65dec4794eb029f6d909bfa2f, type: 3}
     CheckpointBlocks:
     - {fileID: 8671515563828578549, guid: a466947466905de43b326c8900729149, type: 3}
+    - {fileID: 1037538234150584160, guid: 05e54e69ac6e85e4795d16f30b58b7ff, type: 3}
   - NormalBlocks:
     - {fileID: 2277854058653274712, guid: 1f95aebb5a0374d43967c4aa61be0724, type: 3}
     - {fileID: 343826936698566833, guid: 5d320724a8e15ab4c95ed24b5777068d, type: 3}

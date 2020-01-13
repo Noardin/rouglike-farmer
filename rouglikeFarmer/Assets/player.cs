@@ -11,7 +11,8 @@ public class player : MonoBehaviour
     private bool movesTowards;
     private Animator _animator;
     public CameraFollow cameraController;
-    public bool PlayerControlledMovementDisabled = true;
+    public CharacterController2D CharacterController2D;
+    [HideInInspector]public bool PlayerControlledMovementDisabled = true;
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -28,11 +29,24 @@ public class player : MonoBehaviour
         this.GoToPosition = GoToPosition;
         GoToSpeed = speed;
         movesTowards = true;
+        if (!FacingPositioon(GoToPosition))
+        {
+            CharacterController2D.Flip();
+        }
         _animator.SetFloat("Speed",1f);
         _animator.SetBool("Grounded", true);
         PlayerControlledMovementDisabled = true;
 
 
+    }
+
+    public bool FacingPositioon(Vector3 whatFacing)
+    {
+
+        Vector3 playerDirection = whatFacing - transform.position  ;
+        
+        
+        return Vector3.Dot(playerDirection, CharacterController2D.DashdDircetion) > 0;
     }
 
     private void Update()

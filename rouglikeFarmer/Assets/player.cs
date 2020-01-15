@@ -24,7 +24,7 @@ public class player : MonoBehaviour
         healthManager.TakeDamage(damage);
     }
 
-    public void GoTo(Vector2 GoToPosition, float speed)
+    public void GoTo(Vector3 GoToPosition, float speed)
     {
         this.GoToPosition = GoToPosition;
         GoToSpeed = speed;
@@ -43,7 +43,7 @@ public class player : MonoBehaviour
     public bool FacingPositioon(Vector3 whatFacing)
     {
 
-        Vector3 playerDirection = whatFacing - transform.position  ;
+        Vector3 playerDirection = whatFacing - transform.position ;
         
         
         return Vector3.Dot(playerDirection, CharacterController2D.DashdDircetion) > 0;
@@ -55,7 +55,7 @@ public class player : MonoBehaviour
         {
             float step = GoToSpeed * Time.deltaTime;
             GoToPosition.y = transform.position.y;
-            position.position = Vector2.MoveTowards(position.position, GoToPosition, step);
+            position.position = Vector3.MoveTowards(position.position, GoToPosition, step);
             if (position.position == GoToPosition)
             {
                 movesTowards = false;

@@ -216,6 +216,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &48375455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4309707554479728453, guid: ab7d15ce835678043bdec12208befbce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1105260873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c120f7d9a3e05224a97a6da4132d8ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &53731558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2259,11 @@ PrefabInstance:
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 53731561}
+    - target: {fileID: 4309707554479728510, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: CharacterController2D
+      value: 
+      objectReference: {fileID: 48375455}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!1 &1215628963

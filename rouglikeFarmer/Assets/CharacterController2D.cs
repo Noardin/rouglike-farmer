@@ -40,7 +40,7 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true; // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
-    [HideInInspector]public Vector3 DashdDircetion;
+    [HideInInspector]public Vector3 DashdDircetion = new Vector3(1,0,0);
     public bool isSliding = false;
     public float DashSpeed = 400f;
     public float DashDistance = 100f;

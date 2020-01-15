@@ -27,7 +27,6 @@ public class LoadManagement : MonoBehaviour
         checkpoint checkpointData = checkpointController.LastCheckpoint;
         player.healthManager.HP = playerdata.HP;
         Vector3 position;
-        Vector3 GoToPosition;
         if (checkpointData != null)
         {
             print("loading checkpoint");
@@ -47,8 +46,11 @@ public class LoadManagement : MonoBehaviour
         player.transform.position = position;
         if (checkpointData == null)
         {
+            
             Transform LevelStart = GameObject.Find("LevelStart").transform;
-            GoToPosition = LevelStart.position;
+            
+            Vector3 GoToPosition = LevelStart.position;
+            Debug.Log("levelstart "+GoToPosition);
             player.GoTo(GoToPosition, 10);
             cameraController.LookAt(GoToPosition);
            

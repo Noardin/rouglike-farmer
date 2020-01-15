@@ -107,8 +107,8 @@ public class Enemy: MonoBehaviour
             isPreparing = false;
             AttackTimer = 0;
             State = EnemyState.Idling;
-            animator.ResetTrigger("Attacking");
-            animator.SetTrigger("Idling");
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Idling", true);
             return;
         }
         if (!FacingPlayer())
@@ -117,37 +117,32 @@ public class Enemy: MonoBehaviour
         }
         if (PlayerInAttackRange())
         {
-            
             if (!isAttacking)
             {
-                if (isMoving)
-                {
-                    isMoving = false;
-                    animator.SetBool("Walking", false);
-                }
+                
                 if (AttackTimer >= AttackDelay)
                 {
-                    animator.ResetTrigger("Preparing");
-                    animator.SetTrigger("Attacking");
+                    animator.SetBool("Attacking",true);
+                    animator.SetBool("Idling", false);
                 }
                 else
                 {
                     if (!isPreparing)
                     {
-                        
+                        animator.SetBool("Walking", false);
                         
                         isPreparing = true;
                         Debug.Log("preparing");
                         popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.5f, 1.1f );
-                        animator.SetTrigger("Preparing");
+                
                     }
                     AttackTimer += Time.deltaTime;
                 }
             }
         }
-        else
+        else if(!isPreparing && !isAttacking)
         {
-            Move(attackMoveSpeed);
+            AttackMove(attackMoveSpeed);
         }
         
     }
@@ -161,7 +156,7 @@ public class Enemy: MonoBehaviour
             Flip();
             
         }
-        if (!CanMove())
+        if (!CanMove()&& !PlayerInAttackRange())
         {
           Flip();   
         }
@@ -171,7 +166,7 @@ public class Enemy: MonoBehaviour
             if (!isMoving)
             {
                 isMoving = true;
-                animator.ResetTrigger("Idling");
+                animator.SetBool("Idling", false);
                 animator.SetBool("Walking", true);
             }
             moveCurrentDistance += 10f * Time.deltaTime;
@@ -184,14 +179,32 @@ public class Enemy: MonoBehaviour
             {
                 isMoving = false;
                 animator.SetBool("Walking", false);
-                animator.SetTrigger("Idling");
+                animator.SetBool("Idling",true);
             }
             currentMoveWait -= Time.deltaTime;
+        }    
+        
+    }
+
+    protected virtual void AttackMove(float moveSpeed)
+    {
+        if (!FacingPlayer())
+        {
+            Flip();
         }
-        
-        
-        
-        
+
+        if (CanMove())
+        {
+            animator.SetBool("Walking", true);
+            moveCurrentDistance += 10f * Time.deltaTime;
+            Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
+            enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
+        }
+        else
+        {
+            animator.SetBool("Idling", true);
+        }
+       
     }
 
     protected virtual bool CanMove()
@@ -229,8 +242,8 @@ public class Enemy: MonoBehaviour
     {
         isAttacking = false;
         State = EnemyState.Idling;
-        animator.ResetTrigger("Attacking");
-        animator.SetTrigger("Idling");
+        animator.SetBool("Attacking",false);
+        animator.SetBool("Idling", true);
         
     }
 

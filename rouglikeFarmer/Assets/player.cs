@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class player : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class player : MonoBehaviour
     public CameraFollow cameraController;
     public CharacterController2D CharacterController2D;
     [HideInInspector]public bool PlayerControlledMovementDisabled = true;
+    public UnityEvent OnGoToEvent = new UnityEvent(); 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -24,6 +27,22 @@ public class player : MonoBehaviour
         healthManager.TakeDamage(damage);
     }
 
+    public void GoTo(Vector3 GoToPosition, float speed, UnityAction GoToTrigger)
+    {
+        this.GoToPosition = GoToPosition;
+        GoToSpeed = speed;
+        movesTowards = true;
+        if (!FacingPositioon(GoToPosition))
+        {
+            CharacterController2D.Flip();
+        }
+        _animator.SetFloat("Speed",1f);
+        _animator.SetBool("Grounded", true);
+        PlayerControlledMovementDisabled = true;
+        OnGoToEvent.AddListener(GoToTrigger);
+
+
+    }
     public void GoTo(Vector3 GoToPosition, float speed)
     {
         this.GoToPosition = GoToPosition;
@@ -44,8 +63,6 @@ public class player : MonoBehaviour
     {
 
         Vector3 playerDirection = whatFacing - transform.position ;
-        
-        
         return Vector3.Dot(playerDirection, CharacterController2D.DashdDircetion) > 0;
     }
 
@@ -55,13 +72,14 @@ public class player : MonoBehaviour
         {
             float step = GoToSpeed * Time.deltaTime;
             GoToPosition.y = transform.position.y;
+            GoToPosition.z = transform.position.z;
             position.position = Vector3.MoveTowards(position.position, GoToPosition, step);
             if (position.position == GoToPosition)
             {
                 movesTowards = false;
                 PlayerControlledMovementDisabled = false;
                 _animator.SetFloat("Speed",0f);
-                cameraController.Follow(transform);
+                OnGoToEvent.Invoke();
             }
             
         }

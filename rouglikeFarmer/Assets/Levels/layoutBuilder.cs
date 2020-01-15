@@ -22,4 +22,10 @@ public class layoutBuilder : MonoBehaviour
       Debug.Log("buildLayout");
                                         
    }
+
+   private void OnDrawGizmos()
+   {
+      Gizmos.color = Color.yellow;
+      Gizmos.DrawRay(new Vector3(-35,-7.5f,0),new Vector3(200,0,0));
+   }
 }

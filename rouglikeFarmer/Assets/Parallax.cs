@@ -11,7 +11,7 @@ public class Parallax : MonoBehaviour
 
     public float smoothing = 1f; // >0 
 
-    public Transform cam;
+    [HideInInspector]public Transform cam;
 
     private Vector3 previousCamPos;
 

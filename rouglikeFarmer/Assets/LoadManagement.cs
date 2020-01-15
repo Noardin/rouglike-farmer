@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Cinemachine.Utility;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +13,8 @@ public class LoadManagement : MonoBehaviour
     public player player;
     public levelBuilder LevelBuilder;
     public CameraFollow cameraController;
+
+    private UnityAction GoToTrigger;
     
     void OnEnable()
     {
@@ -36,10 +40,8 @@ public class LoadManagement : MonoBehaviour
         }
         else
         {
-           
-            Transform PlayerSpawn = GameObject.Find("PlayerSpawn").transform;
-           
-            position = PlayerSpawn.position;
+           Transform PlayerSpawn = GameObject.Find("PlayerSpawn").transform;
+           position = PlayerSpawn.position;
         }
         
 
@@ -48,23 +50,30 @@ public class LoadManagement : MonoBehaviour
         {
             
             Transform LevelStart = GameObject.Find("LevelStart").transform;
-            
+
+            GoToTrigger += () => {cameraController.Follow(player.transform);};
             Vector3 GoToPosition = LevelStart.position;
             Debug.Log("levelstart "+GoToPosition);
-            player.GoTo(GoToPosition, 10);
+            player.GoTo(GoToPosition, 10, GoToTrigger);
             cameraController.LookAt(GoToPosition);
            
         }
        
-        if (checkpointData != null & Loader.LastSceneLoaded != Loader.Scene.MainMenu)
+        if (checkpointData != null)
         {
-             checkpointData.DeactivateCheckpoint();
+            Debug.Log("checkopoint != null");
+            
+            player.PlayerControlledMovementDisabled = false;
+            cameraController.Follow(player.transform);
+            if (Loader.LastSceneLoaded != Loader.Scene.MainMenu)
+            {
+                checkpointData.DeactivateCheckpoint();
+            }
+            
         }
-       
-        
-        
         
     }
+    
 
     private void OnDisable()
     {

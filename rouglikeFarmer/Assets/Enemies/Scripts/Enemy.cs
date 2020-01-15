@@ -115,7 +115,7 @@ public class Enemy: MonoBehaviour
         {
             Flip();
         }
-        if (PlayerInAttackRange())
+        if (PlayerInAttackRange()| isPreparing)
         {
             if (!isAttacking)
             {
@@ -129,7 +129,9 @@ public class Enemy: MonoBehaviour
                 {
                     if (!isPreparing)
                     {
+                        isMoving = false;
                         animator.SetBool("Walking", false);
+                        animator.SetBool("Idling",true);
                         
                         isPreparing = true;
                         Debug.Log("preparing");
@@ -195,7 +197,13 @@ public class Enemy: MonoBehaviour
 
         if (CanMove())
         {
-            animator.SetBool("Walking", true);
+            if (!isMoving)
+            {
+                isMoving = true;
+                animator.SetBool("Idling", false);
+                animator.SetBool("Walking", true);
+            }
+            
             moveCurrentDistance += 10f * Time.deltaTime;
             Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
             enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
@@ -203,6 +211,8 @@ public class Enemy: MonoBehaviour
         else
         {
             animator.SetBool("Idling", true);
+            animator.SetBool("Walking", false);
+            isMoving = false;
         }
        
     }

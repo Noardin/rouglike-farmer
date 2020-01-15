@@ -1498,7 +1498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstlevelLayouts:
-  - {fileID: 3913449490885564748, guid: 1b1e1d938f7e82248864eaabcb9b46fd, type: 3}
+  - {fileID: 2835867858608423756, guid: 0d7d314c9b5c2274e936af8fb11274d7, type: 3}
   - {fileID: 8684411830297585763, guid: 364dca50a0d8d6d4c8044a0a40a75222, type: 3}
   SecondlevelLayouts:
   - {fileID: 2868110511420737662, guid: ceae2c2b0e26b7c42a8c559806adbf37, type: 3}
@@ -2264,6 +2264,11 @@ PrefabInstance:
       propertyPath: CharacterController2D
       value: 
       objectReference: {fileID: 48375455}
+    - target: {fileID: 4309707554802487461, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!1 &1215628963

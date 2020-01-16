@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEditorInternal;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Enemy: MonoBehaviour
     public int HP = 100;
     private GameObject player;
     private Rigidbody2D playerbody;
-    private Vector3 moveDirection = new Vector3(1f,0f,0);
+    protected Vector3 moveDirection = new Vector3(1f,0f,0);
     public Rigidbody2D enemybody;
     public float KnockBackFoce = 10f;
     public LayerMask whatisPlayer;
@@ -29,7 +30,7 @@ public class Enemy: MonoBehaviour
     private float moveCurrentDistance;
     public float moveWait;
     private float currentMoveWait;
-    private Vector3 velocity = Vector3.zero;
+    protected Vector3 velocity = Vector3.zero;
     protected bool isAttacking;
     public float looseAgroRange = 5f;
     protected bool isPreparing;
@@ -41,6 +42,7 @@ public class Enemy: MonoBehaviour
     public PopUps popUps;
     protected EnemyState State = EnemyState.Idling;
     public SpriteRenderer SR;
+    public bool AttackFlipping= true;
     protected enum EnemyState
     {
         Stunned, Attacking, Idling
@@ -111,7 +113,7 @@ public class Enemy: MonoBehaviour
             animator.SetBool("Idling", true);
             return;
         }
-        if (!FacingPlayer())
+        if (!FacingPlayer()& AttackFlipping)
         {
             Flip();
         }
@@ -119,11 +121,11 @@ public class Enemy: MonoBehaviour
         {
             if (!isAttacking)
             {
-                
+                Debug.Log("attacking");
                 if (AttackTimer >= AttackDelay)
                 {
-                    animator.SetBool("Attacking",true);
-                    animator.SetBool("Idling", false);
+                    Attack();
+
                 }
                 else
                 {
@@ -149,8 +151,20 @@ public class Enemy: MonoBehaviour
         
     }
 
+    protected virtual void Attack()
+    {
+        animator.SetBool("Attacking",true);
+        animator.SetBool("Idling", false);
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        
+    }
+
     protected virtual void Move(float moveSpeed)
     {
+        Debug.Log("moveNormal");
         if (moveCurrentDistance >= moveDistance)
         {
             moveCurrentDistance = 0;
@@ -171,6 +185,7 @@ public class Enemy: MonoBehaviour
                 animator.SetBool("Idling", false);
                 animator.SetBool("Walking", true);
             }
+            Debug.Log("moveNormal");
             moveCurrentDistance += 10f * Time.deltaTime;
             Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
             enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
@@ -194,6 +209,7 @@ public class Enemy: MonoBehaviour
         {
             Flip();
         }
+        Debug.Log("move");
 
         if (CanMove())
         {
@@ -204,7 +220,7 @@ public class Enemy: MonoBehaviour
                 animator.SetBool("Walking", true);
             }
             
-            moveCurrentDistance += 10f * Time.deltaTime;
+            
             Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
             enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
         }
@@ -254,6 +270,7 @@ public class Enemy: MonoBehaviour
         State = EnemyState.Idling;
         animator.SetBool("Attacking",false);
         animator.SetBool("Idling", true);
+        Debug.Log("attackend");
         
     }
 

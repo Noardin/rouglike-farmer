@@ -19,6 +19,7 @@
         <e p="Dialog.cs" t="Include" />
         <e p="Enemies" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Cow.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="Mrkev.cs" t="Include" />
             <e p="Ovce.cs" t="Include" />

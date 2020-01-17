@@ -3,19 +3,249 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9cd90f-82b9-455e-9d8b-972ef2435e98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Models/cow.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_idle_anim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_idle_anim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_idle_walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/ovce/ovce_idle_walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Ovce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Ovce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk31.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/Cow_walk9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack100.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack101.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack101.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack102.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack102.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack103.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack103.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack104.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack104.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack105.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack105.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack106.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack106.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack107.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack107.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack108.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack108.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack109.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack109.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack110.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack110.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack111.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack111.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack112.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack112.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack113.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack113.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack114.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack114.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack115.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack115.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack116.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack116.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack117.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack117.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack118.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack118.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack119.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack119.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack120.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack120.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack121.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack121.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack122.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack122.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack123.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack123.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack124.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack124.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack125.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack125.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack126.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack126.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack127.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack127.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack128.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack129.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack129.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack130.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack130.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack131.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack131.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack132.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack132.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack133.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack133.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack134.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack134.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack135.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack135.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack136.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack136.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack137.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack137.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack138.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack138.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack139.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack139.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack140.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack140.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack141.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack141.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack142.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack142.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack143.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack143.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack144.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack144.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack145.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack145.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack146.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack146.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack147.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack147.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack148.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack148.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack149.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack149.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack150.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack151.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack151.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack152.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack152.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack153.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack153.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack154.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack154.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack155.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack155.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack156.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack156.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack157.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack157.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack158.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack158.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack159.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack159.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack160.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack160.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack161.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack161.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack162.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack162.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack163.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack163.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack164.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack164.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack165.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack165.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack166.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack166.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack167.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack167.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack168.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack168.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack31.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack32.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack33.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack34.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack35.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack36.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack37.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack38.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack39.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack40.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack41.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack42.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack43.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack44.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack45.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack46.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack47.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack48.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack49.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack50.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack51.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack51.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack52.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack52.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack53.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack53.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack54.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack54.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack55.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack55.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack56.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack56.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack57.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack58.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack59.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack60.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack61.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack61.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack62.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack62.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack63.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack63.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack64.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack65.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack65.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack66.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack66.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack67.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack67.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack68.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack68.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack69.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack69.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack70.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack70.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack71.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack71.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack72.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack73.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack73.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack74.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack74.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack75.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack75.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack76.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack76.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack77.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack77.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack78.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack78.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack79.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack79.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack80.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack80.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack81.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack81.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack82.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack82.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack83.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack83.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack84.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack84.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack85.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack85.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack86.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack86.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack87.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack87.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack88.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack88.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack89.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack89.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack90.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack90.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack91.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack91.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack92.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack92.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack93.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack93.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack94.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack94.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack95.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack95.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack96.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack96.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack97.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack97.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack98.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack98.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack99.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_attack/Cow_attack99.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle31.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle32.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle33.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle34.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle35.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Cow/cow_idle/Cow_idle9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/cow/cow_attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/cow/cow_attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Cow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Cow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_start.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_start.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/EnemySpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/EnemySpawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/checkpoints.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/worldSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/worldSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,150 +253,121 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="782719506">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="cs" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="C#" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cs" value="2260" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="C#" value="2260" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2142">
-              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+            <state relative-caret-position="60">
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding>
-                <marker date="1579214195019" expanded="false" signature="6:183" ph="..." />
-                <marker date="1579214195019" expanded="true" signature="218:9534" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1487:1534" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1569:1792" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1606:1690" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1718:1786" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1828:1849" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1886:2130" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="1915:2124" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2167:2327" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2221:2283" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2395:2704" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2546:2675" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2608:2665" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2743:4143" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="2803:3073" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3118:3158" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3206:4021" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3246:4011" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3348:3415" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3436:3997" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="3492:3928" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4067:4128" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4180:4279" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4342:4363" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4413:5601" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4501:4631" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4680:4721" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4756:5313" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="4793:4956" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5326:5582" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5362:5525" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5657:6448" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5692:5732" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5783:6277" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="5820:5983" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="6290:6434" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="6486:6646" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="6688:6850" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="6885:7072" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7114:7126" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7182:7246" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7289:7493" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7528:7878" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7684:7872" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7758:7862" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="7910:8004" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="8037:8118" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="8145:8367" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="8445:9532" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="8477:9516" ph="{...}" />
-                <marker date="1579214195019" expanded="true" signature="8758:9000" ph="/* Debug.Log(&quot;player&quot;, player); ... */" />
-                <marker date="1579214195019" expanded="true" signature="9027:9419" ph="/* float xForce; ... */" />
-                <marker date="1579214195019" expanded="true" signature="9452:9504" ph="{...}" />
+                <marker date="1579285214401" expanded="false" signature="6:183" ph="..." />
+                <marker date="1579285214401" expanded="true" signature="218:9698" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1487:1534" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1569:1792" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1606:1690" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1718:1786" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1828:1849" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1886:2173" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="1915:2167" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2210:2436" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2293:2392" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2504:2813" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2655:2784" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2717:2774" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2852:4265" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="2912:3182" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3227:3267" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3315:4143" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3355:4120" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3457:3524" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3545:4106" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="3601:4037" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4189:4250" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4302:4401" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4464:4485" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4535:5728" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4623:4753" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4802:4843" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4878:5440" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="4915:5078" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5453:5709" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5489:5652" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5784:6612" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5819:5859" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5910:6441" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="5947:6147" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="6454:6598" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="6650:6810" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="6852:7014" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7049:7236" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7278:7290" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7346:7410" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7453:7657" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7692:8042" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7848:8036" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="7922:8026" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8074:8168" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8201:8282" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8309:8531" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8609:9696" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8641:9680" ph="{...}" />
+                <marker date="1579285214401" expanded="true" signature="8922:9164" ph="/* Debug.Log(&quot;player&quot;, player); ... */" />
+                <marker date="1579285214401" expanded="true" signature="9191:9583" ph="/* float xForce; ... */" />
+                <marker date="1579285214401" expanded="true" signature="9616:9668" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-55">
+              <folding>
+                <marker date="1578297056595" expanded="false" signature="6:78" ph="..." />
+                <marker date="1578297056595" expanded="true" signature="120:2364" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="631:932" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="990:1255" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1021:1081" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1114:1240" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1307:1425" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1470:1529" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1567:2362" ph="{...}" />
+                <marker date="1578297056595" expanded="true" signature="1680:2348" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+              <folding>
+                <marker date="1579285877776" expanded="false" signature="6:121" ph="..." />
+                <marker date="1579285877776" expanded="true" signature="147:1210" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="233:272" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="307:406" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="438:473" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="510:1208" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="558:1196" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="962:1178" ph="{...}" />
+                <marker date="1579285877776" expanded="true" signature="1022:1167" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Svestka.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="68">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
-                <marker date="1579214653639" expanded="true" signature="6:121" ph="..." />
-                <marker date="1579214653639" expanded="true" signature="147:1094" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="239:456" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="374:451" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="493:532" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="567:666" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="698:733" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="770:1092" ph="{...}" />
-                <marker date="1579214653639" expanded="true" signature="818:1080" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/worldSettings.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <marker date="1579211647317" expanded="false" signature="6:78" ph="..." />
-                <marker date="1579211647317" expanded="true" signature="122:403" ph="{...}" />
-                <marker date="1579211647317" expanded="true" signature="196:398" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Levels/levelBuilder.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <marker date="1576419112274" expanded="false" signature="6:78" ph="..." />
-                <marker date="1576419112274" expanded="true" signature="121:1039" ph="{...}" />
-                <marker date="1576419112274" expanded="true" signature="348:1037" ph="{...}" />
-                <marker date="1576419112274" expanded="true" signature="374:851" ph="{...}" />
+                <marker date="1579299680854" expanded="false" signature="6:78" ph="..." />
+                <marker date="1579299680854" expanded="true" signature="108:116" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -175,16 +376,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding>
-                <marker date="1579127223582" expanded="false" signature="6:78" ph="..." />
-                <marker date="1579127223582" expanded="true" signature="117:1505" ph="{...}" />
-                <marker date="1579127223582" expanded="true" signature="341:390" ph="{...}" />
-                <marker date="1579127223582" expanded="true" signature="461:715" ph="{...}" />
-                <marker date="1579127223582" expanded="true" signature="617:709" ph="{...}" />
-                <marker date="1579127223582" expanded="true" signature="773:1503" ph="{...}" />
-                <marker date="1579127223582" expanded="true" signature="832:1457" ph="{...}" />
+                <marker date="1579166268545" expanded="false" signature="6:78" ph="..." />
+                <marker date="1579166268545" expanded="true" signature="117:1505" ph="{...}" />
+                <marker date="1579166268545" expanded="true" signature="341:390" ph="{...}" />
+                <marker date="1579166268545" expanded="true" signature="461:715" ph="{...}" />
+                <marker date="1579166268545" expanded="true" signature="617:709" ph="{...}" />
+                <marker date="1579166268545" expanded="true" signature="773:1503" ph="{...}" />
+                <marker date="1579166268545" expanded="true" signature="832:1457" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -193,25 +394,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="119">
               <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding>
-                <marker date="1578415250614" expanded="false" signature="6:126" ph="..." />
-                <marker date="1578415250614" expanded="true" signature="167:2320" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="678:862" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="904:945" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="998:1287" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1036:1263" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1107:1253" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1338:1564" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1376:1540" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1447:1530" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1598:1997" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1627:1752" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="1773:1915" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="2037:2318" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="2063:2144" ph="{...}" />
-                <marker date="1578415250614" expanded="true" signature="2157:2234" ph="{...}" />
+                <marker date="1578477156678" expanded="false" signature="6:126" ph="..." />
+                <marker date="1578477156678" expanded="true" signature="167:2320" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="678:862" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="904:945" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="998:1287" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1036:1263" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1107:1253" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1338:1564" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1376:1540" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1447:1530" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1598:1997" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1627:1752" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="1773:1915" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="2037:2318" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="2063:2144" ph="{...}" />
+                <marker date="1578477156678" expanded="true" signature="2157:2234" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -220,19 +421,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/LoadManagement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+            <state relative-caret-position="1105">
+              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
               <folding>
-                <marker date="1579124429221" expanded="true" signature="6:229" ph="..." />
-                <marker date="1579124429221" expanded="true" signature="274:2385" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="445:508" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="565:2285" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="970:1209" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="1222:1363" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="1455:1870" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="1914:2270" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="2164:2247" ph="{...}" />
-                <marker date="1579124429221" expanded="true" signature="2320:2383" ph="{...}" />
+                <marker date="1579166268543" expanded="false" signature="6:229" ph="..." />
+                <marker date="1579166268543" expanded="true" signature="274:2385" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="445:508" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="565:2285" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="970:1209" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="1222:1363" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="1455:1870" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="1914:2270" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="2164:2247" ph="{...}" />
+                <marker date="1579166268543" expanded="true" signature="2320:2383" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -243,16 +444,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <marker date="1579075897254" expanded="false" signature="6:92" ph="..." />
-                <marker date="1579075897254" expanded="true" signature="131:994" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="291:348" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="401:650" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="428:635" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="488:625" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="677:992" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="701:977" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="742:815" ph="{...}" />
-                <marker date="1579075897254" expanded="true" signature="832:967" ph="{...}" />
+                <marker date="1578909641651" expanded="false" signature="6:92" ph="..." />
+                <marker date="1578909641651" expanded="true" signature="131:994" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="291:348" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="401:650" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="428:635" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="488:625" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="677:992" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="701:977" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="742:815" ph="{...}" />
+                <marker date="1578909641651" expanded="true" signature="832:967" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -261,14 +462,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Levels/layoutBuilder.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+            <state relative-caret-position="-68">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <marker date="1579126850727" expanded="false" signature="6:137" ph="..." />
-                <marker date="1579126850727" expanded="true" signature="181:739" ph="{...}" />
-                <marker date="1579126850727" expanded="true" signature="272:479" ph="{...}" />
-                <marker date="1579126850727" expanded="true" signature="508:591" ph="{...}" />
-                <marker date="1579126850727" expanded="true" signature="623:737" ph="{...}" />
+                <marker date="1579166268538" expanded="false" signature="6:137" ph="..." />
+                <marker date="1579166268538" expanded="true" signature="181:739" ph="{...}" />
+                <marker date="1579166268538" expanded="true" signature="272:479" ph="{...}" />
+                <marker date="1579166268538" expanded="true" signature="508:591" ph="{...}" />
+                <marker date="1579166268538" expanded="true" signature="623:737" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -280,17 +481,17 @@
             <state relative-caret-position="255">
               <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
-                <marker date="1578415295308" expanded="false" signature="6:170" ph="..." />
-                <marker date="1578415295308" expanded="true" signature="219:1597" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="311:457" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="527:871" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="897:1595" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="1384:1506" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="1632:1867" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="1960:2873" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="2079:2238" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="2280:2871" ph="{...}" />
-                <marker date="1578415295308" expanded="true" signature="2601:2811" ph="{...}" />
+                <marker date="1578477156662" expanded="false" signature="6:170" ph="..." />
+                <marker date="1578477156662" expanded="true" signature="219:1597" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="311:457" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="527:871" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="897:1595" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="1384:1506" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="1632:1867" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="1960:2873" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="2079:2238" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="2280:2871" ph="{...}" />
+                <marker date="1578477156662" expanded="true" signature="2601:2811" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -308,29 +509,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Parallax.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Ovce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/LevelDoors/OpenDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Mrkev.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/LevelDoors/LevelDoor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/deathMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Levels/layoutBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/NPC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/mainSceneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Parallax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpointController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LoadManagement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PopUps.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Levels/levelBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UniqueId.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LoadManagement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levels/levelBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Ovce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/LevelDoors/LevelDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levels/layoutBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PopUps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UniqueId.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/deathMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Svestka.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CheckpointSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/mainSceneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NPC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/worldSettings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -359,42 +561,15 @@
         <option value="$PROJECT_DIR$/Assets/worldSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Svestka.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ads@2.0.8/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.analytics@3.3.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.3.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.2.16/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ext.nunit@1.0.0/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.0.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@1.0.10/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.0.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.0.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.6/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@2.0.6/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@6.9.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@6.9.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@6.9.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.0.13/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.xr.legacyinputhelpers@2.0.2/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="240" />
+    <option name="y" value="128" />
+    <option name="width" value="1440" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -402,14 +577,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,13 +608,17 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <list>
@@ -463,11 +643,12 @@
       <workItem from="1579103969596" duration="5053000" />
       <workItem from="1579120050320" duration="6033000" />
       <workItem from="1579208794527" duration="5832000" />
+      <workItem from="1579280027705" duration="5243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42587000" />
+    <option name="totallyTimeSpent" value="47830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,10 +660,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1924307" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19517103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -541,9 +722,6 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -555,13 +733,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/LevelDoor.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scenes/mainSceneController.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -730,59 +901,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/worldSettings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1579278046401" expanded="false" signature="6:78" ph="..." />
+            <marker date="1579278046401" expanded="true" signature="122:403" ph="{...}" />
+            <marker date="1579278046401" expanded="true" signature="196:398" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Levels/levelBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-34">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <marker date="1576419112274" expanded="false" signature="6:78" ph="..." />
-            <marker date="1576419112274" expanded="true" signature="121:1039" ph="{...}" />
-            <marker date="1576419112274" expanded="true" signature="348:1037" ph="{...}" />
-            <marker date="1576419112274" expanded="true" signature="374:851" ph="{...}" />
+            <marker date="1576503201804" expanded="false" signature="6:78" ph="..." />
+            <marker date="1576503201804" expanded="true" signature="121:1039" ph="{...}" />
+            <marker date="1576503201804" expanded="true" signature="348:1037" ph="{...}" />
+            <marker date="1576503201804" expanded="true" signature="374:851" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <marker date="1579166268545" expanded="false" signature="6:78" ph="..." />
+            <marker date="1579166268545" expanded="true" signature="117:1505" ph="{...}" />
+            <marker date="1579166268545" expanded="true" signature="341:390" ph="{...}" />
+            <marker date="1579166268545" expanded="true" signature="461:715" ph="{...}" />
+            <marker date="1579166268545" expanded="true" signature="617:709" ph="{...}" />
+            <marker date="1579166268545" expanded="true" signature="773:1503" ph="{...}" />
+            <marker date="1579166268545" expanded="true" signature="832:1457" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Levels/Layouts/Components/checkpoint/checkpoint.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="119">
           <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
           <folding>
-            <marker date="1578415250614" expanded="false" signature="6:126" ph="..." />
-            <marker date="1578415250614" expanded="true" signature="167:2320" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="678:862" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="904:945" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="998:1287" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1036:1263" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1107:1253" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1338:1564" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1376:1540" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1447:1530" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1598:1997" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1627:1752" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="1773:1915" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="2037:2318" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="2063:2144" ph="{...}" />
-            <marker date="1578415250614" expanded="true" signature="2157:2234" ph="{...}" />
+            <marker date="1578477156678" expanded="false" signature="6:126" ph="..." />
+            <marker date="1578477156678" expanded="true" signature="167:2320" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="678:862" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="904:945" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="998:1287" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1036:1263" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1107:1253" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1338:1564" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1376:1540" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1447:1530" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1598:1997" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1627:1752" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="1773:1915" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="2037:2318" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="2063:2144" ph="{...}" />
+            <marker date="1578477156678" expanded="true" signature="2157:2234" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/LoadManagement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+        <state relative-caret-position="1105">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding>
-            <marker date="1579124429221" expanded="true" signature="6:229" ph="..." />
-            <marker date="1579124429221" expanded="true" signature="274:2385" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="445:508" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="565:2285" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="970:1209" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="1222:1363" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="1455:1870" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="1914:2270" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="2164:2247" ph="{...}" />
-            <marker date="1579124429221" expanded="true" signature="2320:2383" ph="{...}" />
+            <marker date="1579166268543" expanded="false" signature="6:229" ph="..." />
+            <marker date="1579166268543" expanded="true" signature="274:2385" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="445:508" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="565:2285" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="970:1209" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="1222:1363" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="1455:1870" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="1914:2270" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="2164:2247" ph="{...}" />
+            <marker date="1579166268543" expanded="true" signature="2320:2383" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -791,30 +990,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1579075897254" expanded="false" signature="6:92" ph="..." />
-            <marker date="1579075897254" expanded="true" signature="131:994" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="291:348" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="401:650" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="428:635" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="488:625" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="677:992" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="701:977" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="742:815" ph="{...}" />
-            <marker date="1579075897254" expanded="true" signature="832:967" ph="{...}" />
+            <marker date="1578909641651" expanded="false" signature="6:92" ph="..." />
+            <marker date="1578909641651" expanded="true" signature="131:994" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="291:348" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="401:650" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="428:635" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="488:625" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="677:992" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="701:977" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="742:815" ph="{...}" />
+            <marker date="1578909641651" expanded="true" signature="832:967" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Levels/layoutBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+        <state relative-caret-position="-68">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
-            <marker date="1579126850727" expanded="false" signature="6:137" ph="..." />
-            <marker date="1579126850727" expanded="true" signature="181:739" ph="{...}" />
-            <marker date="1579126850727" expanded="true" signature="272:479" ph="{...}" />
-            <marker date="1579126850727" expanded="true" signature="508:591" ph="{...}" />
-            <marker date="1579126850727" expanded="true" signature="623:737" ph="{...}" />
+            <marker date="1579166268538" expanded="false" signature="6:137" ph="..." />
+            <marker date="1579166268538" expanded="true" signature="181:739" ph="{...}" />
+            <marker date="1579166268538" expanded="true" signature="272:479" ph="{...}" />
+            <marker date="1579166268538" expanded="true" signature="508:591" ph="{...}" />
+            <marker date="1579166268538" expanded="true" signature="623:737" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -824,126 +1023,127 @@
         <state relative-caret-position="255">
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
-            <marker date="1578415295308" expanded="false" signature="6:170" ph="..." />
-            <marker date="1578415295308" expanded="true" signature="219:1597" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="311:457" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="527:871" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="897:1595" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="1384:1506" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="1632:1867" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="1960:2873" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="2079:2238" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="2280:2871" ph="{...}" />
-            <marker date="1578415295308" expanded="true" signature="2601:2811" ph="{...}" />
+            <marker date="1578477156662" expanded="false" signature="6:170" ph="..." />
+            <marker date="1578477156662" expanded="true" signature="219:1597" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="311:457" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="527:871" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="897:1595" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="1384:1506" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="1632:1867" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="1960:2873" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="2079:2238" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="2280:2871" ph="{...}" />
+            <marker date="1578477156662" expanded="true" signature="2601:2811" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Hitboxcheck.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="-55">
           <folding>
-            <marker date="1579127223582" expanded="false" signature="6:78" ph="..." />
-            <marker date="1579127223582" expanded="true" signature="117:1505" ph="{...}" />
-            <marker date="1579127223582" expanded="true" signature="341:390" ph="{...}" />
-            <marker date="1579127223582" expanded="true" signature="461:715" ph="{...}" />
-            <marker date="1579127223582" expanded="true" signature="617:709" ph="{...}" />
-            <marker date="1579127223582" expanded="true" signature="773:1503" ph="{...}" />
-            <marker date="1579127223582" expanded="true" signature="832:1457" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/worldSettings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <marker date="1579211647317" expanded="false" signature="6:78" ph="..." />
-            <marker date="1579211647317" expanded="true" signature="122:403" ph="{...}" />
-            <marker date="1579211647317" expanded="true" signature="196:398" ph="{...}" />
+            <marker date="1578297056595" expanded="false" signature="6:78" ph="..." />
+            <marker date="1578297056595" expanded="true" signature="120:2364" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="631:932" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="990:1255" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1021:1081" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1114:1240" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1307:1425" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1470:1529" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1567:2362" ph="{...}" />
+            <marker date="1578297056595" expanded="true" signature="1680:2348" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+        <state relative-caret-position="60">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding>
-            <marker date="1579214195019" expanded="false" signature="6:183" ph="..." />
-            <marker date="1579214195019" expanded="true" signature="218:9534" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1487:1534" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1569:1792" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1606:1690" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1718:1786" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1828:1849" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1886:2130" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="1915:2124" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2167:2327" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2221:2283" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2395:2704" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2546:2675" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2608:2665" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2743:4143" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="2803:3073" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3118:3158" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3206:4021" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3246:4011" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3348:3415" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3436:3997" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="3492:3928" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4067:4128" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4180:4279" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4342:4363" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4413:5601" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4501:4631" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4680:4721" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4756:5313" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="4793:4956" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5326:5582" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5362:5525" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5657:6448" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5692:5732" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5783:6277" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="5820:5983" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="6290:6434" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="6486:6646" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="6688:6850" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="6885:7072" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7114:7126" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7182:7246" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7289:7493" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7528:7878" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7684:7872" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7758:7862" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="7910:8004" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="8037:8118" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="8145:8367" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="8445:9532" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="8477:9516" ph="{...}" />
-            <marker date="1579214195019" expanded="true" signature="8758:9000" ph="/* Debug.Log(&quot;player&quot;, player); ... */" />
-            <marker date="1579214195019" expanded="true" signature="9027:9419" ph="/* float xForce; ... */" />
-            <marker date="1579214195019" expanded="true" signature="9452:9504" ph="{...}" />
+            <marker date="1579285214401" expanded="false" signature="6:183" ph="..." />
+            <marker date="1579285214401" expanded="true" signature="218:9698" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1487:1534" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1569:1792" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1606:1690" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1718:1786" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1828:1849" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1886:2173" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="1915:2167" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2210:2436" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2293:2392" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2504:2813" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2655:2784" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2717:2774" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2852:4265" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="2912:3182" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3227:3267" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3315:4143" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3355:4120" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3457:3524" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3545:4106" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="3601:4037" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4189:4250" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4302:4401" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4464:4485" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4535:5728" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4623:4753" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4802:4843" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4878:5440" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="4915:5078" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5453:5709" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5489:5652" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5784:6612" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5819:5859" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5910:6441" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="5947:6147" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="6454:6598" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="6650:6810" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="6852:7014" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7049:7236" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7278:7290" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7346:7410" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7453:7657" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7692:8042" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7848:8036" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="7922:8026" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8074:8168" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8201:8282" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8309:8531" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8609:9696" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8641:9680" ph="{...}" />
+            <marker date="1579285214401" expanded="true" signature="8922:9164" ph="/* Debug.Log(&quot;player&quot;, player); ... */" />
+            <marker date="1579285214401" expanded="true" signature="9191:9583" ph="/* float xForce; ... */" />
+            <marker date="1579285214401" expanded="true" signature="9616:9668" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Enemies/Scripts/Cow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="434">
+          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
           <folding>
-            <marker date="1579214653639" expanded="true" signature="6:121" ph="..." />
-            <marker date="1579214653639" expanded="true" signature="147:1094" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="239:456" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="374:451" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="493:532" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="567:666" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="698:733" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="770:1092" ph="{...}" />
-            <marker date="1579214653639" expanded="true" signature="818:1080" ph="{...}" />
+            <marker date="1579285877776" expanded="false" signature="6:121" ph="..." />
+            <marker date="1579285877776" expanded="true" signature="147:1210" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="233:272" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="307:406" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="438:473" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="510:1208" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="558:1196" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="962:1178" ph="{...}" />
+            <marker date="1579285877776" expanded="true" signature="1022:1167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Svestka.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <marker date="1579299680854" expanded="false" signature="6:78" ph="..." />
+            <marker date="1579299680854" expanded="true" signature="108:116" ph="{...}" />
           </folding>
         </state>
       </provider>

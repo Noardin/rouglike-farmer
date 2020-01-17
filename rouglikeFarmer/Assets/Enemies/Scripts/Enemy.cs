@@ -73,6 +73,7 @@ public class Enemy: MonoBehaviour
                 break;
             
             case EnemyState.Attacking:
+                Debug.Log("AttackUpdate");
                 Attacking();
                 break;
         }
@@ -80,8 +81,10 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Idling()
     {
+        Debug.Log("Idling");
         if (IsInRange(AgroRange, whatisPlayer))
         {
+            Debug.Log("coughtAgro");
             State = EnemyState.Attacking;
         }
         
@@ -143,6 +146,7 @@ public class Enemy: MonoBehaviour
                     AttackTimer += Time.deltaTime;
                 }
             }
+            
         }
         else if(!isPreparing && !isAttacking)
         {
@@ -216,6 +220,7 @@ public class Enemy: MonoBehaviour
             if (!isMoving)
             {
                 isMoving = true;
+                isAttacking = false;
                 animator.SetBool("Idling", false);
                 animator.SetBool("Walking", true);
             }

@@ -73,7 +73,7 @@ public class Enemy: MonoBehaviour
                 break;
             
             case EnemyState.Attacking:
-                Debug.Log("AttackUpdate");
+            
                 Attacking();
                 break;
         }
@@ -81,10 +81,10 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Idling()
     {
-        Debug.Log("Idling");
+        
         if (IsInRange(AgroRange, whatisPlayer))
         {
-            Debug.Log("coughtAgro");
+          
             State = EnemyState.Attacking;
         }
         
@@ -139,7 +139,7 @@ public class Enemy: MonoBehaviour
                         animator.SetBool("Idling",true);
                         
                         isPreparing = true;
-                        Debug.Log("preparing");
+                        
                         popUps.PopUpTimed(PopUps.PopUpTypes.Exclemation, AttackDelay,1.5f, 1.1f );
                 
                     }
@@ -168,7 +168,7 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Move(float moveSpeed)
     {
-        Debug.Log("moveNormal");
+        
         if (moveCurrentDistance >= moveDistance)
         {
             moveCurrentDistance = 0;
@@ -189,7 +189,7 @@ public class Enemy: MonoBehaviour
                 animator.SetBool("Idling", false);
                 animator.SetBool("Walking", true);
             }
-            Debug.Log("moveNormal");
+           
             moveCurrentDistance += 10f * Time.deltaTime;
             Vector2 targetVelocity = new Vector2(moveDirection.x*moveSpeed*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
             enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
@@ -213,7 +213,7 @@ public class Enemy: MonoBehaviour
         {
             Flip();
         }
-        Debug.Log("move");
+    
 
         if (CanMove())
         {
@@ -275,7 +275,7 @@ public class Enemy: MonoBehaviour
         State = EnemyState.Idling;
         animator.SetBool("Attacking",false);
         animator.SetBool("Idling", true);
-        Debug.Log("attackend");
+      
         
     }
 

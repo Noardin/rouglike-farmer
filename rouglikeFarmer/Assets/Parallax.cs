@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
 
-    public Transform[] backgrounds;
+    private List<Transform> backgrounds = new List<Transform>();
 
     private float[] parallaxScales;
 
@@ -23,11 +24,22 @@ public class Parallax : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Transform ForeGrounds = GameObject.FindWithTag("ForeGround").transform;
+        Debug.Log("Foreground"+ ForeGrounds);
+        Transform BackGrounds = GameObject.FindWithTag("BackGround").transform;
+        foreach (Transform foreground in ForeGrounds)
+        {
+            backgrounds.Add(foreground);
+        }
+        foreach (Transform background in BackGrounds)
+        {
+            backgrounds.Add(background);
+        }
         previousCamPos = cam.position;
 
-        parallaxScales = new float[backgrounds.Length];
+        parallaxScales = new float[backgrounds.Count];
 
-        for (int i = 0; i < backgrounds.Length; i++)
+        for (int i = 0; i < backgrounds.Count; i++)
         {
             parallaxScales[i] = backgrounds[i].position.z;
             
@@ -37,7 +49,7 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < backgrounds.Length; i++)
+        for (int i = 0; i < backgrounds.Count; i++)
         {
             float parallax = (previousCamPos.x - cam.position.x) * -parallaxScales[i];
             float parallaxY = (previousCamPos.y - cam.position.y) * -parallaxScales[i]/2;

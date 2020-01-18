@@ -261,7 +261,7 @@ public class CharacterController2D : MonoBehaviour
                             AirRolled = true;
                         }
 
-                        PlayerHitBox.ImInvincible(.8f);
+                        PlayerHitBox.ImInvincible(.4f);
                         isSliding = true;
                         Debug.Log("isSliding");
 
@@ -427,7 +427,7 @@ public class CharacterController2D : MonoBehaviour
 
     private IEnumerator DropDownAttack()
     {
-        PlayerHitBox.ImInvincible(.8f);
+        PlayerHitBox.ImInvincible(.4f);
         isDroppingDown = true;
         animator.SetBool("DroppingDown", true);
         StartCoroutine(Freeze(.5f));

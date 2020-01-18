@@ -6,6 +6,8 @@
     <e p="C:\Users\Toshiba\Desktop\rouglike-farmer\rouglikeFarmer" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AddTo.cs" t="Include" />
+        <e p="AddToForeground.cs" t="Include" />
         <e p="Attack.cs" t="Include" />
         <e p="AttackColliders.cs" t="Include" />
         <e p="BarnScenes.cs" t="Include" />

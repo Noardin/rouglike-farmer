@@ -9,6 +9,9 @@ TagManager:
   - EventTrigger
   - PickUp
   - checkpoint
+  - ForeGround
+  - MidGround
+  - BackGround
   layers:
   - Default
   - TransparentFX

@@ -7,5 +7,11 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Svestka_AnimatorOverride
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: c0e5ad383004dc54b968de55509312fc, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 80c98c37edc837f49a4eb92f816740dd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a1bf3c6e34c4dd1498932291a07175b0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7c4280c8afb429f4ebb0f889869b719e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 818ea2a29fc29244ebef6d9341117d54, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 62ef65b5eb37efb44bd779357768b858, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 808f2c9025e1bf045b08962cd6eed78a, type: 2}

@@ -3,44 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9cd90f-82b9-455e-9d8b-972ef2435e98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle31.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle31.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle32.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle33.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle33.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle34.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle34.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle35.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle35.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle36.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle36.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle37.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle37.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle38.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle38.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle39.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle39.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle40.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle40.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle41.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle41.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle42.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle42.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle43.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blender/Renders/Enemies/Idle/Ovce_Idle43.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animations/svestka/svestka_walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Animator/Svestka_AnimatorOverride.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Animator/Svestka_AnimatorOverride.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Ovce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/Ovce.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/svestka.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Enemy_PF/svestka.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_Ending.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_Ending.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_checkpoint_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_checkpoint_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_checkpoint_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_checkpoint_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_start.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/FirstLevel/LayoutBlock_start.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/LayoutBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/LayoutBlocks/LayoutBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/EnemySpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/EnemySpawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/EmptyLayout.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/EmptyLayout.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/FirstLevel_Layouts/Layout_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/FirstLevel_Layouts/Layout_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/FirstLevel_Layouts/Layout_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/FirstLevel_Layouts/Layout_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Parallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parallax.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Svestka.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Svestka.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="259" column="25" lean-forward="true" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
+            <state relative-caret-position="961">
+              <caret line="291" column="63" selection-start-line="291" selection-start-column="63" selection-end-line="291" selection-end-column="63" />
               <folding>
                 <marker date="1579361537314" expanded="true" signature="6:277" ph="..." />
                 <marker date="1579361537314" expanded="true" signature="329:15138" ph="{...}" />
@@ -266,10 +228,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/LoaderCallback.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="187">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding>
                 <marker date="1575728670300" expanded="false" signature="6:78" ph="..." />
                 <marker date="1575728670300" expanded="true" signature="123:292" ph="{...}" />
@@ -301,6 +264,7 @@
     <findStrings>
       <find>movespeed</find>
       <find>moveSpeed</find>
+      <find>invin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -446,12 +410,12 @@
       <workItem from="1579103969596" duration="5053000" />
       <workItem from="1579120050320" duration="6033000" />
       <workItem from="1579208794527" duration="5832000" />
-      <workItem from="1579280027705" duration="15035000" />
+      <workItem from="1579280027705" duration="16316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57622000" />
+    <option name="totallyTimeSpent" value="58903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,7 +428,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19517103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -908,18 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LoaderCallback.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1575728670300" expanded="false" signature="6:78" ph="..." />
-            <marker date="1575728670300" expanded="true" signature="123:292" ph="{...}" />
-            <marker date="1575728670300" expanded="true" signature="187:290" ph="{...}" />
-            <marker date="1575728670300" expanded="true" signature="214:286" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Parallax.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -940,8 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CharacterController2D.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="259" column="25" lean-forward="true" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
+        <state relative-caret-position="961">
+          <caret line="291" column="63" selection-start-line="291" selection-start-column="63" selection-end-line="291" selection-end-column="63" />
           <folding>
             <marker date="1579361537314" expanded="true" signature="6:277" ph="..." />
             <marker date="1579361537314" expanded="true" signature="329:15138" ph="{...}" />
@@ -1006,6 +957,19 @@
             <marker date="1579361537314" expanded="true" signature="14780:14846" ph="{...}" />
             <marker date="1579361537314" expanded="true" signature="14859:14926" ph="{...}" />
             <marker date="1579361537314" expanded="true" signature="15062:15107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LoaderCallback.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <marker date="1575728670300" expanded="false" signature="6:78" ph="..." />
+            <marker date="1575728670300" expanded="true" signature="123:292" ph="{...}" />
+            <marker date="1575728670300" expanded="true" signature="187:290" ph="{...}" />
+            <marker date="1575728670300" expanded="true" signature="214:286" ph="{...}" />
           </folding>
         </state>
       </provider>

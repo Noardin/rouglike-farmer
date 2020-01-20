@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Animations;
 public class Cow : Enemy
 {
    private bool isCharging;
+   public float ChargeDistance;
    
    
       
@@ -35,14 +36,13 @@ public class Cow : Enemy
       base.Update();
       if (isCharging)
       {
-         Vector2 targetVelocity = new Vector2(moveDirection.x*15f*Time.fixedDeltaTime*5f*idleMoveSpeed, enemybody.velocity.y);
+         Vector2 targetVelocity = new Vector2(moveDirection.x*15f*Time.fixedDeltaTime*5f*ChargeDistance, enemybody.velocity.y);
          enemybody.velocity = Vector3.SmoothDamp(enemybody.velocity, targetVelocity, ref velocity, movementSmoothing);
          Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(attackPosition.position, 2f, whatisPlayer);
          foreach (var coll in collider2Ds)
          {
             if (coll.CompareTag("EventTrigger"))
             {
-               Debug.Log("earlyTrigger");
                animator.Play("ovce_attack", 0, 151f/167f);
                
             }

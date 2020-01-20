@@ -372,3 +372,4 @@ MonoBehaviour:
   popUps: {fileID: 2535896646272912857}
   SR: {fileID: 8794572689806220761}
   AttackFlipping: 0
+  ChargeDistance: 20

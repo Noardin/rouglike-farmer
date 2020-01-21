@@ -14,7 +14,7 @@ public class ImageLoader : MonoBehaviour
 {
    private string path;
    public string Filename = "newfile.png";
-   public RawImage image;
+   public SpriteRenderer Image;
    public DropdownMaps dropdownMaps;
 
 
@@ -66,7 +66,7 @@ public class ImageLoader : MonoBehaviour
          }
 
          dropdownMaps.PopulateList();
-         StartCoroutine(GetImage(filename));
+         dropdownMaps.SetListTo(filename);
          
       }
    }
@@ -86,6 +86,7 @@ public class ImageLoader : MonoBehaviour
          {
             // Get downloaded asset bundle
             var texture = DownloadHandlerTexture.GetContent(uwr);
+
             displayImage(texture);
          }
       }
@@ -94,7 +95,8 @@ public class ImageLoader : MonoBehaviour
 
    public void displayImage(Texture2D t)
    {
-      image.texture = t;
+      Sprite sprite = Sprite.Create(t,new Rect(0f,0f,t.width,t.height), new Vector2(0.5f,0.5f),100f );
+      Image.sprite = sprite;
    }
 
    void Deletes()

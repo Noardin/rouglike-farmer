@@ -22,6 +22,19 @@ public class DropdownMaps : MonoBehaviour
 
    public void ListChoice(int item)
    {
-      Debug.Log("item " + item);
+      Dropdown.OptionData data = dropdown.options[item];
+      StartCoroutine(ImageLoader.GetImage(data.text));
+   }
+
+   public void SetListTo(string filename)
+   {
+      foreach (var o in dropdown.options)
+      {
+         if (o.text == filename)
+         {
+            dropdown.value = o.GetHashCode();
+            break;
+         }
+      }
    }
 }

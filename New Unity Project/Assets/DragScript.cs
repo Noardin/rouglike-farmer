@@ -9,18 +9,26 @@ public class DragScript : MonoBehaviour
    public Transform map;
    private Vector2 lastmousePos;
    public DropdownMaps dropdown;
-   public BoxCollider2D col;
-
+   private Camera cam;
+   private SpriteRenderer mapSR;
+   private Sprite previosSprite;
+   public BoxCollider2D mapBorder;
+   public float maxX;
+   public float maxY;
+   public float movedX;
+   public float movedY;
    private void Start()
    {
-      lastmousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      cam =Camera.main;
+      lastmousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      mapSR = map.GetComponent<SpriteRenderer>();
+      
    }
 
    private void OnMouseOver()
    {
       if (Input.GetMouseButtonDown(0)& dropdown.dropdown.options.Count !=0)
       {
-        
          selected = true;
          Debug.Log("dragged "+ dropdown.dropdown.options.Count);
       }
@@ -29,31 +37,44 @@ public class DragScript : MonoBehaviour
 
    private void Update()
    {
-      if (selected & CanMove())
+      if (previosSprite != mapSR.sprite)
       {
-         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         map.position = new Vector2(map.position.x + (cursorPos.x-lastmousePos.x),map.position.y + (cursorPos.y-lastmousePos.y));
+         Bounds spritebounds = mapSR.sprite.bounds;
+         float scale = mapSR.transform.localScale.x;
+         maxX = spritebounds.extents.x*scale- mapBorder.bounds.size.x/2;
+         maxY = spritebounds.extents.y*scale- mapBorder.bounds.size.y/2;
+         Debug.Log("spriteX "+spritebounds.extents.x);
+         cam.transform.position = new Vector3(0,0,cam.transform.position.z);
+         movedX = 0f;
+         movedY = 0f;
+         previosSprite = mapSR.sprite;
+      }   
+      if (selected)
+      {
+         Vector2 cursorPos = cam.ScreenToWorldPoint(Input.mousePosition);
+         Vector2 moveAmount = new Vector2(-cursorPos.x+lastmousePos.x,  -cursorPos.y+lastmousePos.y);
+         Vector3 NextPos = new Vector3((cam.transform.position.x +moveAmount.x),(cam.transform.position.y +moveAmount.y), cam.transform.position.z);
          
+         if (CanMove(moveAmount))
+         {
+            cam.transform.position = NextPos;
+            movedX += moveAmount.x;
+            movedY += moveAmount.y;
+         }
       }
 
       if (Input.GetMouseButtonUp(0))
       {
          selected = false;
       }
-      lastmousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      lastmousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       
    }
-   private bool CanMove()
+
+   private bool CanMove(Vector2 moveAmount)
    {
-      RaycastHit2D ycollision = Physics2D.Raycast(map.position, Vector2.up, col.size.y/2,8 );
-      RaycastHit2D xcollision = Physics2D.Raycast(map.position, Vector2.right, col.size.x/2,8);
-      Debug.Log("col " + xcollision.collider);
-      return (ycollision.collider == null & xcollision.collider == null);
+      return (movedX + moveAmount.x < maxX & movedX + moveAmount.x > -maxX)& (movedY + moveAmount.y < maxY & movedY + moveAmount.y > -maxY);
    }
 
-   private void OnDrawGizmos()
-   {
-      Gizmos.color = Color.cyan;
-      Gizmos.DrawRay(map.position, new Vector2(0, col.bounds.size.y/2));
-   }
+
 }

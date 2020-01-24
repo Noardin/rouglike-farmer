@@ -32,7 +32,8 @@ public class DropdownMaps : MonoBehaviour
       {
          if (o.text == filename)
          {
-            dropdown.value = o.GetHashCode();
+            Debug.Log("set "+ o.text);
+            dropdown.value = dropdown.options.IndexOf(o);
             break;
          }
       }

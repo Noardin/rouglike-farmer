@@ -16,9 +16,7 @@ public class ImageLoader : MonoBehaviour
    public string Filename = "newfile.png";
    public SpriteRenderer Image;
    public DropdownMaps dropdownMaps;
-
-
-
+   public float minYSize;
    private void Start()
    {
       Deletes();
@@ -26,7 +24,7 @@ public class ImageLoader : MonoBehaviour
 
    public void OpenExplorer()
    {
-      path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
+      path = EditorUtility.OpenFilePanel("Overwrite with png", "", "*.png; *.jpeg; *.jpg");
       SaveImage(path, Filename);
    }
 
@@ -97,6 +95,8 @@ public class ImageLoader : MonoBehaviour
    {
       Sprite sprite = Sprite.Create(t,new Rect(0f,0f,t.width,t.height), new Vector2(0.5f,0.5f),100f );
       Image.sprite = sprite;
+      float fact = minYSize / sprite.bounds.size.y;
+      Image.transform.localScale = new Vector3(fact, fact, fact);
    }
 
    void Deletes()

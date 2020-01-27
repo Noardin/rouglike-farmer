@@ -17,22 +17,34 @@ public class DragScript : MonoBehaviour
    public float maxY;
    public float movedX;
    public float movedY;
+   public cursorHandler CursorHandler;
    private void Start()
    {
       cam =Camera.main;
       lastmousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       mapSR = map.GetComponent<SpriteRenderer>();
-      
+
    }
 
    private void OnMouseOver()
    {
+      
       if (Input.GetMouseButtonDown(0)& dropdown.dropdown.options.Count !=0)
       {
          selected = true;
          Debug.Log("dragged "+ dropdown.dropdown.options.Count);
       }
      
+   }
+
+   private void OnMouseEnter()
+   {
+      CursorHandler.currentCursor = cursorHandler.CursorTypes.drag;
+   }
+
+   private void OnMouseExit()
+   {
+      CursorHandler.currentCursor = cursorHandler.CursorTypes.point;
    }
 
    private void Update()

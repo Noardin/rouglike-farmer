@@ -19,12 +19,14 @@ public class ImageLoader : MonoBehaviour
    public float minYSize;
    private void Start()
    {
-      Deletes();
+      
    }
 
    public void OpenExplorer()
    {
+      Cursor.visible = true;
       path = EditorUtility.OpenFilePanel("Overwrite with png", "", "*.png; *.jpeg; *.jpg");
+      Cursor.visible = false;
       SaveImage(path, Filename);
    }
 

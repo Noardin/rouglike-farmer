@@ -43,6 +43,7 @@ public class Enemy: MonoBehaviour
     protected EnemyState State = EnemyState.Idling;
     public SpriteRenderer SR;
     public bool AttackFlipping= true;
+    private GameManagement GM;
     protected enum EnemyState
     {
         Stunned, Attacking, Idling
@@ -61,7 +62,7 @@ public class Enemy: MonoBehaviour
 
     protected virtual void Start()
     {
-        
+        GM = GameObject.Find("_GM").GetComponent<GameManagement>();
     }
 
     protected virtual void Update()
@@ -299,6 +300,7 @@ public class Enemy: MonoBehaviour
     protected virtual void Die()
     {
         animator.SetTrigger("IsDying");
+        GM.KillCountUp();
         Destroy(gameObject);
     }
 

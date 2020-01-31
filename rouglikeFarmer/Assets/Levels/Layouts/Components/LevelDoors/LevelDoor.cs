@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +14,7 @@ public class LevelDoor : MonoBehaviour
     private Transform LeavePosition;
     private CameraFollow cameraController;
     private CloseDoor closeDoor;
+    private GameManagement GM;
 
     private void Awake()
     {
@@ -22,6 +24,12 @@ public class LevelDoor : MonoBehaviour
         cameraController = GameObject.Find("CM vcam1").GetComponent<CameraFollow>();
         closeDoor = GameObject.Find("Door_close").GetComponentInChildren<CloseDoor>();
     }
+
+    private void Start()
+    {
+        GM = GameObject.Find("_GM").GetComponent<GameManagement>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EventTrigger"))
@@ -40,9 +48,13 @@ public class LevelDoor : MonoBehaviour
 
     private void GoToLeavePosition()
     {
-        cameraController.StopFollow();
-        closeDoor.OpenDoor();
-        _player.GoTo(LeavePosition.position, 10);
+        if (GM.CanFinish())
+        {
+            cameraController.StopFollow();
+            closeDoor.OpenDoor();
+            _player.GoTo(LeavePosition.position, 10);
+        }
+
     }
 
 

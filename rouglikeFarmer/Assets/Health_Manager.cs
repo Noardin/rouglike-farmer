@@ -25,7 +25,27 @@ public class Health_Manager : MonoBehaviour
     private void Awake()
     {
         FlashImageRenderer = GameObject.Find("FlashScreen").GetComponent<Image>();
+        Debug.Log("sss");
         
+    }
+
+    public void SetHearts()
+    {
+        switch (mainSceneController.GameDifficulty)
+        {
+            case mainSceneController.Difficulty.Easy:
+                numOfHearts = 10;
+                break;
+            case mainSceneController.Difficulty.Normal:
+                numOfHearts = 5;
+                break;
+            case mainSceneController.Difficulty.Hard:
+                numOfHearts = 3;
+                break;
+            default:
+                numOfHearts = 5;
+                break;
+        }
     }
 
     // Update is called once per frame

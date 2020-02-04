@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 using Random = UnityEngine.Random;
+
 
 public class LayoutBlockSpawner : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class Blocks
     public GameObject[] EndingBlocks;
     public GameObject[] CheckpointBlocks;
 }
+#if UNITY_EDITOR
 [CustomEditor(typeof(LayoutBlockSpawner))]
 public class LayoutBlockSpawnerInspector : Editor
 {
@@ -87,3 +89,4 @@ public class LayoutBlockSpawnerInspector : Editor
 
     }
 }
+#endif

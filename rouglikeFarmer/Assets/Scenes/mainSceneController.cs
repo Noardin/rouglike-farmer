@@ -21,10 +21,15 @@ public static class mainSceneController
 {
     private static int sceneSeed;
     public static Levels currentLvel;
+    public static Difficulty GameDifficulty;
     public enum Levels{
         FirstLevel,
         SecondLevel,
         ThirdLevel
+    }
+    public enum Difficulty
+    {
+        Easy, Normal, Hard
     }
     public static int SceneSeed
     {
@@ -78,7 +83,8 @@ public static class mainSceneController
         {
             SceneSeed = sceneData.seed;
             currentLvel = sceneData.currentLevel;
-            
+            GameDifficulty = sceneData.GameDifficulty;
+
         }
         else
         {

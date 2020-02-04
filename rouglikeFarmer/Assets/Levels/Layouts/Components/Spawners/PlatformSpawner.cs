@@ -25,6 +25,7 @@ public class Platforms
 {
    public GameObject[] platforms;
 }
+#if UNITY_EDITOR
 [CustomEditor(typeof(PlatformSpawner))]
 public class PlatformSpawnerInspector : Editor
 {
@@ -49,3 +50,4 @@ public class PlatformSpawnerInspector : Editor
 
    }
 }
+#endif

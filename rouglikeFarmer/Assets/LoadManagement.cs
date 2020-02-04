@@ -29,7 +29,20 @@ public class LoadManagement : MonoBehaviour
         LevelBuilder.BuildLevel(mainSceneController.currentLvel);
         checkpointController.LoadCheckpoints(); 
         checkpoint checkpointData = checkpointController.LastCheckpoint;
-        player.healthManager.HP = playerdata.HP;
+        player.healthManager.SetHearts();
+        //checking wheter the player has save;
+        if (playerdata == null)
+        {
+            player.healthManager.HealFull();
+            SaveSystem.SavePlayer(player);
+            
+           
+        }
+        else
+        {
+            player.healthManager.HP = playerdata.HP;
+        }
+       
         Vector3 position;
         if (checkpointData != null)
         {

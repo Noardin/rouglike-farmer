@@ -9,6 +9,7 @@ public class deathMenu : MonoBehaviour
     
     public void quit()
     {
+        SaveSystem.ClearSave();
         Application.Quit();
     }
 
@@ -16,6 +17,12 @@ public class deathMenu : MonoBehaviour
     {
         Loader.Load(Loader.Scene.GameOver, Loader.Scene.Main);
          
+    }
+
+    public void MainMenu()
+    {
+        SaveSystem.ClearSave();
+        Loader.Load(Loader.Scene.GameOver, Loader.Scene.MainMenu);
     }
 
 

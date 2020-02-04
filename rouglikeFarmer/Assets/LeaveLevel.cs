@@ -14,7 +14,7 @@ public class LeaveLevel : MonoBehaviour
         }
     }
 
-    public void GoToLVL()
+    private void GoToLVL()
     {
         mainSceneController.GoToLevel(ToLevel);
     }

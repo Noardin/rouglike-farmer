@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.UI;
+﻿
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,7 +9,6 @@ public class NPC : MonoBehaviour
     public GameObject DialogCanvas;
     public Transform DialogWindowTransform;
     private GameObject DialogWindow;
-    public PopUps PopUps;
     private UnityEvent TriggerByButtonEvent = new UnityEvent();
 
     private void Awake()

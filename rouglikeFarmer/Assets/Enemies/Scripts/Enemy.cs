@@ -1,8 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using UnityEditorInternal;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -125,7 +121,7 @@ public class Enemy: MonoBehaviour
         {
             if (!isAttacking)
             {
-                Debug.Log("attacking");
+                
                 if (AttackTimer >= AttackDelay)
                 {
                     Attack();

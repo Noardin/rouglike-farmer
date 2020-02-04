@@ -15,6 +15,8 @@ public class LevelDoor : MonoBehaviour
     private CameraFollow cameraController;
     private CloseDoor closeDoor;
     private GameManagement GM;
+    public SpriteRenderer SR;
+    public Sprite ActiveSwitch;
 
     private void Awake()
     {
@@ -50,6 +52,7 @@ public class LevelDoor : MonoBehaviour
     {
         if (GM.CanFinish())
         {
+            SR.sprite = ActiveSwitch;
             cameraController.StopFollow();
             closeDoor.OpenDoor();
             _player.GoTo(LeavePosition.position, 10);

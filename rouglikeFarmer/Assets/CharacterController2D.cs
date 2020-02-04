@@ -1,9 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO.IsolatedStorage;
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using Debug = UnityEngine.Debug;
@@ -372,7 +368,7 @@ public class CharacterController2D : MonoBehaviour
         animator.SetBool("IsClimbing", true);
         IsGripping = false;
         animator.SetBool("LedgeHooking", false);
-
+        PlayerHitBox.ImInvincible();
         Vector3 pullDirection = new Vector3(0f, 1f, 0f);
 
         bool MustClimbe;
@@ -416,6 +412,7 @@ public class CharacterController2D : MonoBehaviour
 
         animator.SetBool("IsClimbing", false);
         IsClimbing = false;
+        PlayerHitBox.ImNotInvincible();
     }
 
     private IEnumerator Freeze(float sec)

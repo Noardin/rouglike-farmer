@@ -56,6 +56,16 @@ public class Hitboxcheck : MonoBehaviour
         StartCoroutine(InvincibleEn(seconds));
     }
 
+    public void ImInvincible()
+    {
+        Invincible = true;
+    }
+
+    public void ImNotInvincible()
+    {
+        Invincible = false;
+    }
+
     public void HitPlayer(Enemy col)
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Enemy") && isBeeingHit == false && !Invincible)

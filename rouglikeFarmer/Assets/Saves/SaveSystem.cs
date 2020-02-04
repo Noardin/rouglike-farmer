@@ -55,6 +55,7 @@ public class SaveSystem : MonoBehaviour
          try
          {
             checkpointData data = formatter.Deserialize(stream) as checkpointData;
+            Debug.Log("loadData "+data.isSet);
             return data;
          }
          catch
@@ -105,13 +106,17 @@ public class SaveSystem : MonoBehaviour
    public static void SaveCheckpoints(List<checkpoint> checkpoints)
    {
       BinaryFormatter formatter = new BinaryFormatter();
-      
+      string pathFolder = Application.persistentDataPath + "/checkpoints";
+      if (!Directory.Exists(pathFolder))
+      {
+         Directory.CreateDirectory(pathFolder);
+      }
      
       foreach (checkpoint checkpoint in checkpoints)
       {
          Debug.Log("isSet"+ checkpoint.isSet);
          checkpointData data = new checkpointData(checkpoint);
-         string path = Application.persistentDataPath + "/checkpoint_"+data.Id+".mix";
+         string path = pathFolder + "/checkpoint_"+data.Id+".mix";
          FileStream stream = new FileStream(path, FileMode.Create);
 
          try

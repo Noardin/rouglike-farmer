@@ -64,7 +64,7 @@ public class LoadManagement : MonoBehaviour
             
             Transform LevelStart = GameObject.Find("LevelStart").transform;
 
-            GoToTrigger += () => {cameraController.Follow(player.transform);};
+            GoToTrigger += () => {cameraController.Follow(GameObject.Find("CameraLookAt").transform);};
             Vector3 GoToPosition = LevelStart.position;
             Debug.Log("levelstart "+GoToPosition);
             player.GoTo(GoToPosition, 10, GoToTrigger);
@@ -77,7 +77,7 @@ public class LoadManagement : MonoBehaviour
             Debug.Log("checkopoint != null");
             
             player.PlayerControlledMovementDisabled = false;
-            cameraController.Follow(player.transform);
+            cameraController.Follow(GameObject.Find("CameraLookAt").transform);
             if (Loader.LastSceneLoaded != Loader.Scene.MainMenu)
             {
                 checkpointData.DeactivateCheckpoint();

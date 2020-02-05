@@ -61,14 +61,19 @@ MonoBehaviour:
     - {fileID: 1037538234150584160, guid: 05e54e69ac6e85e4795d16f30b58b7ff, type: 3}
   - NormalBlocks:
     - {fileID: 2277854058653274712, guid: 1f95aebb5a0374d43967c4aa61be0724, type: 3}
-    - {fileID: 343826936698566833, guid: 5d320724a8e15ab4c95ed24b5777068d, type: 3}
+    - {fileID: 7167218550939399466, guid: 97fc6c1fa9512414bb0469d2269ed349, type: 3}
+    - {fileID: 7167218550939399466, guid: 3f1da516d24d8db4a98e4c9c57298f90, type: 3}
+    - {fileID: 7167218550939399466, guid: 92ad3b917991f1442a6b480867c34c5b, type: 3}
+    - {fileID: 7167218550939399466, guid: 48052da984432864da221f96a8fc6134, type: 3}
     ShopBlocks: []
     ChestBlocks: []
     StartingBlocks:
-    - {fileID: 8457712438491120062, guid: 1d3954edaea3d8e41ab84a802709a69b, type: 3}
+    - {fileID: 4344492106226415785, guid: 589aa06ccedcf5c41ab73a1d59dfd197, type: 3}
     EndingBlocks:
-    - {fileID: 3581089225626876562, guid: 08f304aa935439a4bb045af5d56241dc, type: 3}
-    CheckpointBlocks: []
+    - {fileID: 2112461181374865343, guid: bcc1fc31f952eb048a383d4e3b4790ab, type: 3}
+    CheckpointBlocks:
+    - {fileID: 8671515563828578549, guid: 8912841365e29284c9ac24958fc2190a, type: 3}
+    - {fileID: 1037538234150584160, guid: 598b8ab6b7c56de40bc481c5311453e6, type: 3}
   - NormalBlocks: []
     ShopBlocks: []
     ChestBlocks: []

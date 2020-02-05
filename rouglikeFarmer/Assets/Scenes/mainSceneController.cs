@@ -73,6 +73,7 @@ public static class mainSceneController
         checkpointController.ClearCheckpointsAndSave();
         SceneData sceneData = new SceneData();
         SaveSystem.SaveSceneData(sceneData);
+        SaveSystem.SavePlayer(GameObject.Find("Player").GetComponent<player>());
     }
 
     public static void PrepareLvl()

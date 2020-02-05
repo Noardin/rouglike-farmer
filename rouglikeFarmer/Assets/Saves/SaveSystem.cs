@@ -2,7 +2,6 @@
 using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.WSA;
 using Application = UnityEngine.Application;
 
 public class SaveSystem : MonoBehaviour

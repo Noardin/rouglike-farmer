@@ -216,18 +216,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &48375455 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4309707554479728453, guid: ab7d15ce835678043bdec12208befbce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1105260873}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c120f7d9a3e05224a97a6da4132d8ec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &53731558
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +256,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 6.7
+    OrthographicSize: 13.86
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -291,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53731558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -9.99, y: 9.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1492098207}
@@ -1746,7 +1734,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 6.7
+  orthographic size: 13.86
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1770,7 +1758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000398609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -9.99, y: 9.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 481124558}
@@ -2607,61 +2595,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
         type: 3}
-      propertyPath: hearts.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[10]
-      value: 
-      objectReference: {fileID: 809395840}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[11]
-      value: 
-      objectReference: {fileID: 1057909804}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[12]
-      value: 
-      objectReference: {fileID: 978275966}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[13]
-      value: 
-      objectReference: {fileID: 1329228028}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[14]
-      value: 
-      objectReference: {fileID: 36347121}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[15]
-      value: 
-      objectReference: {fileID: 1542919956}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[16]
-      value: 
-      objectReference: {fileID: 1686160914}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[17]
-      value: 
-      objectReference: {fileID: 1437155736}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[18]
-      value: 
-      objectReference: {fileID: 1455508401}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: hearts.Array.data[19]
-      value: 
-      objectReference: {fileID: 1544344287}
-    - target: {fileID: 4309707553035893693, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 809395840}
@@ -2715,41 +2648,11 @@ PrefabInstance:
       propertyPath: camshake
       value: 
       objectReference: {fileID: 1000398613}
-    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.041328713
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.1173853
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.45069173
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309707553197375257, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.76048833
-      objectReference: {fileID: 0}
     - target: {fileID: 4309707554479728510, guid: ab7d15ce835678043bdec12208befbce,
         type: 3}
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 53731561}
-    - target: {fileID: 4309707554479728510, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: CharacterController2D
-      value: 
-      objectReference: {fileID: 48375455}
-    - target: {fileID: 4309707554802487461, guid: ab7d15ce835678043bdec12208befbce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.49
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!1 &1141511753
@@ -3338,9 +3241,9 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
-  m_ZDamping: 1
+  m_ZDamping: 0.93
   m_ScreenX: 0.5
-  m_ScreenY: 0.707
+  m_ScreenY: 0.815
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -4008,7 +3911,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 942cc6119e7726b40a50d8b0f44620d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 007875d27be27a447a2bc8a7cdbc591d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

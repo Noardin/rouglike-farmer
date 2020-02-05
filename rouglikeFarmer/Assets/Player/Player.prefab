@@ -4970,7 +4970,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: -0.21}
+  m_Offset: {x: 0.041328713, y: -0.1173853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4981,7 +4981,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.61}
+  m_Size: {x: 0.45069173, y: 0.76048833}
   m_EdgeRadius: 0
 --- !u!58 &4309707553197375258
 CircleCollider2D:
@@ -5230,6 +5230,7 @@ Transform:
   - {fileID: 4309707553817436596}
   - {fileID: 4309707553505242210}
   - {fileID: 4309707552998525322}
+  - {fileID: 7471969367906611211}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5313,6 +5314,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   RangeToDropdown: 4
+  DashdDircetion: {x: 1, y: 0, z: 0}
   isSliding: 0
   DashSpeed: 10
   DashDistance: 5
@@ -5481,6 +5483,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 4309707553035893693}
   position: {fileID: 4309707554479728455}
+  cameraController: {fileID: 0}
+  CharacterController2D: {fileID: 4309707554479728453}
+  PlayerControlledMovementDisabled: 1
+  OnGoToEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4309707554479728511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5538,9 +5548,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4309707554802487462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038, y: -0.521, z: 0}
+  m_LocalPosition: {x: 0.038, y: -0.49, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4309707554479728455}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7300202834963653220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7471969367906611211}
+  m_Layer: 8
+  m_Name: CameraLookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7471969367906611211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300202834963653220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.8772225, z: -11}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4309707554479728455}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

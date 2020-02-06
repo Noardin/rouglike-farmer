@@ -34,7 +34,7 @@ public class LayoutBlockSpawner : MonoBehaviour
         
         #endif
     }
-
+    //Test 
     private void Awake()
     {
         Blocks currentLevelBlocks = LevelLayoutBlocks[(int) mainSceneController.currentLvel];

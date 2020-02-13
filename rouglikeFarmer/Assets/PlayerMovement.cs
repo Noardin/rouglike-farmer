@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float runSpeed = 40f;
   
 	float horizontalMove = 0f;
+    private float horizontalDirection;
 	bool jump = false;
 	bool crouch = false;
     private bool dash = false;
@@ -36,8 +37,8 @@ public class PlayerMovement : MonoBehaviour {
                 
                     if (!animator.GetBool("IsAttacking"))
                     {
-                        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
+                        horizontalMove = horizontalDirection * runSpeed;
+
                     }
                     else
                     {
@@ -45,12 +46,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
         
                     animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-                    if (Input.GetButtonDown("Jump"))
-                    {
-                        jump = true;
-                        animator.SetBool("IsJumping", true);
-                    }
-        
+                    
                     if (Input.GetButtonDown("Crouch"))
                     {
                         crouch = true;
@@ -60,17 +56,52 @@ public class PlayerMovement : MonoBehaviour {
                         crouch = false;
                     }
         
-                    if (Input.GetButtonDown("Fire2") && !animator.GetBool("LedgeHooking") && !animator.GetBool("IsSliding") &&
-                        SlideTimer <= 0)
-                    {
-                        SlideTimer = slideDelay;
-                        dash = true;
-                        animator.SetBool("IsSliding", true);
-                        Debug.Log("slide");
-                    }
                 }
         }
         
+    }
+
+    public void MoveRightDown()
+    {
+        horizontalDirection = 1f;
+    }
+
+    public void MoveRightUp()
+    {
+        horizontalDirection = 0f;
+    }
+
+    public void MoveLeftDown()
+    {
+        horizontalDirection = -1f;
+    }
+
+    public void MoveLeftUp()
+    {
+        horizontalDirection = 0f;
+    }
+
+    public void JumpUp()
+    {
+        if (!PauseMenu.paused && !_player.PlayerControlledMovementDisabled)
+        {
+            jump = true;
+            animator.SetBool("IsJumping", true);
+        }
+        
+    }
+
+   
+
+    public void Roll()
+    {
+        if (!PauseMenu.paused && !_player.PlayerControlledMovementDisabled && !animator.GetBool("LedgeHooking") 
+            && !animator.GetBool("IsSliding") && SlideTimer <= 0)
+        {
+            SlideTimer = slideDelay;
+            dash = true;
+            animator.SetBool("IsSliding", true);
+        }
     }
     public void OnLanding()
     {

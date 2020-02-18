@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     private Transform player;
     private bool IsChasingFollow;
     private Transform ChasingPosition;
-    private float CameraDistance = 9f;
+    private float CameraDistance = 5.5f;
     private float timeLeft = 0.5f;
     
 

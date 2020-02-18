@@ -4840,20 +4840,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7361719372816919205}
     m_Modifications:
-    - target: {fileID: 7968504172078374069, guid: 5b3daed2979708848a4b36a067e5a9f0,
-        type: 3}
-      propertyPath: m_Name
-      value: garden_midground
-      objectReference: {fileID: 0}
     - target: {fileID: 6156868029935304359, guid: 5b3daed2979708848a4b36a067e5a9f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: -5.681
       objectReference: {fileID: 0}
     - target: {fileID: 6156868029935304359, guid: 5b3daed2979708848a4b36a067e5a9f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -6.106
       objectReference: {fileID: 0}
     - target: {fileID: 6156868029935304359, guid: 5b3daed2979708848a4b36a067e5a9f0,
         type: 3}
@@ -4899,6 +4894,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156868029935304359, guid: 5b3daed2979708848a4b36a067e5a9f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.9327197
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156868029935304359, guid: 5b3daed2979708848a4b36a067e5a9f0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.367216
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968504172078374069, guid: 5b3daed2979708848a4b36a067e5a9f0,
+        type: 3}
+      propertyPath: m_Name
+      value: garden_midground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3daed2979708848a4b36a067e5a9f0, type: 3}

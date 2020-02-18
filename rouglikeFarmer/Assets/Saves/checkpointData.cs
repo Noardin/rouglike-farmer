@@ -4,15 +4,17 @@ using UnityEngine;
 [System.Serializable]
 public class checkpointData
 {
-   public float[] position;
+
    public string Id;
    public bool isActive;
    public bool isSet;
+   public bool isDisabled;
    public checkpointData(checkpoint checkpoint)
    {
       isActive = checkpoint.isActive;
       isSet = checkpoint.isSet;
       Id = checkpoint.UniqueId.uniqueId;
-      position = new[] {checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z};
+      isDisabled = checkpoint.isDisabled;
+      
    }
 }

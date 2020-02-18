@@ -11,19 +11,16 @@ public class checkpoint : MonoBehaviour
     public Sprite InactiveCheckpointSprite;
     public ParticleSystem ParticleSystem;
     [HideInInspector]public SpriteRenderer SR;
-    public EventTriggerSystem TriggerSystem;
     [HideInInspector]public UniqueId UniqueId;
     
     [HideInInspector]public bool isSet;
     [HideInInspector]public bool isActive;
-
-    private UnityEvent TriggerEvent = new UnityEvent();
+    [HideInInspector] public bool isDisabled;
     // Start is called before the first frame update
 
     void Awake()
     {
         SR = gameObject.GetComponent<SpriteRenderer>();
-        TriggerEvent.AddListener(SetCheckpoint);
         player = GameObject.Find("Player").GetComponent<player>();
     }
 
@@ -34,28 +31,17 @@ public class checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isActive | !isSet)
-        {
-            if (other.gameObject.CompareTag("EventTrigger"))
-                    {
-                        TriggerSystem.TriggerByButton(EventTriggerSystem.button.ENTER, TriggerEvent);
-                    }
-        }
-        
-        
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (!isActive | !isSet)
+        if ((!isActive | !isSet)& !isDisabled)
         {
             if (other.gameObject.CompareTag("EventTrigger"))
             {
-                TriggerSystem.CancelTriggerByButton();
+               SetCheckpoint();
             }
         }
         
         
     }
+ 
 
 
     public void SetCheckpoint()
@@ -91,6 +77,8 @@ public class checkpoint : MonoBehaviour
         }
 
         SR.sprite = InactiveCheckpointSprite;
-        ParticleSystem.Stop();
+        ParticleSystem.ColorOverLifetimeModule colorModule = ParticleSystem.colorOverLifetime;
+        colorModule.enabled = true;
+        colorModule.color = new ParticleSystem.MinMaxGradient(Color.black, Color.gray);
     }
 }

@@ -42,21 +42,28 @@ public static class checkpointController
             }
             else
             {
-                Debug.Log("data.isSet: "+ data.isSet);
-                cp.isActive = data.isActive;
-                cp.isSet = data.isSet;
-                if (cp.isActive)
+                if (!data.isDisabled)
                 {
-                    activeCheckpoints.Add(cp);
-                    cp.SR.sprite = cp.AciteCheckpointSprite;
-                    cp.ParticleSystem.Play();
+                    cp.isActive = data.isActive;
+                    cp.isSet = data.isSet;
+                    if (cp.isActive)
+                    {
+                        activeCheckpoints.Add(cp);
+                        cp.SR.sprite = cp.AciteCheckpointSprite;
+                        cp.ParticleSystem.Play();
+                    }
+    
+                    if (cp.isSet)
+                    {
+                        CanRespawn = true;
+                        LastCheckpoint = cp;
+                    }
                 }
-
-                if (cp.isSet)
+                else
                 {
-                    CanRespawn = true;
-                    LastCheckpoint = cp;
+                    cp.isDisabled = data.isDisabled;
                 }
+                
             }
             
         }
@@ -75,6 +82,7 @@ public static class checkpointController
         {
             checkpoint.isActive = false;
             checkpoint.isSet = false;
+            checkpoint.isDisabled = false;
         }
 
         CanRespawn = false;
@@ -124,17 +132,14 @@ public static class checkpointController
 
     public static void DeactivateLastCheckpoint()
     {
-        Debug.Log("unset "+LastCheckpoint);
         LastCheckpoint.isActive = false;
         LastCheckpoint.isSet = false;
+
         removeCheckpoint(LastCheckpoint);
         
-
         if (activeCheckpoints.Count > 0)
         {
-            Debug.Log("still othercheckpoints");
             LastCheckpoint = activeCheckpoints.Last();
-            Debug.Log("next checkpoint "+ LastCheckpoint);
             LastCheckpoint.SetCheckpoint();
         }
         else
@@ -148,13 +153,8 @@ public static class checkpointController
 
     public static void removeCheckpoint(checkpoint checkpoint)
     {
-        Debug.Log("remove");
         activeCheckpoints.Remove(checkpoint);
-        foreach (checkpoint cp in AllCheckpoints)
-        {
-            Debug.Log("allcheckpoints "+ cp);
-        }
-        
+        LastCheckpoint.isDisabled = true;
 
     }
 }

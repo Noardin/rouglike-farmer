@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1161,7 +1161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.400024, y: -33.80005}
+  m_AnchoredPosition: {x: -72.5, y: -33.75}
   m_SizeDelta: {x: 145, y: 67.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313354962
@@ -1618,7 +1618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.38000488}
+  m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0, y: -0.6500244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &640367746
@@ -1657,7 +1657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60.899994, y: -67}
+  m_AnchoredPosition: {x: 61, y: -67}
   m_SizeDelta: {x: 67.3, y: 66.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640367748
@@ -3078,7 +3078,43 @@ PrefabInstance:
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 53731561}
-    m_RemovedComponents: []
+    - target: {fileID: 4309707554479728452, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707554479728451, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707554479728451, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.030000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707554479728451, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09043434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707554479728451, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.8208687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309707553817436596, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471969367906611211, guid: ab7d15ce835678043bdec12208befbce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.18
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4309707554479728452, guid: ab7d15ce835678043bdec12208befbce, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab7d15ce835678043bdec12208befbce, type: 3}
 --- !u!114 &1105260874 stripped
 MonoBehaviour:

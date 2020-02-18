@@ -392,6 +392,7 @@ public class CharacterController2D : MonoBehaviour
             if (ledgeCheck.IsOnTop)
             {
                 MustClimbe = false;
+                transform.position = new Vector2(ledgeCheck.CurrentEdge.position.x, transform.position.y);
             }
 
 
@@ -399,11 +400,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
 
-        while (!m_Grounded)
-        {
-            transform.position += DashdDircetion * Time.deltaTime * 5f;
-            yield return new WaitForSeconds(.002f);
-        }
+        
 
 
         m_Rigidbody2D.gravityScale = 3;

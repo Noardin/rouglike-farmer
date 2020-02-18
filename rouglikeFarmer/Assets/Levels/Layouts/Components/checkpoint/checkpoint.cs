@@ -24,6 +24,17 @@ public class checkpoint : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<player>();
     }
 
+    private void Start()
+    {
+        if (isDisabled)
+        {
+            ParticleSystem.ColorOverLifetimeModule colorModule = ParticleSystem.colorOverLifetime;
+            colorModule.enabled = true;
+            colorModule.color = new ParticleSystem.MinMaxGradient(Color.black, Color.gray);
+            ParticleSystem.Play();
+        }
+    }
+
     public void SetID(UniqueId uniqueId)
     {
         UniqueId = uniqueId;

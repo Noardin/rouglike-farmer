@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -846,8 +846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373.00006, y: -205}
-  m_SizeDelta: {x: 117.3, y: 58.2}
+  m_AnchoredPosition: {x: 202.2, y: -66.4}
+  m_SizeDelta: {x: 64.29, y: 34.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635877466
 MonoBehaviour:
@@ -1539,7 +1539,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 03dd94c39c251ac479975bfc0f9ad02f, type: 3}
-    m_FontSize: 20
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zpet
+  m_Text: Back
 --- !u!222 &1477894458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 1.96
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

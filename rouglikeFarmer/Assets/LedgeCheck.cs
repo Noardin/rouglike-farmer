@@ -5,6 +5,7 @@ using UnityEngine;
 public class LedgeCheck : MonoBehaviour
 {
     public bool IsOnTop;
+    public Transform CurrentEdge;
 
     public LayerMask WhatIsEdge;
     void Update()
@@ -16,6 +17,7 @@ public class LedgeCheck : MonoBehaviour
             if (htiCollider[i].gameObject != gameObject)
             {
                 IsOnTop = true;
+                CurrentEdge = htiCollider[i].transform;
             }
            
         }

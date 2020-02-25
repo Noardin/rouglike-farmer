@@ -1,21 +1,63 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SocialPlatforms.Impl;
 using Application = UnityEngine.Application;
 
 public class SaveSystem : MonoBehaviour
 {
-   public static void SaveScores(PlayerData player)
+   public static void SaveScores(ScoreData player)
    {
-      List<PlayerData> ExistingPlayers = LoadScores();
+      List<ScoreData> ExistingPlayers = LoadScores();
       BinaryFormatter formatter = new BinaryFormatter();
-      string path = Application.persistentDataPath + "/player.mix";
+      string path = Application.persistentDataPath + "/Scores.mix";
       FileStream stream = new FileStream(path, FileMode.Create);
+      if (ExistingPlayers != null)
+      {
+         Debug.Log("scoreSave "+ ExistingPlayers);
+         int? i = ScoreExists(player, ExistingPlayers);
+         if (i != null)
+         {
+            ExistingPlayers[i.Value] = player;
+         }
+         else
+         {
+            player.PlayerID = ExistingPlayers.Count + 1;
+            ExistingPlayers.Add(player);
+         }
+      }
+      else
+      {
+         ExistingPlayers = new List<ScoreData>();
+         ExistingPlayers.Add(player);
+      }
+
+      try
+      {
+         formatter.Serialize(stream, ExistingPlayers);
+      }
+      finally
+      {
+         stream.Close();
+      }
       
-      ExistingPlayers.Add(player);
-      formatter.Serialize(stream, ExistingPlayers);
-      stream.Close();
+      
+   }
+
+   private static int? ScoreExists(ScoreData player, List<ScoreData> ExistingPlayers)
+   {
+      for (var i = 0; i < ExistingPlayers.Count; i++)
+      {
+         if (player.PlayerID == ExistingPlayers[i].PlayerID)
+         {
+            return i;
+         }
+         
+      }
+
+      return null;
    }
    public static void SavePlayer(player player)
    {
@@ -198,16 +240,16 @@ public class SaveSystem : MonoBehaviour
    }
 
 
-   public static List<PlayerData> LoadScores()
+   public static List<ScoreData> LoadScores()
    {
-      string path = Application.persistentDataPath + "/player.mix";
+      string path = Application.persistentDataPath + "/Scores.mix";
       if (File.Exists(path))
       {
          BinaryFormatter formatter = new BinaryFormatter();
          FileStream stream = new FileStream(path, FileMode.Open);
 
-         
-         List<PlayerData> data = formatter.Deserialize(stream) as List<PlayerData>;
+         Debug.Log("scoreData");
+         List<ScoreData> data = formatter.Deserialize(stream) as List<ScoreData>;
          stream.Close();
          return data;
       }

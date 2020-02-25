@@ -22,6 +22,8 @@ public static class mainSceneController
     private static int sceneSeed;
     public static Levels currentLvel;
     public static Difficulty GameDifficulty;
+    public static ScoreData ScoreData;
+    public static int PlayerID;
     public enum Levels{
         FirstLevel,
         SecondLevel,

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +11,14 @@ public class MainMenu : MonoBehaviour
 {
     public Text EnterbuttonText;
     public Animator animator;
-    public SceneData data;
+    [HideInInspector]public SceneData data;
+    public InputField PlayerName;
+    [HideInInspector]public ScoreData ScoreData;
+    public GameObject NewPlayerForm;
+    public GameObject ExistingPlayerForm;
+    public GameObject PlayerListObject;
+    public RectTransform PlayerList;
+    
     private void Start()
     {
         if (!SaveSystem.SavesExist())
@@ -41,7 +49,8 @@ public class MainMenu : MonoBehaviour
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Easy;
-        SaveSystem.SaveSceneData(data);
+        
+        animator.SetTrigger("SlideToPlayerSettings");
         
     }
     public void NewNormalGame()
@@ -49,25 +58,67 @@ public class MainMenu : MonoBehaviour
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Normal;
-        SaveSystem.SaveSceneData(data);
+       
+        animator.SetTrigger("SlideToPlayerSettings");
     }
     public void NewHardyGame()
     {
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Hard;
-        SaveSystem.SaveSceneData(data);
-        Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
+        
+        animator.SetTrigger("SlideToPlayerSettings");
+        
     }
 
     public void NewPlayer()
     {
-        
+        ExistingPlayerForm.SetActive(false);
+        NewPlayerForm.SetActive(true);
+        animator.SetTrigger("SlideToFinalStep");
     }
 
     public void ExistingPlayer()
     {
+        NewPlayerForm.SetActive(false);
+        ExistingPlayerForm.SetActive(true);
+        List<ScoreData> players = SaveSystem.LoadScores();
         
+        for (var i = 0; i < players.Count; i++)
+        {
+            GameObject item = Instantiate(PlayerListObject);
+            
+            item.transform.SetParent(PlayerList);
+            item.transform.localScale = new Vector3(1,1,1);
+            item.GetComponentInChildren<Text>().text = players[i].PlayerName;
+            ButtonData itemData = item.GetComponent<ButtonData>();
+            itemData.ScoreData = players[i];
+        }
+        animator.SetTrigger("SlideToFinalStep");
+        
+
+    }
+
+    public void CreatePlayerAndPlay()
+    {
+        if (PlayerName.text != String.Empty)
+        {
+            ScoreData = new ScoreData(PlayerName.text, 0);
+            SaveSystem.SaveScores(ScoreData);
+            SaveSystem.SaveSceneData(data);
+            Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
+        }
+    }
+
+
+    public void ChooseExistingPlay()
+    {
+        if (ScoreData != null)
+        {
+            SaveSystem.SaveScores(ScoreData);
+            SaveSystem.SaveSceneData(data);
+            Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
+        }
     }
 
     public void Zpet()

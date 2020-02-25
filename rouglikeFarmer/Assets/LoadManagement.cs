@@ -30,7 +30,7 @@ public class LoadManagement : MonoBehaviour
         checkpointController.LoadCheckpoints(); 
         checkpoint checkpointData = checkpointController.LastCheckpoint;
         player.healthManager.SetHearts();
-        //checking wheter the player has save;
+        //checking wether the player has save;
         if (playerdata == null)
         {
             player.healthManager.HealFull();

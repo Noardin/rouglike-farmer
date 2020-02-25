@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Toshiba\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Toshiba\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_rouglikeFarmer.-1842344153.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Toshiba\Desktop\rouglike-farmer\rouglikeFarmer" t="IncludeRecursive">
+    <e p="C:\Users\triks\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\triks\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_rouglikeFarmer.-87817425.00" t="ExcludeRecursive" />
+    <e p="C:\Users\triks\Desktop\Programming\Project\UnityProjects\rouglike-farmer\rouglikeFarmer" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddTo.cs" t="Include" />
@@ -11,6 +11,7 @@
         <e p="Attack.cs" t="Include" />
         <e p="AttackColliders.cs" t="Include" />
         <e p="BarnScenes.cs" t="Include" />
+        <e p="ButtonData.cs" t="Include" />
         <e p="CameraFollow.cs" t="Include" />
         <e p="CameraShake.cs" t="Include" />
         <e p="CharacterController2D.cs" t="Include" />
@@ -83,9 +84,9 @@
         <e p="Saves" t="Include">
           <e p="checkpointData.cs" t="Include" />
           <e p="PlayerData.cs" t="Include" />
-          <e p="PlayersData.cs" t="Include" />
           <e p="SaveSystem.cs" t="Include" />
           <e p="SceneData.cs" t="Include" />
+          <e p="ScoreData.cs" t="Include" />
         </e>
         <e p="Scenes" t="Include">
           <e p="mainSceneController.cs" t="Include" />
@@ -126,10 +127,13 @@
         <e p="WaveEffectShader.shader" t="Include" />
         <e p="worldSettings.cs" t="Include" />
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="rouglikeFarmer.sln" t="IncludeFlat" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

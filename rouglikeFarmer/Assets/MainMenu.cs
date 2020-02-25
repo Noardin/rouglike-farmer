@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 {
     public Text EnterbuttonText;
     public Animator animator;
+    public SceneData data;
     private void Start()
     {
         if (!SaveSystem.SavesExist())
@@ -37,30 +38,36 @@ public class MainMenu : MonoBehaviour
 
     public void NewEasyGame()
     {
-        SceneData data = new SceneData();
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Easy;
         SaveSystem.SaveSceneData(data);
-        Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
+        
     }
     public void NewNormalGame()
     {
-        SceneData data = new SceneData();
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Normal;
         SaveSystem.SaveSceneData(data);
-        Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
     }
     public void NewHardyGame()
     {
-        SceneData data = new SceneData();
         data.seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         data.currentLevel = mainSceneController.Levels.FirstLevel;
         data.GameDifficulty = mainSceneController.Difficulty.Hard;
         SaveSystem.SaveSceneData(data);
         Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
+    }
+
+    public void NewPlayer()
+    {
+        
+    }
+
+    public void ExistingPlayer()
+    {
+        
     }
 
     public void Zpet()

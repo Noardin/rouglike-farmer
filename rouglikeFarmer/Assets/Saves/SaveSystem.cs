@@ -6,6 +6,17 @@ using Application = UnityEngine.Application;
 
 public class SaveSystem : MonoBehaviour
 {
+   public static void SaveScores(PlayerData player)
+   {
+      List<PlayerData> ExistingPlayers = LoadScores();
+      BinaryFormatter formatter = new BinaryFormatter();
+      string path = Application.persistentDataPath + "/player.mix";
+      FileStream stream = new FileStream(path, FileMode.Create);
+      
+      ExistingPlayers.Add(player);
+      formatter.Serialize(stream, ExistingPlayers);
+      stream.Close();
+   }
    public static void SavePlayer(player player)
    {
       BinaryFormatter formatter = new BinaryFormatter();
@@ -17,7 +28,7 @@ public class SaveSystem : MonoBehaviour
       formatter.Serialize(stream, data);
       stream.Close();
    }
-
+   
    public static void ClearSave()
    {
       string CheckpointPath = Application.persistentDataPath + "/checkpoints";
@@ -187,6 +198,25 @@ public class SaveSystem : MonoBehaviour
    }
 
 
+   public static List<PlayerData> LoadScores()
+   {
+      string path = Application.persistentDataPath + "/player.mix";
+      if (File.Exists(path))
+      {
+         BinaryFormatter formatter = new BinaryFormatter();
+         FileStream stream = new FileStream(path, FileMode.Open);
+
+         
+         List<PlayerData> data = formatter.Deserialize(stream) as List<PlayerData>;
+         stream.Close();
+         return data;
+      }
+      else
+      {
+         Debug.LogError("Save file not found in"+ path);
+         return null;
+      }
+   }
    public static PlayerData LoadPlayer()
    {
       string path = Application.persistentDataPath + "/player.mix";

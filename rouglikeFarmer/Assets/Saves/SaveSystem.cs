@@ -45,6 +45,38 @@ public class SaveSystem : MonoBehaviour
       
       
    }
+   public static int? SaveNewScores(string PlayerName)
+   {
+      List<ScoreData> ExistingPlayers = LoadScores();
+      ScoreData player = new ScoreData(PlayerName, 0);
+      BinaryFormatter formatter = new BinaryFormatter();
+      string path = Application.persistentDataPath + "/Scores.mix";
+      FileStream stream = new FileStream(path, FileMode.Create);
+      if (ExistingPlayers != null)
+      {
+         player.PlayerID = ExistingPlayers.Count + 1;
+         ExistingPlayers.Add(player);
+      }
+      else
+      {
+         ExistingPlayers = new List<ScoreData>();
+         ExistingPlayers.Add(player);
+         player.PlayerID = 0;
+      }
+
+      try
+      {
+         formatter.Serialize(stream, ExistingPlayers); 
+         return player.PlayerID;
+      }
+      finally
+      {
+         stream.Close();
+        
+      }
+      
+      
+   }
 
    private static int? ScoreExists(ScoreData player, List<ScoreData> ExistingPlayers)
    {

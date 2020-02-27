@@ -104,8 +104,10 @@ public class MainMenu : MonoBehaviour
         if (PlayerName.text != String.Empty)
         {
             ScoreData = new ScoreData(PlayerName.text, 0);
-            SaveSystem.SaveScores(ScoreData);
+            int? PlayerID = SaveSystem.SaveNewScores(PlayerName.text);
+            ScoreData.PlayerID = PlayerID;
             SaveSystem.SaveSceneData(data);
+            mainSceneController.ScoreData = ScoreData;
             Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
         }
     }
@@ -117,6 +119,7 @@ public class MainMenu : MonoBehaviour
         {
             SaveSystem.SaveScores(ScoreData);
             SaveSystem.SaveSceneData(data);
+            mainSceneController.ScoreData = ScoreData;
             Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);
         }
     }
@@ -124,6 +127,16 @@ public class MainMenu : MonoBehaviour
     public void Zpet()
     {
         animator.SetTrigger("ButtonSlideBack");
+    }
+
+    public void ZpetFinalStep()
+    {
+        animator.SetTrigger("ButtonSlideBackFinalStep");
+    }
+
+    public void ZpetPlayerSettings()
+    {
+        animator.SetTrigger("ButtonSlideBackPlayerSettings");
     }
     private void Continue()
     {

@@ -5,6 +5,7 @@ using Debug = UnityEngine.Debug;
 public class Enemy: MonoBehaviour
 {
     public int HP = 100;
+    public int Score;
     private GameObject player;
     private Rigidbody2D playerbody;
     protected Vector3 moveDirection = new Vector3(1f,0f,0);
@@ -297,6 +298,7 @@ public class Enemy: MonoBehaviour
     {
         animator.SetTrigger("IsDying");
         GM.KillCountUp();
+        mainSceneController.ScoreData.PlayerScore += Score;
         Destroy(gameObject);
     }
 

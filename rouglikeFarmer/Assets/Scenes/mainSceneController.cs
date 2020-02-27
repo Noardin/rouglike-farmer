@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public static class Extensions
@@ -81,6 +82,7 @@ public static class mainSceneController
     public static void PrepareLvl()
     {
         SceneData sceneData = SaveSystem.LoadSceneData();
+        Debug.Log("Player: "+ScoreData.PlayerName);
 
         if (sceneData != null)
         {

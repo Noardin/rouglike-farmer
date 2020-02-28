@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+
 [System.Serializable]
 public class SceneData
 {
     public int seed;
-    public int PlayerID;
+    public ScoreData NewScoreData;
     public mainSceneController.Levels currentLevel;
     public mainSceneController.Difficulty GameDifficulty;
 
@@ -14,6 +16,6 @@ public class SceneData
         seed = mainSceneController.SceneSeed;
         currentLevel = mainSceneController.currentLvel;
         GameDifficulty = mainSceneController.GameDifficulty;
-        PlayerID = mainSceneController.PlayerID;
+        NewScoreData = mainSceneController.NewScore;
     }
 }

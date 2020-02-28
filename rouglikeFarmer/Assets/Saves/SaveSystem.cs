@@ -20,20 +20,13 @@ public class SaveSystem : MonoBehaviour
          int? i = ScoreExists(player, ExistingPlayers);
          if (i != null)
          {
-            ExistingPlayers[i.Value] = player;
-         }
-         else
-         {
-            player.PlayerID = ExistingPlayers.Count + 1;
-            ExistingPlayers.Add(player);
+            if (ExistingPlayers[i.Value].PlayerScore < player.PlayerScore)
+            {
+               ExistingPlayers[i.Value].PlayerScore = player.PlayerScore;
+            }
+            
          }
       }
-      else
-      {
-         ExistingPlayers = new List<ScoreData>();
-         ExistingPlayers.Add(player);
-      }
-
       try
       {
          formatter.Serialize(stream, ExistingPlayers);

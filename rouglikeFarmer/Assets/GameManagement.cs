@@ -11,6 +11,7 @@ public class GameManagement : MonoBehaviour
     public Text MaxText;
     private int max;
     private int min;
+    public Text Score;
     public Animator killcountanim;
     public int Max
     {
@@ -43,6 +44,12 @@ public class GameManagement : MonoBehaviour
     public void KillCountUp()
     {
         Min += 1;
+        
+    }
+
+    public void SetScoreCount(int Score)
+    {
+        this.Score.text = Score.ToString();
     }
 
     private void Start()

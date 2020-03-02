@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonData : MonoBehaviour
 {
@@ -15,5 +16,6 @@ public class ButtonData : MonoBehaviour
     public void onChoosePlayer()
     {
         mainMenu.ScoreData = ScoreData;
+        GameObject.Find("Score").GetComponent<Text>().text = ScoreData.PlayerScore.ToString();
     }
 }

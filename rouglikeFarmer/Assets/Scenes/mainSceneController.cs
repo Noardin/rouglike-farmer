@@ -24,8 +24,7 @@ public static class mainSceneController
     public static Levels currentLvel;
     public static Difficulty GameDifficulty;
     public static ScoreData ScoreData;
-    public static ScoreData NewScore;
-    public static int PlayerID;
+    public static int NewScore;
     public enum Levels{
         FirstLevel,
         SecondLevel,
@@ -91,13 +90,14 @@ public static class mainSceneController
             currentLvel = sceneData.currentLevel;
             GameDifficulty = sceneData.GameDifficulty;
             NewScore = sceneData.NewScoreData;
-            GameObject.Find("_GM").GetComponent<GameManagement>().SetScoreCount(NewScore.PlayerScore);
+            GameObject.Find("_GM").GetComponent<GameManagement>().SetScoreCount(NewScore);
 
         }
         else
         {
             currentLvel = Levels.FirstLevel;
             SceneSeed = Random.seed;
+            NewScore = 0;
         }
         
         

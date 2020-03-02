@@ -25,8 +25,7 @@ public class Health_Manager : MonoBehaviour
     private void Awake()
     {
         FlashImageRenderer = GameObject.Find("FlashScreen").GetComponent<Image>();
-        Debug.Log("sss");
-        
+
     }
 
     public void SetHearts()

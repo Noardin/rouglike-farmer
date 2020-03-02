@@ -20,11 +20,7 @@ public class SaveSystem : MonoBehaviour
          int? i = ScoreExists(player, ExistingPlayers);
          if (i != null)
          {
-            if (ExistingPlayers[i.Value].PlayerScore < player.PlayerScore)
-            {
-               ExistingPlayers[i.Value].PlayerScore = player.PlayerScore;
-            }
-            
+            ExistingPlayers[i.Value].PlayerScore = player.PlayerScore;
          }
       }
       try

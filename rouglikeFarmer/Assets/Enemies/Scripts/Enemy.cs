@@ -297,9 +297,9 @@ public class Enemy: MonoBehaviour
     protected virtual void Die()
     {
         animator.SetTrigger("IsDying");
-        mainSceneController.NewScore.PlayerScore += Score;
+        mainSceneController.NewScore += Score;
         GM.KillCountUp();
-        GM.SetScoreCount(mainSceneController.NewScore.PlayerScore);
+        GM.SetScoreCount(mainSceneController.NewScore);
         Destroy(gameObject);
     }
 

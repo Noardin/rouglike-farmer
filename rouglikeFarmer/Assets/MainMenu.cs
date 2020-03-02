@@ -116,8 +116,7 @@ public class MainMenu : MonoBehaviour
     public void ChooseExistingPlay()
     {
         if (ScoreData != null)
-        {
-            SaveSystem.SaveScores(ScoreData);
+        { 
             SaveSystem.SaveSceneData(data);
             mainSceneController.ScoreData = ScoreData;
             Loader.Load(Loader.Scene.MainMenu, Loader.Scene.Main);

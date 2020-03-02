@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,10 +7,12 @@ using UnityEngine.UI;
 public class deathMenu : MonoBehaviour
 {
     public Text LoadCheckpointText;
+    public Text ScoreNumber;
+    public GameObject Score;
+    public GameObject buttons;
     
     public void quit()
     {
-        SaveSystem.ClearSave();
         Application.Quit();
     }
 
@@ -31,6 +34,24 @@ public class deathMenu : MonoBehaviour
         if (!checkpointController.CanRespawn)
         {
             LoadCheckpointText.text = "TRY AGAIN";
+            SaveSystem.ClearSave();
+        }
+
+        ScoreNumber.text = mainSceneController.NewScore.ToString();
+        if (mainSceneController.ScoreData.PlayerScore < mainSceneController.NewScore)
+        {
+            mainSceneController.ScoreData.PlayerScore = mainSceneController.NewScore;
+            SaveSystem.SaveScores(mainSceneController.ScoreData);
+        }
+
+    }
+
+    private void Update()
+    {
+        if ((Input.touchCount > 0 | Input.anyKey) & !buttons.activeSelf)
+        {
+            buttons.SetActive(true);
+            Score.SetActive(false);
         }
     }
 }

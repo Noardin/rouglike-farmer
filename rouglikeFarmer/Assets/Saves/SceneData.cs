@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class SceneData
 {
     public int seed;
-    public ScoreData NewScoreData;
+    public int NewScoreData;
     public mainSceneController.Levels currentLevel;
     public mainSceneController.Difficulty GameDifficulty;
 

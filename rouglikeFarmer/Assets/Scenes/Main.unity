@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3573,8 +3573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -81.35, y: -127.96}
-  m_SizeDelta: {x: 160.5, y: 65.82}
+  m_AnchoredPosition: {x: -73.025, y: -125.9}
+  m_SizeDelta: {x: 143.95, y: 61.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310402567
 MonoBehaviour:
@@ -3597,7 +3597,7 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
@@ -3847,7 +3847,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50.82416, y: 65.82}
+  m_SizeDelta: {x: 0, y: 65.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429938489
 MonoBehaviour:
@@ -3866,7 +3866,7 @@ MonoBehaviour:
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 7.92
   m_FlexibleHeight: -1
   m_LayoutPriority: 9
 --- !u!114 &1429938490
@@ -5025,7 +5025,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 109.675835, y: 65.82}
+  m_SizeDelta: {x: 0, y: 65.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954606373
 MonoBehaviour:

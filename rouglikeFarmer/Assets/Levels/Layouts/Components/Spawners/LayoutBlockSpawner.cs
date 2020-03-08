@@ -47,6 +47,7 @@ public class LayoutBlockSpawner : MonoBehaviour
             Instance.GetComponentInChildren<checkpoint>().SetID(gameObject.GetComponent<UniqueId>());
         }
         Instance.transform.parent = transform.parent;
+      
         Destroy(gameObject);
     }
 }

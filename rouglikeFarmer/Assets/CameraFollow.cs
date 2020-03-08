@@ -50,7 +50,6 @@ public class CameraFollow : MonoBehaviour
                 Vector3 nextPos = Vector3.Lerp(camera.transform.position, new Vector3(ChasingPosition.position.x,ChasingPosition.position.y,-11f),Time.deltaTime/timeLeft);
                 
                 float nextZoom = Mathf.Lerp(camera.m_Lens.OrthographicSize, CameraDistance, Time.deltaTime/timeLeft);
-                Debug.Log("chasingFolow "+nextZoom +" "+nextPos);
                 camera.m_Lens.OrthographicSize = nextZoom;
                 camera.transform.position = nextPos;
                 timeLeft -= Time.deltaTime;

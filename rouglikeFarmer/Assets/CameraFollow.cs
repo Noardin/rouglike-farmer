@@ -47,7 +47,7 @@ public class CameraFollow : MonoBehaviour
             }
             else
             {
-                Vector3 nextPos = Vector3.Lerp(camera.transform.position, new Vector3(ChasingPosition.position.x,ChasingPosition.position.y,-11f),Time.deltaTime/timeLeft);
+                Vector3 nextPos = Vector3.Lerp(camera.transform.position, new Vector3(ChasingPosition.position.x,ChasingPosition.position.y,camera.transform.position.z),Time.deltaTime/timeLeft);
                 
                 float nextZoom = Mathf.Lerp(camera.m_Lens.OrthographicSize, CameraDistance, Time.deltaTime/timeLeft);
                 camera.m_Lens.OrthographicSize = nextZoom;

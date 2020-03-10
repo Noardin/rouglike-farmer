@@ -24,7 +24,20 @@ public class MainMenu : MonoBehaviour
         if (!SaveSystem.SavesExist())
         {
             EnterbuttonText.text = "New game";
+            List<ScoreData> players = SaveSystem.LoadScores();
+        
+            for (var i = 0; i < players.Count; i++)
+            {
+                GameObject item = Instantiate(PlayerListObject);
+            
+                item.transform.SetParent(PlayerList);
+                item.transform.localScale = new Vector3(1,1,1);
+                item.GetComponentInChildren<Text>().text = players[i].PlayerName;
+                ButtonData itemData = item.GetComponent<ButtonData>();
+                itemData.ScoreData = players[i];
+            }
         }
+        
     }
 
     public void EnterGameButton()
@@ -82,18 +95,7 @@ public class MainMenu : MonoBehaviour
     {
         NewPlayerForm.SetActive(false);
         ExistingPlayerForm.SetActive(true);
-        List<ScoreData> players = SaveSystem.LoadScores();
         
-        for (var i = 0; i < players.Count; i++)
-        {
-            GameObject item = Instantiate(PlayerListObject);
-            
-            item.transform.SetParent(PlayerList);
-            item.transform.localScale = new Vector3(1,1,1);
-            item.GetComponentInChildren<Text>().text = players[i].PlayerName;
-            ButtonData itemData = item.GetComponent<ButtonData>();
-            itemData.ScoreData = players[i];
-        }
         animator.SetTrigger("SlideToFinalStep");
         
 

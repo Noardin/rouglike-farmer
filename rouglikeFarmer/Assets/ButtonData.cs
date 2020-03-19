@@ -16,6 +16,6 @@ public class ButtonData : MonoBehaviour
     public void onChoosePlayer()
     {
         mainMenu.ScoreData = ScoreData;
-        GameObject.Find("Score").GetComponent<Text>().text = ScoreData.PlayerScore.ToString();
+        GameObject.Find("Score").GetComponent<Text>().text = ScoreData.playerScore.scores[mainMenu.data.GameDifficulty].ToString();
     }
 }

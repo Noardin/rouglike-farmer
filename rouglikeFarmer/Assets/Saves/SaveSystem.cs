@@ -20,7 +20,7 @@ public class SaveSystem : MonoBehaviour
          int? i = ScoreExists(player, ExistingPlayers);
          if (i != null)
          {
-            ExistingPlayers[i.Value].PlayerScore = player.PlayerScore;
+            ExistingPlayers[i.Value].playerScore = player.playerScore;
          }
       }
       try
@@ -37,7 +37,7 @@ public class SaveSystem : MonoBehaviour
    public static int? SaveNewScores(string PlayerName)
    {
       List<ScoreData> ExistingPlayers = LoadScores();
-      ScoreData player = new ScoreData(PlayerName, 0);
+      ScoreData player = new ScoreData(PlayerName, new ScoreData.PlayerScore());
       BinaryFormatter formatter = new BinaryFormatter();
       string path = Application.persistentDataPath + "/Scores.mix";
       FileStream stream = new FileStream(path, FileMode.Create);

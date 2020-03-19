@@ -105,7 +105,7 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerName.text != String.Empty)
         {
-            ScoreData = new ScoreData(PlayerName.text, 0);
+            ScoreData = new ScoreData(PlayerName.text, new ScoreData.PlayerScore());
             int? PlayerID = SaveSystem.SaveNewScores(PlayerName.text);
             ScoreData.PlayerID = PlayerID;
             SaveSystem.SaveSceneData(data);

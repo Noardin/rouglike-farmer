@@ -38,9 +38,9 @@ public class deathMenu : MonoBehaviour
         }
 
         ScoreNumber.text = mainSceneController.NewScore.ToString();
-        if (mainSceneController.ScoreData.PlayerScore < mainSceneController.NewScore)
+        if (mainSceneController.ScoreData.playerScore.scores[mainSceneController.GameDifficulty] < mainSceneController.NewScore)
         {
-            mainSceneController.ScoreData.PlayerScore = mainSceneController.NewScore;
+            mainSceneController.ScoreData.playerScore.scores[mainSceneController.GameDifficulty] = mainSceneController.NewScore;
             SaveSystem.SaveScores(mainSceneController.ScoreData);
         }
 

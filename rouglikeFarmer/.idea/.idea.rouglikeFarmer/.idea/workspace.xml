@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9cd90f-82b9-455e-9d8b-972ef2435e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.rouglikeFarmer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ButtonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ButtonData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Layouts/SecondLevel_Layouts/Layout_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Layouts/SecondLevel_Layouts/Layout_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.backup.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saves/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Saves/SaveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saves/ScoreData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Saves/ScoreData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/deathMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/deathMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parallax.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +106,12 @@
         <option value="$PROJECT_DIR$/Assets/Levels/Layouts/Components/Spawners/LayoutBlockSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Clouds.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Parallax.cs" />
         <option value="$PROJECT_DIR$/Assets/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonData.cs" />
         <option value="$PROJECT_DIR$/Assets/Saves/SaveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/deathMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Saves/ScoreData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Parallax.cs" />
       </list>
     </option>
   </component>
@@ -186,7 +178,8 @@
       <workItem from="1583673299984" duration="7032000" />
       <workItem from="1583769943611" duration="2163000" />
       <workItem from="1583848111523" duration="312000" />
-      <workItem from="1584622657707" duration="3644000" />
+      <workItem from="1584622657707" duration="3884000" />
+      <workItem from="1586954594716" duration="308000" />
     </task>
     <servers />
   </component>
